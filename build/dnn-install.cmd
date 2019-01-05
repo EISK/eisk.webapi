@@ -5,7 +5,7 @@ mkdir dnn-template-render
 cd dnn-template-render
 
 echo $$$$$$$$$$$$$$$$$$$$ create content from template {template.json - shortname}
-dotnet new eiskwebapi
+dotnet new eiskwebapi -n App
 
 echo $$$$$$$$$$$$$$$$$$$$ unstalling template {nuspec - package id / template.json - identity }
 dotnet new -u Eisk.WebApi
