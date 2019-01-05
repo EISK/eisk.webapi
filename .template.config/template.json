@@ -17,7 +17,16 @@
       "path": ".\\Core\\Eisk.Core\\Eisk.Core.csproj"
     },
     {
+      "path": ".\\WebApi\\Eisk.WebApi\\Eisk.WebApi.csproj"
+    },
+    {
       "path": ".\\Core\\Eisk.Test.Core\\Eisk.Test.Core.csproj"
+    },
+    {
+      "path": ".\\Core\\Eisk.Core.Tests\\Eisk.Core.Tests.csproj"
+    },
+    {
+      "path": ".\\Core\\Eisk.Test.Core.Tests\\Eisk.Test.Core.Tests.csproj"
     }
   ]
 }

@@ -16,13 +16,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.Test.Core", "Core\Eisk
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisk.WebApi.TemplatePack", "Eisk.WebApi.TemplatePack\Eisk.WebApi.TemplatePack.csproj", "{8824BF10-E351-4F9E-B462-B86F51CA234E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisk.Core.Tests", "Core\Eisk.Core.Tests\Eisk.Core.Tests.csproj", "{1BC9EBFE-A17A-43FB-AB9D-C429CCD8020D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.Core.Tests", "Core\Eisk.Core.Tests\Eisk.Core.Tests.csproj", "{1BC9EBFE-A17A-43FB-AB9D-C429CCD8020D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisk.Test.Core.Tests", "Core\Eisk.Test.Core.Tests\Eisk.Test.Core.Tests.csproj", "{DCDCAE0A-4CF7-44CA-96A1-BDD70087D575}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.Test.Core.Tests", "Core\Eisk.Test.Core.Tests\Eisk.Test.Core.Tests.csproj", "{DCDCAE0A-4CF7-44CA-96A1-BDD70087D575}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{CEBF47DF-D79A-4AE0-A857-A51D438E3C39}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test.Core", "Test.Core", "{16043213-DF69-4E37-98E1-2C86C410551B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisk.WebApi", "WebApi\Eisk.WebApi\Eisk.WebApi.csproj", "{99D535CA-1DE1-459B-8ECC-B4F6936F5142}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{9611B3D6-810A-4E98-9166-2DA770E38B81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +54,10 @@ Global
 		{DCDCAE0A-4CF7-44CA-96A1-BDD70087D575}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCDCAE0A-4CF7-44CA-96A1-BDD70087D575}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCDCAE0A-4CF7-44CA-96A1-BDD70087D575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99D535CA-1DE1-459B-8ECC-B4F6936F5142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99D535CA-1DE1-459B-8ECC-B4F6936F5142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99D535CA-1DE1-459B-8ECC-B4F6936F5142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99D535CA-1DE1-459B-8ECC-B4F6936F5142}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +67,7 @@ Global
 		{642F6C34-DFFF-47FB-8568-621423F95B79} = {16043213-DF69-4E37-98E1-2C86C410551B}
 		{1BC9EBFE-A17A-43FB-AB9D-C429CCD8020D} = {CEBF47DF-D79A-4AE0-A857-A51D438E3C39}
 		{DCDCAE0A-4CF7-44CA-96A1-BDD70087D575} = {16043213-DF69-4E37-98E1-2C86C410551B}
+		{99D535CA-1DE1-459B-8ECC-B4F6936F5142} = {9611B3D6-810A-4E98-9166-2DA770E38B81}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4370F72B-9D16-4EBF-8EF5-1F0925FC7CC6}
