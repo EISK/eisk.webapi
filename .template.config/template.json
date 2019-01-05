@@ -14,10 +14,10 @@
   "sourceName": "Eisk",
   "primaryOutputs": [
     {
-      "path": ".\\Eisk.Core\\Eisk.Core.csproj"
+      "path": ".\\Core\\Eisk.Core\\Eisk.Core.csproj"
     },
     {
-      "path": ".\\Eisk.ConsoleApp\\Eisk.ConsoleApp.csproj"
+      "path": ".\\Core\\Eisk.Test.Core\\Eisk.Test.Core.csproj"
     }
   ]
 }
