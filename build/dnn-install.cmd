@@ -1,4 +1,4 @@
-echo $$$$$$$$$$$$$$$$$$$$ installing template {nuspec - package id / path}
+echo $$$$$$$$$$$$$$$$$$$$ installing template {nuspec - package id / path} 
 dotnet new -i  ..\Eisk.WebApi.TemplatePack\bin\Debug\templates\Eisk.WebApi.1.0.0.nupkg
 
 rmdir .\dnn-template-render /s /q
