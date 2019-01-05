@@ -17,8 +17,8 @@
     <ProjectGuid>{8824BF10-E351-4F9E-B462-B86F51CA234E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Eisk.WebApi.TemplateBuilder</RootNamespace>
-    <AssemblyName>Eisk.WebApi.TemplateBuilder</AssemblyName>
+    <RootNamespace>Eisk.WebApi</RootNamespace>
+    <AssemblyName>Eisk.WebApi</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>

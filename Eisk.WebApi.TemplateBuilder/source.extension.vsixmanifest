@@ -3,7 +3,7 @@
     <Metadata>
         <Identity Id="87026DB0-F8B8-4737-93EB-4FB56898C434" Version="1.0" Language="en-US" Publisher="Ashraf Alam" />
         <DisplayName>Eisk.WebApi</DisplayName>
-        <Description xml:space="preserve">Project template with simple CRUD to get started ASP.NET Web Api quickly.Project template with simple CRUD to get started ASP.NET Web Api quickly.Eisk.WebApi</Description>
+        <Description xml:space="preserve">Project template with simple CRUD to get started ASP.NET Web Api quickly.</Description>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0]" />

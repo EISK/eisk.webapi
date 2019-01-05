@@ -10,7 +10,7 @@
     "language": "C#",
     "type": "project"
   },
-  "shortName": "eisk.webapi",
+  "shortName": "eiskwebapi",
   "sourceName": "Eisk",
   "primaryOutputs": [
     {

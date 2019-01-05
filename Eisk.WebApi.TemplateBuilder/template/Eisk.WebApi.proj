@@ -26,7 +26,10 @@
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/.vs/**/*" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/.git/**/*" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/packages/**/*" />
-
+    <ExcludeFromPackage Include="$(TemplateSourceRoot)Eisk.TemplateBuilder.sln" />
+    <ExcludeFromPackage Include="$(TemplateSourceRoot)Eisk.WebApi.TemplateBuilder/**/*" />
+    <ExcludeFromPackage Include="$(TemplateSourceRoot)build/**/*" />
+    
     <TemplateFiles  Include="$(TemplateSourceRoot)/**/*" 
                     Exclude="@(ExcludeFromPackage)" />
   </ItemGroup>
