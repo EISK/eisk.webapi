@@ -23,7 +23,7 @@
     <Configuration Condition=" '$(Configuration)'=='' ">Debug</Configuration>
     <TemplateSourceRoot Condition=" '$(TemplateSourceRoot)'=='' ">$(MSBuildProjectDirectory)\..\</TemplateSourceRoot>
     <TemplateOutputPath Condition=" '$(TemplateOutputPath)'=='' ">bin\$(Configuration)\templates\</TemplateOutputPath>
-    <DefaultNewProjectNode Condition=" '$(DefaultNewProjectNode)'=='' ">CSharp\Web\Eisk</DefaultNewProjectNode>
+    <DefaultNewProjectNode Condition=" '$(DefaultNewProjectNode)'=='' ">CSharp\Web\SideWaffle</DefaultNewProjectNode>
   </PropertyGroup>
 
   <!--

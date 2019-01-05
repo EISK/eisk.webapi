@@ -20,7 +20,7 @@
       <CustomParameter Name = "$language$" Value="CSharp" />
       <CustomParameter Name = "$uistyle$" Value="none"/>
       <CustomParameter Name = "$groupid$" Value="Eisk.WebApi" />
-      <CustomParameter Name = "SideWaffleNewProjNode" Value="CSharp\Web\Eisk"/>
+      <CustomParameter Name = "SideWaffleNewProjNode" Value="CSharp\Web\SideWaffle"/>
     </CustomParameters>
   </TemplateContent>
   <WizardExtension>

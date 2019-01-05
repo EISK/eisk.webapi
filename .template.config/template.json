@@ -15,6 +15,9 @@
   "primaryOutputs": [
     {
       "path": ".\\Eisk.Core\\Eisk.Core.csproj"
+    },
+    {
+      "path": ".\\Eisk.ConsoleApp\\Eisk.ConsoleApp.csproj"
     }
   ]
 }
