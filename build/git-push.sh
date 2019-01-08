@@ -13,7 +13,7 @@ cd $TEMP_REPO_DIR
 git rm -r *
 
 echo "Copy documentation into the repo"
-cp -r $SOURCE_DIR/dnn-template-render/* .
+cp -r $SOURCE_DIR/dnn-local-template-render/* .
 
 echo "Push the new docs to the remote branch"
 git add . -A
