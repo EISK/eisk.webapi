@@ -9,7 +9,7 @@
   <PropertyGroup Label="TemplatePackInfo">
     <Authors>Ashraf Alam</Authors>
     <Description>Project template with simple CRUD to get started ASP.NET Web Api quickly.</Description>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <PropertyGroup Label="PackageConfiguration">
