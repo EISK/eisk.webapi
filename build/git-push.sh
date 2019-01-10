@@ -1,24 +1,24 @@
-GitTargetRepo=${1:-.}
-GitUserName=${2}
-GitUserEmail=${3}
+ContentTargetGitAddress=${1:-.}
+ContentTargetGitUserName=${2}
+ContentTargetGitUserEmail=${3}
 
-ContentSrc=${4:-content-src}
+ContentSrc=${4:-content}
 
-GitTargetBranch=${5:-content}
-GitTargetRepoDownloadFolder=${6:-content-repo}
+ContentTargetGitBranch=${5:-content}
+ContentTargetGitRepoDownloadFolder=${6:-content-repo}
 
-git config --global user.name $GitUserName
-git config --global user.email $GitUserEmail
+git config --global user.name $ContentTargetGitUserName
+git config --global user.email $ContentTargetGitUserEmail
 
 SOURCE_DIR=$PWD
-TEMP_REPO_DIR=$PWD/$GitTargetRepoDownloadFolder
+TEMP_REPO_DIR=$PWD/$ContentTargetGitRepoDownloadFolder
 
 echo "############################# Removing temporary doc directory $TEMP_REPO_DIR"
 rm -rf $TEMP_REPO_DIR
 mkdir $TEMP_REPO_DIR
 
 echo "############################# Cloning the repo with the content branch"
-git clone $GitTargetRepo --branch $GitTargetBranch $TEMP_REPO_DIR
+git clone $ContentTargetGitAddress --branch $ContentTargetGitBranch $TEMP_REPO_DIR
 
 echo "############################# Clear repo directory"
 cd $TEMP_REPO_DIR
@@ -30,4 +30,4 @@ cp -r $SOURCE_DIR/$ContentSrc/* .
 echo "############################# Push contents to the remote branch"
 git add . -A
 git commit -m "Update content"
-git push origin $GitTargetBranch
+git push origin $ContentTargetGitBranch
