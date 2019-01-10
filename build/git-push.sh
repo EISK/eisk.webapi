@@ -1,4 +1,4 @@
-ContentTargetGitAddress=${1:-.}
+ContentTargetGitAddress=${1:-https://github.com/EISK/eisk.webapi.git}
 ContentTargetGitUserName=${2}
 ContentTargetGitUserEmail=${3}
 
@@ -7,8 +7,13 @@ ContentSrc=${4:-content}
 ContentTargetGitBranch=${5:-content}
 ContentTargetGitRepoDownloadFolder=${6:-content-repo}
 
-git config --global user.name $ContentTargetGitUserName
-git config --global user.email $ContentTargetGitUserEmail
+if [ "$2" != "" ]; then
+	git config --global user.name $ContentTargetGitUserName
+fi
+
+if [ "$3" != "" ]; then
+	git config --global user.email $ContentTargetGitUserEmail
+fi
 
 SOURCE_DIR=$PWD
 TEMP_REPO_DIR=$PWD/$ContentTargetGitRepoDownloadFolder
