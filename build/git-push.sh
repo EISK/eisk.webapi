@@ -1,21 +1,32 @@
-SOURCE_DIR=$PWD
-TEMP_REPO_DIR=$PWD/rendered-templated-content-repo
+GitTargetRepo=${1:-.}
+GitUserName=${4}
+GitUserEmail=${5}
 
-echo "Removing temporary doc directory $TEMP_REPO_DIR"
+GitTargetBranch=${2:-content}
+GitTargetRepoDownloadFolder=${6:-content-repo}
+ContentSrc=${3:-content-src}
+
+git config --global user.name $GitUserName
+git config --global user.email $GitUserEmail
+
+SOURCE_DIR=$PWD
+TEMP_REPO_DIR=$PWD/$GitTargetRepoDownloadFolder
+
+echo "############################# Removing temporary doc directory $TEMP_REPO_DIR"
 rm -rf $TEMP_REPO_DIR
 mkdir $TEMP_REPO_DIR
 
-echo "Cloning the repo with the b102332 branch"
-git clone https://github.com/EISK/eisk.webapi.git --branch b102332 $TEMP_REPO_DIR
+echo "############################# Cloning the repo with the content branch"
+git clone $GitTargetRepo --branch $GitTargetBranch $TEMP_REPO_DIR
 
-echo "Clear repo directory"
+echo "############################# Clear repo directory"
 cd $TEMP_REPO_DIR
 git rm -r *
 
 echo "Copy documentation into the repo"
-cp -r $SOURCE_DIR/dnn-local-template-render/* .
+cp -r $SOURCE_DIR/$ContentSrc/* .
 
-echo "Push the new docs to the remote branch"
+echo "############################# Push contents to the remote branch"
 git add . -A
-git commit -m "Update generated documentation"
-git push origin b102332
+git commit -m "Update content"
+git push origin $GitTargetBranch
