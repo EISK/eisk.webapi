@@ -1,0 +1,3 @@
+[![Build status](https://dev.azure.com/AppOps/App/_apis/build/status/App-WebApi-TemplatePack-CI)](https://dev.azure.com/AppOps/App/_build/latest?definitionId=3)
+
+...
