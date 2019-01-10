@@ -1,10 +1,11 @@
 GitTargetRepo=${1:-.}
-GitUserName=${4}
-GitUserEmail=${5}
+GitUserName=${2}
+GitUserEmail=${3}
 
-GitTargetBranch=${2:-content}
+ContentSrc=${4:-content-src}
+
+GitTargetBranch=${5:-content}
 GitTargetRepoDownloadFolder=${6:-content-repo}
-ContentSrc=${3:-content-src}
 
 git config --global user.name $GitUserName
 git config --global user.email $GitUserEmail
