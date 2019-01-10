@@ -1,6 +1,6 @@
 ContentTargetGitAddress=${1:-https://github.com/EISK/eisk.webapi.git}
-ContentTargetGitUserName=${2}
-ContentTargetGitUserEmail=${3}
+ContentTargetGitUserName=${2:-AshrafAlam}
+ContentTargetGitUserEmail=${3:-joy_csharp@yahoo.com}
 
 ContentSrc=${4:-content}
 
