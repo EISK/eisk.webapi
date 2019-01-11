@@ -7,14 +7,6 @@ ContentSrc=${4:-content}
 ContentTargetGitBranch=${5:-content}
 ContentTargetGitRepoDownloadFolder=${6:-content-repo}
 
-if [ "$2" != "" ]; then
-	git config user.name $ContentTargetGitUserName
-fi
-
-if [ "$3" != "" ]; then
-	git config user.email $ContentTargetGitUserEmail
-fi
-
 SOURCE_DIR=$PWD
 TEMP_REPO_DIR=$PWD/$ContentTargetGitRepoDownloadFolder
 
@@ -31,6 +23,15 @@ git rm -r *
 
 echo "Copy documentation into the repo"
 cp -r $SOURCE_DIR/$ContentSrc/* .
+
+echo "############################# Setting git identity"
+if [ "$2" != "" ]; then
+	git config user.name $ContentTargetGitUserName
+fi
+
+if [ "$3" != "" ]; then
+	git config user.email $ContentTargetGitUserEmail
+fi
 
 echo "############################# Push contents to the remote branch"
 git add . -A
