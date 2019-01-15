@@ -28,8 +28,11 @@ namespace Eisk.DataServices.EntityFrameworkCore.IntegrationTests
             var objectToAdd = Factory_Entity(x => x.Id = 0);
 
             //Act
-            var testDb = new TestDbContextFactory();
-            var returnEmployee = testDb.CreateDbContext().Employees.Add(objectToAdd);
+            var employeeDataService = Factory_DataService();
+            var returnEmployee = employeeDataService.Add(objectToAdd);
+
+            //Assert
+            Assert.NotEqual(0, returnEmployee.Id);
             
         }
 
