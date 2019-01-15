@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace Eisk.DataServices.IntegrationTests
+namespace Eisk.DataServices.EntityFrameworkCore.IntegrationTests
 {
     public class UnitTest1
     {
