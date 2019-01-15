@@ -1,20 +1,23 @@
-﻿//using System;
+﻿using Eisk.DataServices.EntityFrameworkCore.DataContext;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using System;
 
-//namespace Eisk.DataServices.IntegrationTests.Setup
-//{
-//    public class TestDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
-//    {
-//        public AppDbContext CreateDbContext()
-//        {
-//            return CreateDbContext(new[] {""});
-//        }
+namespace Eisk.DataServices.EntityFrameworkCore.IntegrationTests
+{
+    public class TestDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
+    {
+        public AppDbContext CreateDbContext()
+        {
+            return CreateDbContext(new[] { "" });
+        }
 
-//        public AppDbContext CreateDbContext(string[] args)
-//        {
-//            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-//            optionsBuilder.UseInMemoryDatabase("MyDb" + Guid.NewGuid());
+        public AppDbContext CreateDbContext(string[] args)
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
+            optionsBuilder.UseInMemoryDatabase("MyDb" + Guid.NewGuid());
 
-//            return new AppDbContext(optionsBuilder.Options);
-//        }
-//    }
-//}
+            return new AppDbContext(optionsBuilder.Options);
+        }
+    }
+}
