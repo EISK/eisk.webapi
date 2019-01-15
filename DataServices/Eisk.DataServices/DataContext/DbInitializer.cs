@@ -2,7 +2,7 @@
 using System.Linq;
 using Test.Core.DataGen;
 
-namespace Eisk.DataServices.DataContext
+namespace Eisk.DataServices.EntityFrameworkCore.DataContext
 {
     public static class DbInitializer
     {

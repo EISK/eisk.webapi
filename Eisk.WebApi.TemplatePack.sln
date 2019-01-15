@@ -42,7 +42,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domains", "Domains", "{07B0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisk.Domains", "Domains\Eisk.Domains\Eisk.Domains.csproj", "{2AE91D6B-0CF4-4CE8-90B5-B7F271F934AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisk.DataServices", "DataServices\Eisk.DataServices\Eisk.DataServices.csproj", "{265CDF3F-194A-4747-98EF-FBEDE729541C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisk.DataServices.EntityFrameworkCore", "DataServices\Eisk.DataServices\Eisk.DataServices.EntityFrameworkCore.csproj", "{265CDF3F-194A-4747-98EF-FBEDE729541C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisk.DataServices.IntegrationTests", "DataServices\Eisk.DataServices.IntegrationTests\Eisk.DataServices.IntegrationTests.csproj", "{A313D186-6355-4DC9-ACE5-6371C5FEAF2A}"
 EndProject

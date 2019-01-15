@@ -1,10 +1,10 @@
 using Core.DataService;
-using Eisk.DataServices.DataContext;
+using Eisk.DataServices.EntityFrameworkCore.DataContext;
 using Eisk.Domains.Employee;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Eisk.DataServices
+namespace Eisk.DataServices.EntityFrameworkCore
 {
     public class EmployeeDataService : EntityContextDataService<Employee>
     {

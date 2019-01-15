@@ -1,7 +1,7 @@
 ﻿using Eisk.Domains.Employee;
 using Microsoft.EntityFrameworkCore;
 
-namespace Eisk.DataServices.DataContext
+namespace Eisk.DataServices.EntityFrameworkCore.DataContext
 {
     public class AppDbContext : DbContext
     {
