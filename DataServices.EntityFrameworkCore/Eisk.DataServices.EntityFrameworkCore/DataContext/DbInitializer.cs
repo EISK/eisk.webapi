@@ -1,6 +1,5 @@
 ﻿using Eisk.Domains.Employee;
 using System.Linq;
-using Test.Core.DataGen;
 
 namespace Eisk.DataServices.EntityFrameworkCore.DataContext
 {
@@ -19,15 +18,7 @@ namespace Eisk.DataServices.EntityFrameworkCore.DataContext
             }
 
             for (int i = 0; i < 10; i++)
-                context.Employees.Add(
-                    EntityDataFactory<Employee>.Create_Entity(x =>
-                    {
-                        x.Id = 0;
-                        x.ReportsToId = null;
-                        x.ReportsTo = null;
-                        x.Subordinates = null;
-                    })
-                );
+                context.Employees.Add(new Employee {FirstName = "John"});
 
             context.SaveChanges();
         }
