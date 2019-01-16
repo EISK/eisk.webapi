@@ -46,6 +46,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.EntityFra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.EntityFrameworkCore.IntegrationTests", "DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.IntegrationTests\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.csproj", "{A0F69A4C-681B-46AC-BA36-C7CF1FC828E6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.Interfaces", "DataServices.Interfaces\Eisk.DataServices.Interfaces\Eisk.DataServices.Interfaces.csproj", "{30BADCA9-8F87-435D-AACA-1F77CE527D47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,6 +102,10 @@ Global
 		{A0F69A4C-681B-46AC-BA36-C7CF1FC828E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0F69A4C-681B-46AC-BA36-C7CF1FC828E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0F69A4C-681B-46AC-BA36-C7CF1FC828E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BADCA9-8F87-435D-AACA-1F77CE527D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BADCA9-8F87-435D-AACA-1F77CE527D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BADCA9-8F87-435D-AACA-1F77CE527D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BADCA9-8F87-435D-AACA-1F77CE527D47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,6 +123,7 @@ Global
 		{2AE91D6B-0CF4-4CE8-90B5-B7F271F934AA} = {07B09CE7-77B7-4F0F-9BF1-1CA13B8501D8}
 		{B6CF13CC-A394-4CA4-85BC-D8B9DAE73FA5} = {8D09A735-BB55-4075-9B06-EAAA18F59781}
 		{A0F69A4C-681B-46AC-BA36-C7CF1FC828E6} = {8D09A735-BB55-4075-9B06-EAAA18F59781}
+		{30BADCA9-8F87-435D-AACA-1F77CE527D47} = {8D09A735-BB55-4075-9B06-EAAA18F59781}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4370F72B-9D16-4EBF-8EF5-1F0925FC7CC6}

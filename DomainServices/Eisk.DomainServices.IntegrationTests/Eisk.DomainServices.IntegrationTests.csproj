@@ -12,4 +12,12 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Eisk.Core\Eisk.Core.csproj" />
+    <ProjectReference Include="..\..\Core\Eisk.Test.Core\Eisk.Test.Core.csproj" />
+    <ProjectReference Include="..\..\DataServices.Interfaces\Eisk.DataServices.Interfaces\Eisk.DataServices.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Domains\Eisk.Domains\Eisk.Domains.csproj" />
+    <ProjectReference Include="..\Eisk.DomainServices\Eisk.DomainServices.csproj" />
+  </ItemGroup>
+
 </Project>
