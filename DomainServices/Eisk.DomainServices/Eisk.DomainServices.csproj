@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Eisk.Core\Eisk.Core.csproj" />
+    <ProjectReference Include="..\..\DataServices.Interfaces\Eisk.DataServices.Interfaces\Eisk.DataServices.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Domains\Eisk.Domains\Eisk.Domains.csproj" />
+  </ItemGroup>
+
 </Project>

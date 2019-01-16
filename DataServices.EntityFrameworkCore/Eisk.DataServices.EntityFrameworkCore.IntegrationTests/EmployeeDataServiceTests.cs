@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Eisk.DataServices.EntityFrameworkCore.IntegrationTests
 {
-    public class EmployeeTests:EntityTestBase<Employee>
+    public class EmployeeDataServiceTests:EntityTestBase<Employee>
     {
         #region Helpers
 

@@ -5,6 +5,13 @@ VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.Core", "Core\Eisk.Core\Eisk.Core.csproj", "{8E6823DD-60AB-4772-AB9C-E5786BEF2B50}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4E93D3D8-EC59-4DE2-A1E1-3F0258277780}"
+	ProjectSection(SolutionItems) = preProject
+		build\dnn-install.cmd = build\dnn-install.cmd
+		.template.config\template.json = .template.config\template.json
+		.template.config\template.vstemplate = .template.config\template.vstemplate
+	EndProjectSection
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.Test.Core", "Core\Eisk.Test.Core\Eisk.Test.Core.csproj", "{642F6C34-DFFF-47FB-8568-621423F95B79}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.Core.Tests", "Core\Eisk.Core.Tests\Eisk.Core.Tests.csproj", "{1BC9EBFE-A17A-43FB-AB9D-C429CCD8020D}"
@@ -15,9 +22,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{CEBF47DF-D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test.Core", "Test.Core", "{16043213-DF69-4E37-98E1-2C86C410551B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisk.WebApi", "WebApi\Eisk.WebApi\Eisk.WebApi.csproj", "{99D535CA-1DE1-459B-8ECC-B4F6936F5142}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.WebApi", "WebApi\Eisk.WebApi\Eisk.WebApi.csproj", "{99D535CA-1DE1-459B-8ECC-B4F6936F5142}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{9611B3D6-810A-4E98-9166-2DA770E38B81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainServices", "DomainServices", "{B5994C8A-4916-42F0-A92B-70D46FA7F415}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataServices", "DataServices", "{8D09A735-BB55-4075-9B06-EAAA18F59781}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices", "DomainServices\Eisk.DomainServices\Eisk.DomainServices.csproj", "{BF116D36-54AD-49B8-A8F6-262FF35B187D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices.IntegrationTests", "DomainServices\Eisk.DomainServices.IntegrationTests\Eisk.DomainServices.IntegrationTests.csproj", "{47C7FD20-13CB-490C-BAE8-6D9080BA9AB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices.UnitTests", "DomainServices\Eisk.DomainServices.UnitTests\Eisk.DomainServices.UnitTests.csproj", "{7B7CAEA9-C993-4EDF-B46F-EDEFF95236E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domains", "Domains", "{07B09CE7-77B7-4F0F-9BF1-1CA13B8501D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.Domains", "Domains\Eisk.Domains\Eisk.Domains.csproj", "{2AE91D6B-0CF4-4CE8-90B5-B7F271F934AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.EntityFrameworkCore", "DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.csproj", "{B6CF13CC-A394-4CA4-85BC-D8B9DAE73FA5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.EntityFrameworkCore.IntegrationTests", "DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.IntegrationTests\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.csproj", "{A0F69A4C-681B-46AC-BA36-C7CF1FC828E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisk.DataServices.Interfaces", "DataServices.Interfaces\Eisk.DataServices.Interfaces\Eisk.DataServices.Interfaces.csproj", "{C8222D36-DA18-4DC5-9B40-7E00357A835F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +60,6 @@ Global
 		{642F6C34-DFFF-47FB-8568-621423F95B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{642F6C34-DFFF-47FB-8568-621423F95B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{642F6C34-DFFF-47FB-8568-621423F95B79}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8824BF10-E351-4F9E-B462-B86F51CA234E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8824BF10-E351-4F9E-B462-B86F51CA234E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8824BF10-E351-4F9E-B462-B86F51CA234E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8824BF10-E351-4F9E-B462-B86F51CA234E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1BC9EBFE-A17A-43FB-AB9D-C429CCD8020D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1BC9EBFE-A17A-43FB-AB9D-C429CCD8020D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BC9EBFE-A17A-43FB-AB9D-C429CCD8020D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,6 +72,34 @@ Global
 		{99D535CA-1DE1-459B-8ECC-B4F6936F5142}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99D535CA-1DE1-459B-8ECC-B4F6936F5142}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99D535CA-1DE1-459B-8ECC-B4F6936F5142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF116D36-54AD-49B8-A8F6-262FF35B187D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF116D36-54AD-49B8-A8F6-262FF35B187D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF116D36-54AD-49B8-A8F6-262FF35B187D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF116D36-54AD-49B8-A8F6-262FF35B187D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47C7FD20-13CB-490C-BAE8-6D9080BA9AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C7FD20-13CB-490C-BAE8-6D9080BA9AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C7FD20-13CB-490C-BAE8-6D9080BA9AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C7FD20-13CB-490C-BAE8-6D9080BA9AB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B7CAEA9-C993-4EDF-B46F-EDEFF95236E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B7CAEA9-C993-4EDF-B46F-EDEFF95236E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B7CAEA9-C993-4EDF-B46F-EDEFF95236E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B7CAEA9-C993-4EDF-B46F-EDEFF95236E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AE91D6B-0CF4-4CE8-90B5-B7F271F934AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE91D6B-0CF4-4CE8-90B5-B7F271F934AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE91D6B-0CF4-4CE8-90B5-B7F271F934AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE91D6B-0CF4-4CE8-90B5-B7F271F934AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6CF13CC-A394-4CA4-85BC-D8B9DAE73FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6CF13CC-A394-4CA4-85BC-D8B9DAE73FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6CF13CC-A394-4CA4-85BC-D8B9DAE73FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6CF13CC-A394-4CA4-85BC-D8B9DAE73FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0F69A4C-681B-46AC-BA36-C7CF1FC828E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F69A4C-681B-46AC-BA36-C7CF1FC828E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F69A4C-681B-46AC-BA36-C7CF1FC828E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F69A4C-681B-46AC-BA36-C7CF1FC828E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8222D36-DA18-4DC5-9B40-7E00357A835F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8222D36-DA18-4DC5-9B40-7E00357A835F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8222D36-DA18-4DC5-9B40-7E00357A835F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8222D36-DA18-4DC5-9B40-7E00357A835F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,7 +109,15 @@ Global
 		{642F6C34-DFFF-47FB-8568-621423F95B79} = {16043213-DF69-4E37-98E1-2C86C410551B}
 		{1BC9EBFE-A17A-43FB-AB9D-C429CCD8020D} = {CEBF47DF-D79A-4AE0-A857-A51D438E3C39}
 		{DCDCAE0A-4CF7-44CA-96A1-BDD70087D575} = {16043213-DF69-4E37-98E1-2C86C410551B}
+		{16043213-DF69-4E37-98E1-2C86C410551B} = {CEBF47DF-D79A-4AE0-A857-A51D438E3C39}
 		{99D535CA-1DE1-459B-8ECC-B4F6936F5142} = {9611B3D6-810A-4E98-9166-2DA770E38B81}
+		{BF116D36-54AD-49B8-A8F6-262FF35B187D} = {B5994C8A-4916-42F0-A92B-70D46FA7F415}
+		{47C7FD20-13CB-490C-BAE8-6D9080BA9AB0} = {B5994C8A-4916-42F0-A92B-70D46FA7F415}
+		{7B7CAEA9-C993-4EDF-B46F-EDEFF95236E2} = {B5994C8A-4916-42F0-A92B-70D46FA7F415}
+		{2AE91D6B-0CF4-4CE8-90B5-B7F271F934AA} = {07B09CE7-77B7-4F0F-9BF1-1CA13B8501D8}
+		{B6CF13CC-A394-4CA4-85BC-D8B9DAE73FA5} = {8D09A735-BB55-4075-9B06-EAAA18F59781}
+		{A0F69A4C-681B-46AC-BA36-C7CF1FC828E6} = {8D09A735-BB55-4075-9B06-EAAA18F59781}
+		{C8222D36-DA18-4DC5-9B40-7E00357A835F} = {8D09A735-BB55-4075-9B06-EAAA18F59781}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4370F72B-9D16-4EBF-8EF5-1F0925FC7CC6}
