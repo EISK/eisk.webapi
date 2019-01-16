@@ -1,16 +1,19 @@
 using Core.Exceptions;
 using Eisk.DataServices.Interfaces;
+using Eisk.Domains.Employee;
 using Moq;
 using Services.DomainServices;
+using Test.Core.TestBases;
 using Xunit;
 
 namespace UnitTests.DomainServiceTests
 {
-    public class EmployeeDomainServiceUnitTests
+    public class EmployeeDomainServiceUnitTests: DomainServiceBaseUnitTests<Employee, int>
     {
         #region Helpers
 
-        public EmployeeDomainServiceUnitTests()
+        public EmployeeDomainServiceUnitTests() : base
+            (x => x.Id)
         {
 
         }
