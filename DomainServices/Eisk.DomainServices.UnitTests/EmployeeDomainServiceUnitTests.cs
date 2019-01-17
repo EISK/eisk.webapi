@@ -8,15 +8,9 @@ using Xunit;
 
 namespace UnitTests.DomainServiceTests
 {
-    public class EmployeeDomainServiceUnitTests: DomainServiceBaseUnitTests<Employee, int>
+    public class EmployeeDomainServiceUnitTests
     {
         #region Helpers
-
-        public EmployeeDomainServiceUnitTests() : base
-            (x => x.Id)
-        {
-
-        }
 
         static Mock<IEmployeeDataService> Factory_DataService()
         {

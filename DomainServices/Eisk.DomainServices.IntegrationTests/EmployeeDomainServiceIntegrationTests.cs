@@ -19,7 +19,7 @@ namespace IntegrationTests.DomainServiceTests
         }
 
         EmployeeDomainServiceIntegrationTests(EmployeeDomainService employeeDomainService) :
-            base(x => x.Id, employeeDomainService)
+            base(employeeDomainService, x => x.Id)
         {
             _employeeDomainService = employeeDomainService;
         }
