@@ -1,6 +1,6 @@
-using Core.DataService;
 using Eisk.Domains.Employee;
 using System.Collections.Generic;
+using Eisk.Core.DataService;
 
 namespace Eisk.DataServices.Interfaces
 {

@@ -1,7 +1,8 @@
-﻿using Eisk.Domains.Employee;
+﻿using Eisk.DataServices.EntityFrameworkCore.DataContext;
+using Eisk.Domains.Employee;
 using System.Linq;
 
-namespace Eisk.DataServices.EntityFrameworkCore.DataContext
+namespace Eisk.EntityFrameworkCore.Setup
 {
     public static class DbInitializer
     {
