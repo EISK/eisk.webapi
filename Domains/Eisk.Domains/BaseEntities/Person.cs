@@ -3,7 +3,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Eisk.Domains.Employee.Models.Bases
+namespace Eisk.Domains.BaseEntities
 {
     public class Person
     {

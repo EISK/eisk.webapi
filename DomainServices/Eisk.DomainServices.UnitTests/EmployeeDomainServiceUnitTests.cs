@@ -6,7 +6,7 @@ using Services.DomainServices;
 using Test.Core.TestBases;
 using Xunit;
 
-namespace UnitTests.DomainServiceTests
+namespace Eisk.DomainServices.UnitTests
 {
     public class EmployeeDomainServiceUnitTests
     {

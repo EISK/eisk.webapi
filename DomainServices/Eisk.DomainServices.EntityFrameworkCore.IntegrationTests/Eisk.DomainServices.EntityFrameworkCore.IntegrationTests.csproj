@@ -4,6 +4,16 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <AssemblyName>Eisk.DomainServices.EntityFrameworkCore.IntegrationTests</AssemblyName>
+
+    <RootNamespace>Eisk.DomainServices.EntityFrameworkCore.IntegrationTests</RootNamespace>
+
+    <ApplicationIcon />
+
+    <OutputType>Exe</OutputType>
+
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,8 +26,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Eisk.Test.Core\Eisk.Test.Core.csproj" />
     <ProjectReference Include="..\..\DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.csproj" />
-    <ProjectReference Include="..\..\DataServices.Interfaces\Eisk.DataServices.Interfaces\Eisk.DataServices.Interfaces.csproj" />
     <ProjectReference Include="..\..\Domains\Eisk.Domains\Eisk.Domains.csproj" />
+    <ProjectReference Include="..\..\Eisk.Shared\Eisk.DomainServices.IntegrationTests\Eisk.DomainServices.IntegrationTests.csproj" />
     <ProjectReference Include="..\Eisk.DomainServices\Eisk.DomainServices.csproj" />
   </ItemGroup>
 

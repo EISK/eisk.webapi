@@ -1,4 +1,4 @@
-﻿using Eisk.Domains.Employee.Models.Bases;
+﻿using Eisk.Domains.BaseEntities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

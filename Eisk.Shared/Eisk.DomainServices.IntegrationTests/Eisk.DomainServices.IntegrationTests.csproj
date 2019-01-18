@@ -8,16 +8,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
-    <PackageReference Include="Moq" Version="4.7.99" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Eisk.Test.Core\Eisk.Test.Core.csproj" />
+    <ProjectReference Include="..\..\DomainServices\Eisk.DomainServices\Eisk.DomainServices.csproj" />
     <ProjectReference Include="..\..\Domains\Eisk.Domains\Eisk.Domains.csproj" />
-    <ProjectReference Include="..\..\Eisk.Shared\Eisk.DataServices.Interfaces\Eisk.DataServices.Interfaces.csproj" />
-    <ProjectReference Include="..\Eisk.DomainServices\Eisk.DomainServices.csproj" />
   </ItemGroup>
 
 </Project>
