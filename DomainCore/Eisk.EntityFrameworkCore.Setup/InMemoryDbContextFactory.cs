@@ -15,7 +15,7 @@ namespace Eisk.EntityFrameworkCore.Setup
         public AppDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseInMemoryDatabase("MyDb" + Guid.NewGuid());
+            optionsBuilder.UseInMemoryDatabase("Eisk-" + Guid.NewGuid());
 
             return new AppDbContext(optionsBuilder.Options);
         }
