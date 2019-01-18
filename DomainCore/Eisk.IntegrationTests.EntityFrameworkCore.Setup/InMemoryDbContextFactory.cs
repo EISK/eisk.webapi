@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using System;
 
-namespace Eisk.DataServices.EntityFrameworkCore.IntegrationTests
+namespace Eisk.DomainServices.IntegrationTests
 {
-    public class TestDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
+    public class InMemoryDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {
         public AppDbContext CreateDbContext()
         {
