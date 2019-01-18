@@ -54,9 +54,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices.Integra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.EntityFrameworkCore.Setup", "DomainCore\Eisk.EntityFrameworkCore.Setup\Eisk.EntityFrameworkCore.Setup.csproj", "{2CBBF1E4-BE73-4531-901A-6E7C33F0F256}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Extended", "DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Extended\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Extended.csproj", "{703AC2BC-9D64-44E5-A7E1-9C268F80A1E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Ext", "DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Extended\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Ext.csproj", "{703AC2BC-9D64-44E5-A7E1-9C268F80A1E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.Extended", "DomainServices\Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.Extended\Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.Extended.csproj", "{2C35EAE5-9A8C-4423-8C0D-B6889B093FF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.Ext", "DomainServices\Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.Extended\Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.Ext.csproj", "{2C35EAE5-9A8C-4423-8C0D-B6889B093FF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
