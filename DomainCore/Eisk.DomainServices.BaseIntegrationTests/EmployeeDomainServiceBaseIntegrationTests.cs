@@ -30,7 +30,7 @@ namespace Eisk.DomainServices.BaseIntegrationTests
 
             //Assert
             Assert.NotNull(returnEmployee);
-            Assert.Equal(firstName, returnEmployee.FirstOrDefault().FirstName);
+            Assert.Equal(firstName, returnEmployee.FirstOrDefault()?.FirstName);
         }
     }
 }

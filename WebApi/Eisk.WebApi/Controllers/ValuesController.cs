@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Globalization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Eisk.WebApi.Controllers
@@ -13,7 +12,7 @@ namespace Eisk.WebApi.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2..", DateTime.UtcNow.ToString() };
+            return new[] { "value1", "value2..", DateTime.UtcNow.ToString(CultureInfo.InvariantCulture) };
         }
 
         // GET api/values/5
