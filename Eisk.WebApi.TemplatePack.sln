@@ -56,6 +56,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.IntegrationTests.Entit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.Extended", "DomainServices\Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.Extended\Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.Extended.csproj", "{3C8107E3-3ADE-46D5-9C22-DC616286095A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Extended", "DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Extended\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Extended.csproj", "{5FFCA8CA-6B1B-4238-9634-0E9FED043AB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -130,6 +132,10 @@ Global
 		{3C8107E3-3ADE-46D5-9C22-DC616286095A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C8107E3-3ADE-46D5-9C22-DC616286095A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C8107E3-3ADE-46D5-9C22-DC616286095A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FFCA8CA-6B1B-4238-9634-0E9FED043AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FFCA8CA-6B1B-4238-9634-0E9FED043AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FFCA8CA-6B1B-4238-9634-0E9FED043AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FFCA8CA-6B1B-4238-9634-0E9FED043AB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -152,6 +158,7 @@ Global
 		{ABF96432-668C-4D68-B53E-FDE989FFFF83} = {B5994C8A-4916-42F0-A92B-70D46FA7F415}
 		{AF8BE248-A192-4138-A701-8FE8FB61C2F3} = {07B09CE7-77B7-4F0F-9BF1-1CA13B8501D8}
 		{3C8107E3-3ADE-46D5-9C22-DC616286095A} = {B5994C8A-4916-42F0-A92B-70D46FA7F415}
+		{5FFCA8CA-6B1B-4238-9634-0E9FED043AB8} = {8D09A735-BB55-4075-9B06-EAAA18F59781}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4370F72B-9D16-4EBF-8EF5-1F0925FC7CC6}
