@@ -2,6 +2,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Eisk.Domains.ValueObjects;
 
 namespace Eisk.Domains.BaseEntities
 {
@@ -27,7 +28,7 @@ namespace Eisk.Domains.BaseEntities
         [Display(Name = "Birth Date")]
         public DateTime? BirthDate { get; set; }
 
-        //public Address Address { get; set; }
+        public Address Address { get; set; }
 
         [Required(ErrorMessage = "Phone required")]
         [StringLength(24)]
