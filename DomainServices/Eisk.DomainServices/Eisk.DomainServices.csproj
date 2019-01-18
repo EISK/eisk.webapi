@@ -6,8 +6,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Eisk.Core\Eisk.Core.csproj" />
-    <ProjectReference Include="..\..\Domains\Eisk.Domains\Eisk.Domains.csproj" />
-    <ProjectReference Include="..\..\Eisk.Shared\Eisk.DataServices.Interfaces\Eisk.DataServices.Interfaces.csproj" />
+    <ProjectReference Include="..\..\DomainCore\Eisk.DataServices.Interfaces\Eisk.DataServices.Interfaces.csproj" />
+    <ProjectReference Include="..\..\DomainCore\Eisk.Domains\Eisk.Domains.csproj" />
   </ItemGroup>
 
 </Project>

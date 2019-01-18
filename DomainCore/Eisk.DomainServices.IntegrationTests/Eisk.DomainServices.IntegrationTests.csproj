@@ -16,7 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Eisk.Test.Core\Eisk.Test.Core.csproj" />
     <ProjectReference Include="..\..\DomainServices\Eisk.DomainServices\Eisk.DomainServices.csproj" />
-    <ProjectReference Include="..\..\Domains\Eisk.Domains\Eisk.Domains.csproj" />
+    <ProjectReference Include="..\Eisk.Domains\Eisk.Domains.csproj" />
   </ItemGroup>
 
 </Project>
