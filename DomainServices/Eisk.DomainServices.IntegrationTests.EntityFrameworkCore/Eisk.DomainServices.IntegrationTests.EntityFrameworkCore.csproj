@@ -2,18 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-
-    <IsPackable>false</IsPackable>
-
-    <AssemblyName>Eisk.DomainServices.EntityFrameworkCore.IntegrationTests</AssemblyName>
-
-    <RootNamespace>Eisk.DomainServices.EntityFrameworkCore.IntegrationTests</RootNamespace>
-
-    <ApplicationIcon />
-
-    <OutputType>Exe</OutputType>
-
-    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
