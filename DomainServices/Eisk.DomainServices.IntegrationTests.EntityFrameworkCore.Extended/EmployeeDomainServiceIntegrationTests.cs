@@ -1,15 +1,12 @@
 using Eisk.DataServices.EntityFrameworkCore;
-using Eisk.Domains.Employee;
-using Eisk.DomainServices.IntegrationTests;
 using Services.DomainServices;
-using Test.Core.TestBases;
 
-namespace Eisk.DomainServices.EntityFrameworkCore.IntegrationTests
+namespace Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.Extended
 {
-    public class EmployeeDomainServiceIntegrationTests:DomainServiceBaseIntegrationTests<Employee, int>
+    public class EmployeeDomainServiceIntegrationTests : EmployeeDomainServiceBaseIntegrationTests
     {
         public EmployeeDomainServiceIntegrationTests() :
-            base(new EmployeeDomainService(Factory_DataService()), x => x.Id)
+            base(new EmployeeDomainService(Factory_DataService()))
         {
             
         }

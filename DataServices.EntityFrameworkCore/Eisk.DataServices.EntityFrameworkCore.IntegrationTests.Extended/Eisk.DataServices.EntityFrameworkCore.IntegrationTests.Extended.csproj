@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,9 +15,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Eisk.Test.Core\Eisk.Test.Core.csproj" />
-    <ProjectReference Include="..\..\DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\DomainCore\Eisk.DataServices.BaseIntegrationTests\Eisk.DataServices.BaseIntegrationTests.csproj" />
+    <ProjectReference Include="..\..\DomainCore\Eisk.Domains\Eisk.Domains.csproj" />
     <ProjectReference Include="..\..\DomainCore\Eisk.IntegrationTests.EntityFrameworkCore.Setup\Eisk.IntegrationTests.EntityFrameworkCore.Setup.csproj" />
-    <ProjectReference Include="..\Eisk.DomainServices\Eisk.DomainServices.csproj" />
+    <ProjectReference Include="..\Eisk.DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
 </Project>
