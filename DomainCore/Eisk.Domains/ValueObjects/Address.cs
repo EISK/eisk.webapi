@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Eisk.Domains.Employee.Models.ValueObjects
+namespace Eisk.Domains.ValueObjects
 {
     public class Address
     {
