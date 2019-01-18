@@ -1,7 +1,7 @@
-using Eisk.DataServices.IntegrationTests;
-using Eisk.DomainServices.IntegrationTests;
+using Eisk.DataServices.BaseIntegrationTests;
+using Eisk.EntityFrameworkCore.Setup;
 
-namespace Eisk.DataServices.EntityFrameworkCore.IntegrationTests
+namespace Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Extended
 {
     public class EmployeeDataServiceTests: EmployeeDataServiceBaseIntegrationTests
     {

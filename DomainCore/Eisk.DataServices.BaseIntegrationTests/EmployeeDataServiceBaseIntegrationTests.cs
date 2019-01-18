@@ -1,9 +1,8 @@
 using Eisk.DataServices.Interfaces;
 using Eisk.Domains.Employee;
-using Test.Core.TestBases;
-using Xunit;
+using Eisk.Test.Core.TestBases;
 
-namespace Eisk.DataServices.IntegrationTests
+namespace Eisk.DataServices.BaseIntegrationTests
 {
     public abstract class EmployeeDataServiceBaseIntegrationTests : DataServiceBaseIntegrationTests<Employee, int>
     {

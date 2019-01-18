@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Core.DomainService;
+using Eisk.Core.DomainService;
 using Eisk.DataServices.Interfaces;
 using Eisk.Domains.Employee;
 
-namespace Services.DomainServices
+namespace Eisk.DomainServices
 {
     public class EmployeeDomainService : DomainService<Employee, int>
     {

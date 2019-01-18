@@ -1,5 +1,6 @@
 using Eisk.DataServices.EntityFrameworkCore;
-using Services.DomainServices;
+using Eisk.DomainServices.BaseIntegrationTests;
+using Eisk.EntityFrameworkCore.Setup;
 
 namespace Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.Extended
 {

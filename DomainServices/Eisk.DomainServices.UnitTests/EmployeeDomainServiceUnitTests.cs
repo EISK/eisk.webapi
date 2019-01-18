@@ -1,9 +1,7 @@
-using Core.Exceptions;
+using Eisk.Core.Exceptions;
 using Eisk.DataServices.Interfaces;
 using Eisk.Domains.Employee;
 using Moq;
-using Services.DomainServices;
-using Test.Core.TestBases;
 using Xunit;
 
 namespace Eisk.DomainServices.UnitTests

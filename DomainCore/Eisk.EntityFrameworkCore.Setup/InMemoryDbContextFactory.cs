@@ -1,9 +1,9 @@
-﻿using Eisk.DataServices.EntityFrameworkCore.DataContext;
+﻿using System;
+using Eisk.DataServices.EntityFrameworkCore.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using System;
 
-namespace Eisk.DomainServices.IntegrationTests
+namespace Eisk.EntityFrameworkCore.Setup
 {
     public class InMemoryDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {

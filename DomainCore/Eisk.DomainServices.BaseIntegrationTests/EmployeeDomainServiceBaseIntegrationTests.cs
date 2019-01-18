@@ -1,10 +1,9 @@
 using System.Linq;
 using Eisk.Domains.Employee;
-using Services.DomainServices;
-using Test.Core.TestBases;
+using Eisk.Test.Core.TestBases;
 using Xunit;
 
-namespace Eisk.DomainServices.IntegrationTests
+namespace Eisk.DomainServices.BaseIntegrationTests
 {
     public abstract class EmployeeDomainServiceBaseIntegrationTests : DomainServiceBaseIntegrationTests<Employee, int>
     {

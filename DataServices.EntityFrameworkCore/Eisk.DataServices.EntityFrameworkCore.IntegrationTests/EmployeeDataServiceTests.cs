@@ -1,6 +1,6 @@
 using Eisk.Domains.Employee;
-using Eisk.DomainServices.IntegrationTests;
-using Test.Core.TestBases;
+using Eisk.EntityFrameworkCore.Setup;
+using Eisk.Test.Core.TestBases;
 
 namespace Eisk.DataServices.EntityFrameworkCore.IntegrationTests
 {
