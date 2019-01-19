@@ -6,19 +6,21 @@ namespace Eisk.EntityFrameworkCore.Setup
 {
     public class SqlServerDbContext : AppDbContext
     {
-        private IConfiguration _configuration;
-        public SqlServerDbContext(IConfiguration configuration = null) : base(new DbContextOptionsBuilder<AppDbContext>().Options)
+        public SqlServerDbContext(IConfiguration configuration) : this(configuration.GetConnectionString("DefaultSqlConnection")) { }
+
+        private string _connectionString;
+        public SqlServerDbContext(string connectionString = null) : base(new DbContextOptionsBuilder<AppDbContext>().Options)
         {
-            _configuration = configuration;
+            if (string.IsNullOrEmpty(connectionString))
+                connectionString =
+                    "Server=(localdb)\\mssqllocaldb;Database=EiskDb;Trusted_Connection=True;MultipleActiveResultSets=true";
+
+            _connectionString = connectionString;
         }
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = _configuration != null
-                ? _configuration.GetConnectionString("DefaultSqlConnection")
-                :"Server=(localdb)\\mssqllocaldb;Database=EiskDb;Trusted_Connection=True;MultipleActiveResultSets=true";
-
-            optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.UseSqlServer(_connectionString);
         }
     }
 }
