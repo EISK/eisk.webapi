@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Eisk.DataServices.Interfaces;
+using Eisk.DomainServices;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Eisk.WebApi.Controllers
@@ -8,8 +8,8 @@ namespace Eisk.WebApi.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        private IEmployeeDataService _ctx;
-        public ValuesController(IEmployeeDataService ctx)
+        private EmployeeDomainService _ctx;
+        public ValuesController(EmployeeDomainService ctx)
         {
             _ctx = ctx;
         }
