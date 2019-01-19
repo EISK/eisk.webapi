@@ -28,7 +28,7 @@ namespace Eisk.Domains.BaseEntities
         [Display(Name = "Birth Date")]
         public DateTime? BirthDate { get; set; }
 
-        public Address Address { get; set; }
+        //public Address Address { get; set; }
 
         [Required(ErrorMessage = "Phone required")]
         [StringLength(24)]
