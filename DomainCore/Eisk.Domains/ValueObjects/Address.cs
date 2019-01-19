@@ -5,7 +5,7 @@ namespace Eisk.Domains.ValueObjects
     public class Address
     {
         [StringLength(60)]
-        //[Required(ErrorMessage = "Address line required.")]
+        [Required(ErrorMessage = "Address line required.")]
         [Display(Name = "Address line")]
         public string AddressLine { get; set; }
 
@@ -20,7 +20,7 @@ namespace Eisk.Domains.ValueObjects
         [Display(Name = "Postal Code")]
         public string PostalCode { get; set; }
 
-        //[Required(ErrorMessage = "Country required.")]
+        [Required(ErrorMessage = "Country required.")]
         [StringLength(15)]
         public string Country { get; set; }
                 
