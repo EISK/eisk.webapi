@@ -27,10 +27,9 @@ namespace Eisk.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<AppDbContext>(
-                ops => ops.UseSqlServer(Configuration.GetConnectionString("DefaultSqlConnection")));
+            services.AddDbContext<AppDbContext>();
 
-            services.AddTransient<AppDbContext, SqlServerDbContext>();
+            services.AddTransient<AppDbContext, InMemoryDbContext>();
             
             services.AddTransient<IEmployeeDataService, EmployeeDataService>();
 
