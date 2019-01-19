@@ -16,7 +16,7 @@ namespace Eisk.WebApi
         {
             Configuration = configuration;
 
-            DbInitializer.Initialize(new InMemoryDbContext());
+            DbContextDataInitializer.Initialize(new InMemoryDbContext());
         }
 
         public IConfiguration Configuration { get; }

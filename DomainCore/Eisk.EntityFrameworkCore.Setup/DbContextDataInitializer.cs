@@ -5,7 +5,7 @@ using Eisk.Test.Core.DataGen;
 
 namespace Eisk.EntityFrameworkCore.Setup
 {
-    public static class DbInitializer
+    public static class DbContextDataInitializer
     {
         public static void Initialize(AppDbContext context)
         {
