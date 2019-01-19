@@ -1,18 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
+using Eisk.EntityFrameworkCore.Setup;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
 
 namespace Eisk.WebApi.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private InMemoryDbContext _ctx;
+        public ValuesController(InMemoryDbContext ctx)
+        {
+            _ctx = ctx;
+        }
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new[] { "value1", "value2..", DateTime.UtcNow.ToString(CultureInfo.InvariantCulture) };
+            return new[] { _ctx.Employees.First().FirstName };
         }
 
         // GET api/values/5

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Eisk.DataServices.EntityFrameworkCore.DataContext;
+using Eisk.EntityFrameworkCore.Setup;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +12,8 @@ namespace Eisk.WebApi
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+            DbInitializer.Initialize(new InMemoryDbContext());
         }
 
         public IConfiguration Configuration { get; }
@@ -18,6 +22,8 @@ namespace Eisk.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddDbContext<InMemoryDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
