@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Eisk.EntityFrameworkCore.Setup;
+using Eisk.DataServices.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Eisk.WebApi.Controllers
@@ -8,8 +8,8 @@ namespace Eisk.WebApi.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        private InMemoryDbContext _ctx;
-        public ValuesController(InMemoryDbContext ctx)
+        private IEmployeeDataService _ctx;
+        public ValuesController(IEmployeeDataService ctx)
         {
             _ctx = ctx;
         }
@@ -18,7 +18,7 @@ namespace Eisk.WebApi.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new[] { _ctx.Employees.First().FirstName };
+            return new[] { _ctx.GetAll().First().FirstName };
         }
 
         // GET api/values/5

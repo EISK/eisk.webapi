@@ -21,7 +21,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Eisk.Core\Eisk.Core.csproj" />
+    <ProjectReference Include="..\..\DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\DomainCore\Eisk.DataServices.Interfaces\Eisk.DataServices.Interfaces.csproj" />
+    <ProjectReference Include="..\..\DomainCore\Eisk.Domains\Eisk.Domains.csproj" />
     <ProjectReference Include="..\..\DomainCore\Eisk.EntityFrameworkCore.Setup\Eisk.EntityFrameworkCore.Setup.csproj" />
+    <ProjectReference Include="..\..\DomainServices\Eisk.DomainServices\Eisk.DomainServices.csproj" />
   </ItemGroup>
 
 </Project>

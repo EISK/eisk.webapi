@@ -1,4 +1,6 @@
-﻿using Eisk.DataServices.EntityFrameworkCore.DataContext;
+﻿using Eisk.DataServices.EntityFrameworkCore;
+using Eisk.DataServices.EntityFrameworkCore.DataContext;
+using Eisk.DataServices.Interfaces;
 using Eisk.EntityFrameworkCore.Setup;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -24,6 +26,12 @@ namespace Eisk.WebApi
             services.AddMvc();
 
             services.AddDbContext<InMemoryDbContext>();
+
+            services.AddTransient<AppDbContext, InMemoryDbContext>();
+
+            services.AddTransient<IEmployeeDataService, EmployeeDataService>();
+
+            //services.AddTransient<EmployeeDomainService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
