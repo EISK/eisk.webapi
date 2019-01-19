@@ -1,6 +1,7 @@
 ﻿using Eisk.DataServices.EntityFrameworkCore.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using System;
 
 namespace Eisk.EntityFrameworkCore.Setup
 {
@@ -12,12 +13,11 @@ namespace Eisk.EntityFrameworkCore.Setup
         public SqlServerDbContext(string connectionString = null) : base(new DbContextOptionsBuilder<AppDbContext>().Options)
         {
             if (string.IsNullOrEmpty(connectionString))
-                connectionString =
-                    "Server=(localdb)\\mssqllocaldb;Database=EiskDb;Trusted_Connection=True;MultipleActiveResultSets=true";
+                throw new ArgumentNullException(nameof(connectionString));
 
             _connectionString = connectionString;
         }
-        
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(_connectionString);
