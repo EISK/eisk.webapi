@@ -27,18 +27,18 @@ namespace Eisk.EntityFrameworkCore.Setup
 
         public void AddDbContext()
         {
-            //if (_hostingEnvironment.IsDevelopment())
+            if (_hostingEnvironment.IsDevelopment())
                 _services.AddScoped<AppDbContext, InMemoryDbContext>();
-            //else
-                //_services.AddScoped<AppDbContext>(x => new SqlServerDbContext(_configuration));
+            else
+                _services.AddScoped<AppDbContext>(x => new SqlServerDbContext(_configuration));
         }
 
         public static void AddSeedDataToDbContext(IHostingEnvironment hostingEnvironment, IConfiguration configuration)
         {
-            //if (hostingEnvironment.IsDevelopment())
+            if (hostingEnvironment.IsDevelopment())
                 DbContextDataInitializer.Initialize(new InMemoryDbContext());
-            //else
-                //DbContextDataInitializer.Initialize(new SqlServerDbContext(configuration));
+            else
+                DbContextDataInitializer.Initialize(new SqlServerDbContext(configuration));
 
         }
     }
