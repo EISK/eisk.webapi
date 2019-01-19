@@ -26,8 +26,6 @@ namespace Eisk.WebApi
         {
             EntityFrameworkCoreInitializer.Factory(services, Configuration).AddDbContext();
 
-            services.AddScoped<AppDbContext, InMemoryDbContext>();
-
             services.AddTransient<IEmployeeDataService, EmployeeDataService>();
 
             services.AddTransient<EmployeeDomainService>();
