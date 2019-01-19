@@ -6,7 +6,7 @@ namespace Eisk.DataServices.EntityFrameworkCore.IntegrationTests
 {
     public class EmployeeDataServiceTests: DataServiceBaseIntegrationTests<Employee, int>
     {
-        public EmployeeDataServiceTests():base (new EmployeeDataService(new InMemoryDbContextFactory().CreateDbContext()), x => x.Id)
+        public EmployeeDataServiceTests():base (new EmployeeDataService(TestDbContextFactory.CreateDbContext()), x => x.Id)
         {
 
         }

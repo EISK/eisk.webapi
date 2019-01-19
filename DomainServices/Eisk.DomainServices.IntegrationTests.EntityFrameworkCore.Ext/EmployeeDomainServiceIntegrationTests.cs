@@ -14,9 +14,7 @@ namespace Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.Ext
 
         static EmployeeDataService Factory_DataService()
         {
-            var testDb = new InMemoryDbContextFactory();
-
-            EmployeeDataService employeeDataService = new EmployeeDataService(testDb.CreateDbContext());
+            EmployeeDataService employeeDataService = new EmployeeDataService(TestDbContextFactory.CreateDbContext());
 
             return employeeDataService;
         }

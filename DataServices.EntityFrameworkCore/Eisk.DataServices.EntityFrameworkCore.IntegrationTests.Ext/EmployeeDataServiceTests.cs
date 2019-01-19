@@ -5,7 +5,7 @@ namespace Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Ext
 {
     public class EmployeeDataServiceTests: EmployeeDataServiceBaseIntegrationTests
     {
-        public EmployeeDataServiceTests():base (new EmployeeDataService(new InMemoryDbContextFactory().CreateDbContext()))
+        public EmployeeDataServiceTests():base (new EmployeeDataService(TestDbContextFactory.CreateDbContext()))
         {
 
         }
