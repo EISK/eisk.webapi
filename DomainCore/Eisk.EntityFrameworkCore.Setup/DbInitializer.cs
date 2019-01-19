@@ -9,7 +9,7 @@ namespace Eisk.EntityFrameworkCore.Setup
     {
         public static void Initialize(AppDbContext context)
         {
-            //context.Database.EnsureDeleted();
+            context.Database.EnsureDeleted();
 
             context.Database.EnsureCreated();
 
@@ -20,7 +20,9 @@ namespace Eisk.EntityFrameworkCore.Setup
             }
 
             for (int i = 0; i < 10; i++)
-                context.Employees.Add(EntityDataFactory<Employee>.Factory_Entity_Instance());
+                context.Employees.Add(
+                    EntityDataFactory<Employee>.Factory_Entity_Instance( 
+                        x => x.Id = 0));
 
             context.SaveChanges();
         }
