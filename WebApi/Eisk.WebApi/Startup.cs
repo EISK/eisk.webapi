@@ -16,7 +16,7 @@ namespace Eisk.WebApi
         {
             Configuration = configuration;
 
-            DbInitializer.Initialize(new SqlServerDbContext(configuration));
+            DbInitializer.Initialize(new InMemoryDbContext());
         }
 
         public IConfiguration Configuration { get; }
@@ -24,7 +24,7 @@ namespace Eisk.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<AppDbContext>(s => new SqlServerDbContext(Configuration));
+            services.AddScoped<AppDbContext, InMemoryDbContext>();
 
             services.AddTransient<IEmployeeDataService, EmployeeDataService>();
 
