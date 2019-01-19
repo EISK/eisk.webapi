@@ -13,7 +13,7 @@ namespace Eisk.EntityFrameworkCore.Setup
 
             context.Database.EnsureCreated();
 
-            // Look for any students.
+            // Look for any data available.
             if (context.Employees.Any())
             {
                 return; // DB has been seeded
