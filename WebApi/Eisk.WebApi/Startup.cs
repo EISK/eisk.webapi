@@ -1,4 +1,5 @@
 ﻿using Eisk.DataServices.EntityFrameworkCore;
+using Eisk.DataServices.EntityFrameworkCore.DataContext;
 using Eisk.DataServices.Interfaces;
 using Eisk.DomainServices;
 using Eisk.EntityFrameworkCore.Setup;
@@ -15,7 +16,7 @@ namespace Eisk.WebApi
         {
             Configuration = configuration;
 
-            EntityFrameworkCoreInitializer.AddSeedDataToDbContext(env, configuration);
+            DbContextDataInitializer.Initialize(new InMemoryDbContext());
         }
 
         public IConfiguration Configuration { get; }
@@ -23,7 +24,7 @@ namespace Eisk.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            EntityFrameworkCoreInitializer.Factory(services, Configuration).AddDbContext();
+            services.AddScoped<AppDbContext, InMemoryDbContext>();
 
             services.AddTransient<IEmployeeDataService, EmployeeDataService>();
 

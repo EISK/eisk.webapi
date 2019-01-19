@@ -13,7 +13,7 @@ namespace Eisk.DataServices.EntityFrameworkCore.DataContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Employee>().OwnsOne(c => c.Address);
+            modelBuilder.Entity<Employee>().OwnsOne(c => c.Address);
         }
     }
 }
