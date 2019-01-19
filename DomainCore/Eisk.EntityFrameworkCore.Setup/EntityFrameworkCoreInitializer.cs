@@ -1,30 +1,55 @@
 ﻿using Eisk.DataServices.EntityFrameworkCore.DataContext;
-using Eisk.Domains.Employee;
-using System.Linq;
-using Eisk.Test.Core.DataGen;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 
 namespace Eisk.EntityFrameworkCore.Setup
 {
-    public static class EntityFrameworkCoreInitializer
+    public class EntityFrameworkCoreInitializer
     {
-        public static void Initialize(IServiceCollection services)
+        public static EntityFrameworkCoreInitializer Factory(IServiceCollection services, IConfiguration configuration)
         {
-            IServiceProvider serviceProvider = services.BuildServiceProvider();
-            IHostingEnvironment env = serviceProvider.GetService<IHostingEnvironment>();
+            return new EntityFrameworkCoreInitializer(services, configuration);
+        }
 
-            if (env.IsDevelopment())
+        private readonly IServiceCollection _services;
+        private readonly IConfiguration _configuration;
+
+        public EntityFrameworkCoreInitializer(IServiceCollection services, IConfiguration configuration)
+        {
+            _services = services;
+            _configuration = configuration;
+        }
+
+        private IHostingEnvironment _hostingEnvironment;
+        public IHostingEnvironment HostingEnvironment
+        {
+            get
             {
-                services.AddDbContext<InMemoryDbContext>();
-                services.AddTransient<AppDbContext, InMemoryDbContext>();
+                if (_hostingEnvironment == null)
+                {
+                    IServiceProvider serviceProvider = _services.BuildServiceProvider();
+                    _hostingEnvironment = serviceProvider.GetService<IHostingEnvironment>();
+                }
+                return _hostingEnvironment;
             }
+        }
+
+        public void AddDbContext()
+        {
+            if (!HostingEnvironment.IsDevelopment())
+                _services.AddScoped<AppDbContext, InMemoryDbContext>();
             else
-            {
-                services.AddDbContext<SqlServerDbContext>();//pass iconfiguration
-                services.AddTransient<AppDbContext, SqlServerDbContext>();
-            }
+                _services.AddTransient<AppDbContext>(x => new SqlServerDbContext(_configuration));
+        }
+
+        public static void AddSeedDataToDbContext(IHostingEnvironment hostingEnvironment, IConfiguration configuration)
+        {
+            if (!hostingEnvironment.IsDevelopment())
+                DbContextDataInitializer.Initialize(new InMemoryDbContext());
+            else
+                DbContextDataInitializer.Initialize(new SqlServerDbContext(configuration));
 
         }
     }
