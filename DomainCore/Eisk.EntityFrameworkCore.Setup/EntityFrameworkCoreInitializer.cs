@@ -13,40 +13,29 @@ namespace Eisk.EntityFrameworkCore.Setup
             return new EntityFrameworkCoreInitializer(services, configuration);
         }
 
-        private readonly IServiceCollection _services;
-        private readonly IConfiguration _configuration;
-
+        private IServiceCollection _services;
+        private IConfiguration _configuration;
+        private IHostingEnvironment _hostingEnvironment;
         public EntityFrameworkCoreInitializer(IServiceCollection services, IConfiguration configuration)
         {
             _services = services;
             _configuration = configuration;
-        }
 
-        private IHostingEnvironment _hostingEnvironment;
-        public IHostingEnvironment HostingEnvironment
-        {
-            get
-            {
-                if (_hostingEnvironment == null)
-                {
-                    IServiceProvider serviceProvider = _services.BuildServiceProvider();
-                    _hostingEnvironment = serviceProvider.GetService<IHostingEnvironment>();
-                }
-                return _hostingEnvironment;
-            }
+            IServiceProvider serviceProvider = _services.BuildServiceProvider();
+            _hostingEnvironment = serviceProvider.GetService<IHostingEnvironment>();
         }
 
         public void AddDbContext()
         {
-            if (!HostingEnvironment.IsDevelopment())
+            if (_hostingEnvironment.IsDevelopment())
                 _services.AddScoped<AppDbContext, InMemoryDbContext>();
             else
-                _services.AddTransient<AppDbContext>(x => new SqlServerDbContext(_configuration));
+                _services.AddScoped<AppDbContext>(x => new SqlServerDbContext(_configuration));
         }
 
         public static void AddSeedDataToDbContext(IHostingEnvironment hostingEnvironment, IConfiguration configuration)
         {
-            if (!hostingEnvironment.IsDevelopment())
+            if (hostingEnvironment.IsDevelopment())
                 DbContextDataInitializer.Initialize(new InMemoryDbContext());
             else
                 DbContextDataInitializer.Initialize(new SqlServerDbContext(configuration));
