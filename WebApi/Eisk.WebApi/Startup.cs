@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using Castle.DynamicProxy.Generators.Emitters.SimpleAST;
 using Microsoft.EntityFrameworkCore;
 
 namespace Eisk.WebApi
@@ -18,7 +19,7 @@ namespace Eisk.WebApi
         {
             Configuration = configuration;
 
-            DbInitializer.Initialize(new InMemoryDbContext());
+            DbInitializer.Initialize(new SqlServerDbContext());
         }
 
         public IConfiguration Configuration { get; }
@@ -27,10 +28,8 @@ namespace Eisk.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<AppDbContext>();
+            services.AddScoped<AppDbContext, SqlServerDbContext>();
 
-            services.AddTransient<AppDbContext, InMemoryDbContext>();
-            
             services.AddTransient<IEmployeeDataService, EmployeeDataService>();
 
             services.AddTransient<EmployeeDomainService>();

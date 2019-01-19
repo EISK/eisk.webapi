@@ -13,15 +13,16 @@ namespace Eisk.Domains.BaseEntities
         public int Id { get; set; }
 
         [Display(Name = "Title of Courtesy")]
+        [StringLength(50)]
         public TitleOfCourtesy? TitleOfCourtesy { get; set; }
 
         [Required(ErrorMessage = "First name required.")]
-        [StringLength(10)]
+        [StringLength(50)]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         [Required(ErrorMessage = "Last name required.")]
-        [StringLength(20)]
+        [StringLength(50)]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
@@ -31,10 +32,10 @@ namespace Eisk.Domains.BaseEntities
         //public Address Address { get; set; }
 
         [Required(ErrorMessage = "Phone required")]
-        [StringLength(24)]
+        [StringLength(50)]
         public string Phone { get; set; }
 
-        [StringLength(4)]
+        [StringLength(50)]
         public string Extension { get; set; }
 
         [DataType(DataType.MultilineText)]
