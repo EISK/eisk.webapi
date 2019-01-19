@@ -28,7 +28,7 @@ namespace Eisk.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddScoped<AppDbContext, SqlServerDbContext>();
+            services.AddScoped<AppDbContext>(s => new SqlServerDbContext());
 
             services.AddTransient<IEmployeeDataService, EmployeeDataService>();
 
