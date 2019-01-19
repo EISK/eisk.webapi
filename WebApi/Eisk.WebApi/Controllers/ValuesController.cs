@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
+using Eisk.Domains.Employee;
 using Eisk.DomainServices;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,9 +16,9 @@ namespace Eisk.WebApi.Controllers
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Employee> Get()
         {
-            return new[] { _ctx.GetAll().First().FirstName };
+            return _ctx.GetAll();
         }
 
         // GET api/values/5
