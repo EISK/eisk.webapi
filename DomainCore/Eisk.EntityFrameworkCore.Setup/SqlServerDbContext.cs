@@ -8,7 +8,7 @@ namespace Eisk.EntityFrameworkCore.Setup
     {
         public SqlServerDbContext(IConfiguration configuration) : this(configuration.GetConnectionString("DefaultSqlConnection")) { }
 
-        private string _connectionString;
+        private readonly string _connectionString;
         public SqlServerDbContext(string connectionString = null) : base(new DbContextOptionsBuilder<AppDbContext>().Options)
         {
             if (string.IsNullOrEmpty(connectionString))

@@ -1,5 +1,4 @@
 ﻿using Eisk.DataServices.EntityFrameworkCore;
-using Eisk.DataServices.EntityFrameworkCore.DataContext;
 using Eisk.DataServices.Interfaces;
 using Eisk.DomainServices;
 using Eisk.EntityFrameworkCore.Setup;

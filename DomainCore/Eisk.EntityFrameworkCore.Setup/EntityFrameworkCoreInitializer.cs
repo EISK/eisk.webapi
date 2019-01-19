@@ -13,9 +13,9 @@ namespace Eisk.EntityFrameworkCore.Setup
             return new EntityFrameworkCoreInitializer(services, configuration);
         }
 
-        private IServiceCollection _services;
-        private IConfiguration _configuration;
-        private IHostingEnvironment _hostingEnvironment;
+        private readonly IServiceCollection _services;
+        private readonly IConfiguration _configuration;
+        private readonly IHostingEnvironment _hostingEnvironment;
         public EntityFrameworkCoreInitializer(IServiceCollection services, IConfiguration configuration)
         {
             _services = services;
