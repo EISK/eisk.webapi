@@ -9,6 +9,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Eisk.Test.Core\Eisk.Test.Core.csproj" />
-    <ProjectReference Include="..\..\DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore\Eisk.DataServices.EFCore.csproj" />
+    <ProjectReference Include="..\..\DataServices.EFCore\Eisk.DataServices.EFCore\Eisk.DataServices.EFCore.csproj" />
   </ItemGroup>
 </Project>

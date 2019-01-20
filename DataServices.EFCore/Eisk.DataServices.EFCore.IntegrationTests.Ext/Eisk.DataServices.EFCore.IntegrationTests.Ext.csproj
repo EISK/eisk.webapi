@@ -14,9 +14,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Eisk.Test.Core\Eisk.Test.Core.csproj" />
+    <ProjectReference Include="..\..\DomainCore\Eisk.DataServices.BaseIntegrationTests\Eisk.DataServices.BaseIntegrationTests.csproj" />
     <ProjectReference Include="..\..\DomainCore\Eisk.Domains\Eisk.Domains.csproj" />
-    <ProjectReference Include="..\..\DomainCore\Eisk.EntityFrameworkCore.Setup\Eisk.EFCore.Setup.csproj" />
-    <ProjectReference Include="..\Eisk.DataServices.EntityFrameworkCore\Eisk.DataServices.EFCore.csproj" />
+    <ProjectReference Include="..\..\DomainCore\Eisk.EFCore.Setup\Eisk.EFCore.Setup.csproj" />
   </ItemGroup>
 
 </Project>
