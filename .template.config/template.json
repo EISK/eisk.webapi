@@ -17,6 +17,27 @@
       "path": ".\\Core\\Eisk.Core\\Eisk.Core.csproj"
     },
     {
+      "path": ".\\DomainCore\\Eisk.Domains\\Eisk.Domains.csproj"
+    },
+    {
+      "path": ".\\DomainCore\\Eisk.DataServices.Interfaces\\Eisk.DataServices.Interfaces.csproj"
+    },
+    {
+      "path": ".\\DomainCore\\Eisk.EntityFrameworkCore.Setup\\Eisk.EntityFrameworkCore.Setup.csproj"
+    },
+    {
+      "path": ".\\DataServices.EntityFrameworkCore\\Eisk.DataServices.EntityFrameworkCore\\Eisk.DataServices.EntityFrameworkCore.csproj"
+    },
+    {
+      "path": ".\\DataServices.EntityFrameworkCore\\Eisk.DataServices.EntityFrameworkCore.IntegrationTests\\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.csproj"
+    },
+    {
+      "path": ".\\DomainServices\\Eisk.DomainServices\\Eisk.DomainServices.csproj"
+    },
+    {
+      "path": ".\\DomainServices\\Eisk.DomainServices.IntegrationTests.EntityFrameworkCore\\Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.csproj"
+    },
+    {
       "path": ".\\WebApi\\Eisk.WebApi\\Eisk.WebApi.csproj"
     },
     {
