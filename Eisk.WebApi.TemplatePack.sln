@@ -36,9 +36,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices.UnitTes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainCore", "DomainCore", "{07B09CE7-77B7-4F0F-9BF1-1CA13B8501D8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.EntityFrameworkCore", "DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.csproj", "{B6CF13CC-A394-4CA4-85BC-D8B9DAE73FA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.EFCore", "DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore\Eisk.DataServices.EFCore.csproj", "{B6CF13CC-A394-4CA4-85BC-D8B9DAE73FA5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.EntityFrameworkCore.IntegrationTests", "DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.IntegrationTests\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.csproj", "{A0F69A4C-681B-46AC-BA36-C7CF1FC828E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.EFCore.IntegrationTests", "DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.IntegrationTests\Eisk.DataServices.EFCore.IntegrationTests.csproj", "{A0F69A4C-681B-46AC-BA36-C7CF1FC828E6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisk.WebApi.TemplatePack", "Eisk.WebApi.TemplatePack\Eisk.WebApi.TemplatePack.csproj", "{8824BF10-E351-4F9E-B462-B86F51CA234E}"
 EndProject
@@ -52,11 +52,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices.BaseInt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.EFCore.Setup", "DomainCore\Eisk.EntityFrameworkCore.Setup\Eisk.EFCore.Setup.csproj", "{2CBBF1E4-BE73-4531-901A-6E7C33F0F256}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Ext", "DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Ext\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Ext.csproj", "{BA82C8F8-0507-4925-814B-2EF2BACB0467}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DataServices.EFCore.IntegrationTests.Ext", "DataServices.EntityFrameworkCore\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.Ext\Eisk.DataServices.EFCore.IntegrationTests.Ext.csproj", "{BA82C8F8-0507-4925-814B-2EF2BACB0467}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices.IntegrationTests.EFCore", "DomainServices\Eisk.DomainServices.IntegrationTests.EntityFrameworkCore\Eisk.DomainServices.IntegrationTests.EFCore.csproj", "{4F95EAB9-879D-4A72-884F-3866584AEA38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices.IntegrationTests.EFCore", "DomainServices\Eisk.DomainServices.IntegrationTests.EFCore\Eisk.DomainServices.IntegrationTests.EFCore.csproj", "{10E7F578-B9A1-4012-AFD5-FFA9C3F8DCBA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices.IntegrationTests.EFCore.Ext", "DomainServices\Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.Ext\Eisk.DomainServices.IntegrationTests.EFCore.Ext.csproj", "{9DE6EBE9-8F64-4D7D-AD64-D71AD0D60996}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices.IntegrationTests.EFCore.Ext", "DomainServices\Eisk.DomainServices.IntegrationTests.EFCore.Ext\Eisk.DomainServices.IntegrationTests.EFCore.Ext.csproj", "{52EDACAE-A045-4FDC-8401-3AB0F4B30964}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -128,14 +128,14 @@ Global
 		{BA82C8F8-0507-4925-814B-2EF2BACB0467}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA82C8F8-0507-4925-814B-2EF2BACB0467}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA82C8F8-0507-4925-814B-2EF2BACB0467}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F95EAB9-879D-4A72-884F-3866584AEA38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F95EAB9-879D-4A72-884F-3866584AEA38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F95EAB9-879D-4A72-884F-3866584AEA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F95EAB9-879D-4A72-884F-3866584AEA38}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DE6EBE9-8F64-4D7D-AD64-D71AD0D60996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DE6EBE9-8F64-4D7D-AD64-D71AD0D60996}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DE6EBE9-8F64-4D7D-AD64-D71AD0D60996}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DE6EBE9-8F64-4D7D-AD64-D71AD0D60996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10E7F578-B9A1-4012-AFD5-FFA9C3F8DCBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10E7F578-B9A1-4012-AFD5-FFA9C3F8DCBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10E7F578-B9A1-4012-AFD5-FFA9C3F8DCBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10E7F578-B9A1-4012-AFD5-FFA9C3F8DCBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52EDACAE-A045-4FDC-8401-3AB0F4B30964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52EDACAE-A045-4FDC-8401-3AB0F4B30964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52EDACAE-A045-4FDC-8401-3AB0F4B30964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52EDACAE-A045-4FDC-8401-3AB0F4B30964}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -157,8 +157,8 @@ Global
 		{E6687E44-A171-46D8-9361-5C07E706CD17} = {07B09CE7-77B7-4F0F-9BF1-1CA13B8501D8}
 		{2CBBF1E4-BE73-4531-901A-6E7C33F0F256} = {07B09CE7-77B7-4F0F-9BF1-1CA13B8501D8}
 		{BA82C8F8-0507-4925-814B-2EF2BACB0467} = {8D09A735-BB55-4075-9B06-EAAA18F59781}
-		{4F95EAB9-879D-4A72-884F-3866584AEA38} = {B5994C8A-4916-42F0-A92B-70D46FA7F415}
-		{9DE6EBE9-8F64-4D7D-AD64-D71AD0D60996} = {B5994C8A-4916-42F0-A92B-70D46FA7F415}
+		{10E7F578-B9A1-4012-AFD5-FFA9C3F8DCBA} = {B5994C8A-4916-42F0-A92B-70D46FA7F415}
+		{52EDACAE-A045-4FDC-8401-3AB0F4B30964} = {B5994C8A-4916-42F0-A92B-70D46FA7F415}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4370F72B-9D16-4EBF-8EF5-1F0925FC7CC6}
