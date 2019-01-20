@@ -1,8 +1,8 @@
-﻿using Eisk.DataServices.EntityFrameworkCore;
-using Eisk.DataServices.EntityFrameworkCore.DataContext;
+﻿using Eisk.DataServices.EFCore;
+using Eisk.DataServices.EFCore.DataContext;
 using Eisk.DataServices.Interfaces;
 using Eisk.DomainServices;
-using Eisk.EntityFrameworkCore.Setup;
+using Eisk.EFCore.Setup;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

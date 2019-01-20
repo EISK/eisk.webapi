@@ -57,6 +57,7 @@
     <None Include="template\Eisk.WebApi.proj" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="index.html" />
     <Content Include="Properties\project-icon.png" />
     <Content Include="stylesheet.css" />
     <Content Include="template.pkgdef">

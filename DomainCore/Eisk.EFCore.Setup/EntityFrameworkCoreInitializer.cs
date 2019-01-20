@@ -1,10 +1,10 @@
-﻿using Eisk.DataServices.EntityFrameworkCore.DataContext;
-using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using System;
+using Eisk.DataServices.EFCore.DataContext;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Eisk.EntityFrameworkCore.Setup
+namespace Eisk.EFCore.Setup
 {
     public class EntityFrameworkCoreInitializer
     {

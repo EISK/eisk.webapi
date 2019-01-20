@@ -1,9 +1,9 @@
-﻿using Eisk.DataServices.EntityFrameworkCore.DataContext;
+﻿using System.Linq;
+using Eisk.DataServices.EFCore.DataContext;
 using Eisk.Domains.Employee;
-using System.Linq;
 using Eisk.Test.Core.DataGen;
 
-namespace Eisk.EntityFrameworkCore.Setup
+namespace Eisk.EFCore.Setup
 {
     public static class DbContextDataInitializer
     {

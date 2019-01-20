@@ -1,8 +1,8 @@
-﻿using Eisk.DataServices.EntityFrameworkCore.DataContext;
+﻿using System;
+using Eisk.DataServices.EFCore.DataContext;
 using Microsoft.EntityFrameworkCore;
-using System;
 
-namespace Eisk.EntityFrameworkCore.Setup
+namespace Eisk.EFCore.Setup
 {
     public class InMemoryDbContext : AppDbContext
     {

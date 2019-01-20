@@ -1,6 +1,6 @@
-﻿using Eisk.DataServices.EntityFrameworkCore.DataContext;
+﻿using Eisk.DataServices.EFCore.DataContext;
 
-namespace Eisk.EntityFrameworkCore.Setup
+namespace Eisk.EFCore.Setup
 {
     public static class TestDbContextFactory
     {

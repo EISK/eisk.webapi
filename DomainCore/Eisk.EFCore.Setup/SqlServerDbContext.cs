@@ -1,9 +1,9 @@
-﻿using Eisk.DataServices.EntityFrameworkCore.DataContext;
+﻿using System;
+using Eisk.DataServices.EFCore.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System;
 
-namespace Eisk.EntityFrameworkCore.Setup
+namespace Eisk.EFCore.Setup
 {
     public class SqlServerDbContext : AppDbContext
     {
