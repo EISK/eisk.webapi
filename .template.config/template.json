@@ -23,16 +23,16 @@
       "path": ".\\DomainCore\\Eisk.DataServices.Interfaces\\Eisk.DataServices.Interfaces.csproj"
     },
     {
-      "path": ".\\DomainCore\\Eisk.EntityFrameworkCore.Setup\\Eisk.EntityFrameworkCore.Setup.csproj"
+      "path": ".\\DomainCore\\Eisk.EFCore.Setup\\Eisk.EFCore.Setup.csproj"
     },
     {
-      "path": ".\\DataServices.EntityFrameworkCore\\Eisk.DataServices.EntityFrameworkCore\\Eisk.DataServices.EntityFrameworkCore.csproj"
+      "path": ".\\DataServices.EFCore\\Eisk.DataServices.EFCore\\Eisk.DataServices.EFCore.csproj"
     },
     {
       "path": ".\\DomainServices\\Eisk.DomainServices\\Eisk.DomainServices.csproj"
     },
     {
-      "path": ".\\DomainServices\\Eisk.DomainServices.IntegrationTests.EntityFrameworkCore\\Eisk.DomainServices.IntegrationTests.EntityFrameworkCore.csproj"
+      "path": ".\\DomainServices\\Eisk.DomainServices.IntegrationTests.EFCore\\Eisk.DomainServices.IntegrationTests.EFCore.csproj"
     },
     {
       "path": ".\\WebApi\\Eisk.WebApi\\Eisk.WebApi.csproj"
