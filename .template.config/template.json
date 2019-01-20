@@ -29,9 +29,6 @@
       "path": ".\\DataServices.EntityFrameworkCore\\Eisk.DataServices.EntityFrameworkCore\\Eisk.DataServices.EntityFrameworkCore.csproj"
     },
     {
-      "path": ".\\DataServices.EntityFrameworkCore\\Eisk.DataServices.EntityFrameworkCore.IntegrationTests\\Eisk.DataServices.EntityFrameworkCore.IntegrationTests.csproj"
-    },
-    {
       "path": ".\\DomainServices\\Eisk.DomainServices\\Eisk.DomainServices.csproj"
     },
     {
@@ -42,12 +39,6 @@
     },
     {
       "path": ".\\Core\\Eisk.Test.Core\\Eisk.Test.Core.csproj"
-    },
-    {
-      "path": ".\\Core\\Eisk.Core.Tests\\Eisk.Core.Tests.csproj"
-    },
-    {
-      "path": ".\\Core\\Eisk.Test.Core.Tests\\Eisk.Test.Core.Tests.csproj"
     }
   ]
 }
