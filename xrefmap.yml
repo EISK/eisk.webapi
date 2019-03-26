@@ -1,0 +1,45 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: eisk-get-recognized
+  name: Get Recognized
+  href: docs/support/eisk-get-recognized.html
+- uid: eisk-webapi-architecture
+  name: Architectural Overview
+  href: docs/architecture/index.html
+- uid: eisk-webapi-develop-with-eisk
+  name: Develop With EISK
+  href: docs/application-development/develop-with-eisk.html
+- uid: eisk-webapi-download-options
+  name: EISK Web Api Download options
+  href: docs/get-started/download-options.html
+- uid: eisk-webapi-download-options-dotnet-new
+  name: EISK Web Api - dotnet Cli
+  href: docs/get-started/download-options-dotnet-new.html
+- uid: eisk-webapi-download-options-git
+  name: EISK Web Api - git
+  href: docs/get-started/download-options-git.html
+- uid: eisk-webapi-exception-handling
+  name: Exception Handling
+  href: docs/architecture/exception-handling.html
+- uid: eisk-webapi-get-started
+  name: Getting Started with EISK Web Api
+  href: docs/get-started/index.html
+- uid: eisk-webapi-handson-walkthrough-create-service-api
+  name: Create New Service Api
+  href: docs/application-development/handson-walkthrough-create-service-api.html
+- uid: eisk-webapi-logging
+  name: Logging
+  href: docs/architecture/logging.html
+- uid: eisk-webapi-logical-layers
+  name: Logical Layers
+  href: docs/architecture/logical-layers.html
+- uid: eisk-webapi-technology-stack
+  name: Technology Stack
+  href: docs/technical-reference/technology-stack.html
+- uid: eisk-webapi-testing-services
+  name: Testing Services
+  href: docs/architecture/testing-services.html
+- uid: eisk-webapi-what-is-eisk
+  name: What is EISK?
+  href: docs/get-started/what-is-eisk.html

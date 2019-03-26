@@ -1,0 +1,249 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/1/s/content",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "source_relative_path": "art/layers-architecture.png",
+      "output": {
+        "resource": {
+          "relative_path": "art/layers-architecture.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/application-development/develop-with-eisk.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/application-development/develop-with-eisk.html",
+          "hash": "em81FZY4nnbGY/D5O0a3vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/application-development/handson-walkthrough-create-service-api.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/application-development/handson-walkthrough-create-service-api.html",
+          "hash": "fgA5dw8azge/mWLx0S78TA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/architecture/exception-handling.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/architecture/exception-handling.html",
+          "hash": "9uyBoTR7pI0Ea6W3Jw570Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/architecture/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/architecture/index.html",
+          "hash": "e89HXPt7qSDc9aKC22cPgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/architecture/logging.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/architecture/logging.html",
+          "hash": "KfdmBEQW176YMsBnPVcKTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/architecture/logical-layers.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/architecture/logical-layers.html",
+          "hash": "kjDDvkCJFz8XYy3sWzKKOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/architecture/testing-services.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/architecture/testing-services.html",
+          "hash": "Exx/eAifHHVZFn9ZprYZFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/get-started/download-options-dotnet-new.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/get-started/download-options-dotnet-new.html",
+          "hash": "HB91XvIBimjeUovHTKKFHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/get-started/download-options-git.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/get-started/download-options-git.html",
+          "hash": "Xur+p4+VlRO4vE1BcBj3Sw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/get-started/download-options.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/get-started/download-options.html",
+          "hash": "1YLVUGyDB1RRz0Nehw+mhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/get-started/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/get-started/index.html",
+          "hash": "C9u+mO2f2F5r1II6z9Eh6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/get-started/what-is-eisk.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/get-started/what-is-eisk.html",
+          "hash": "aLvvLj3OmgnePEedb39lHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/support/eisk-get-recognized.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/support/eisk-get-recognized.html",
+          "hash": "fnQnuhrF/+rAc4i+820n3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/technical-reference/technology-stack.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/technical-reference/technology-stack.html",
+          "hash": "ErAqfS2iPluHQ8nWznh0xA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html",
+          "hash": "iq4TDvHh44DmiwXgaAVTsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "index",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "n1ggqv/HMEKi/PwKvp2Zcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
