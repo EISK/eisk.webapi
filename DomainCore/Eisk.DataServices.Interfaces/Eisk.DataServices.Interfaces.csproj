@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Eisk.Core\Eisk.Core.csproj" />
+    <ProjectReference Include="..\Eisk.Domains\Eisk.Domains.csproj" />
+  </ItemGroup>
+
+</Project>
