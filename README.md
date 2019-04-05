@@ -12,7 +12,7 @@ With an optional set of customizable utility classes, samples and tools, it lets
 
 If you like or are using this project to learn or start your solution, please give it a [star](https://github.com/EISK/eisk.webapi). Thanks!
 
-![eisk web api](https://github.com/EISK/eisk/blob/master/eisk-webapi.PNG)
+![eisk web api](https://github.com/EISK/eisk/blob/master/eisk-webapi-small.png)
 
 ## Sample Use Case
 
