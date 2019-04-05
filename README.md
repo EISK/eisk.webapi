@@ -27,10 +27,10 @@ Here is a simple CRUD use case illustrated in the default template:
 
 ## Core Technology Areas
 
-* ASP.NET Core 2.0 (Web Api)
-* Entity Framework Core 2.0
-* C# 7.0
-* Visual Studio 2017
+* ASP.NET Core (Web Api)
+* Entity Framework Core
+* C# 
+* Visual Studio 
 * Azure App Services 
 
 ## System Requirements (Development)
