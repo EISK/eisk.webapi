@@ -25,7 +25,7 @@
     <ProjectReference Include="..\..\DomainCore\Eisk.DataServices.Interfaces\Eisk.DataServices.Interfaces.csproj" />
     <ProjectReference Include="..\..\DomainCore\Eisk.DomainServices\Eisk.DomainServices.csproj" />
     <ProjectReference Include="..\..\DomainCore\Eisk.Domains\Eisk.Domains.csproj" />
-    <ProjectReference Include="..\..\Infrastructure.EFCore\Eisk.EFCore.Setup\Eisk.EFCore.Setup.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Eisk.EFCore.Setup\Eisk.EFCore.Setup.csproj" />
   </ItemGroup>
 
 </Project>
