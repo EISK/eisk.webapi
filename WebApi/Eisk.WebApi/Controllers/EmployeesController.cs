@@ -8,7 +8,7 @@
     {
         public EmployeesController(EmployeeDomainService employeeDomainService):base(employeeDomainService)
         {
-            
+            throw new System.Exception("test");
         }
     }
 }
