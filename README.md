@@ -10,7 +10,7 @@ With an optional set of customizable utility classes, samples and tools, it lets
 
 ## Get Support
 
-Should you have any questions or need any help to implement new cool feature, feel free to ask in [StackOverflow]([ask](https://stackoverflow.com/questions/ask?tags=eisk,webapi,asp.net-core&title=In%20EISK,%20How%20Do%20We%20..) with tag [eisk](https://stackoverflow.com/questions/tagged/eisk).
+Should you have any questions or need any help to implement new cool feature, feel free to [ask in StackOverflow](https://stackoverflow.com/questions/ask?tags=eisk,webapi,asp.net-core&title=In%20EISK,%20How%20Do%20We%20..) with tag [eisk](https://stackoverflow.com/questions/tagged/eisk).
 
 ## Give a Star! :star:
 
@@ -69,4 +69,4 @@ Utilities and code samples as provided in EISK have intentionally been designed 
 
 ## Get Support
 
-Should you have any questions or need any help to implement new cool feature, feel free to ask in [StackOverflow]([ask](https://stackoverflow.com/questions/ask?tags=eisk,webapi,asp.net-core&title=In%20EISK,%20How%20Do%20We%20..) with tag [eisk](https://stackoverflow.com/questions/tagged/eisk).
+Should you have any questions or need any help to implement new cool feature, feel free to [ask in StackOverflow](https://stackoverflow.com/questions/ask?tags=eisk,webapi,asp.net-core&title=In%20EISK,%20How%20Do%20We%20..) with tag [eisk](https://stackoverflow.com/questions/tagged/eisk).
