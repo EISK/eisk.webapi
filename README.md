@@ -1,7 +1,3 @@
-[![Build status](https://dev.azure.com/EiskOps/Eisk/_apis/build/status/Eisk-WebApi-TemplatePack-CI)](https://dev.azure.com/EiskOps/Eisk/_build/latest?definitionId=3)
-
-...
-
 # Getting Started with EISK Web Api
 
 EISK makes it easy to write scalable and secured web api on top of Microsoft's new cutting edge .net core technologies. 
