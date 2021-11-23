@@ -54,7 +54,7 @@ That's it!
 
 After running the created project successfully, you'll get an understanding about how the sample use case has been used to explore cutting edge technologies for building a web api.
 
-Next - you can try some hands-on experience by creating your own api on top of your custom entity and see how quickly you can roll out an enterprise quality web api with similar quality and productivity. 
+Next - you can try some hands-on experience by creating your own api on top of your custom entity and see how quickly you can roll out an enterprise quality web api with similar quality and productivity.
 
 Utilities and code samples as provided in EISK have intentionally been designed to be self explaining. You may still want to get deeper understanding by exploring the documentations:
 
