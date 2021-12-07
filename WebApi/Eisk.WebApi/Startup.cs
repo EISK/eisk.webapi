@@ -15,6 +15,8 @@ namespace Eisk.WebApi
     using DataServices.Interfaces;
     using DomainServices;
     using EFCore.Setup;
+    using Eisk.Core.Exceptions;
+    using Eisk.Core.Logger;
 
     public class Startup
     {
@@ -46,6 +48,9 @@ namespace Eisk.WebApi
 
             services.AddTransient<EmployeeDomainService>();
 
+            //Logging service
+            services.AddSingleton<ILogger, Logger>();
+
             services.AddMvc();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
@@ -76,6 +81,9 @@ namespace Eisk.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            //global exception middleware
+            app.UseMiddleware<GlobalExceptionHandler>();
 
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();

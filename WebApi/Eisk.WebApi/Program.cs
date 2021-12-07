@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore;
+﻿using System.Reflection;
+using System.IO;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using log4net;
+using log4net.Config;
 
 namespace Eisk.WebApi
 {
@@ -7,6 +11,9 @@ namespace Eisk.WebApi
     {
         public static void Main(string[] args)
         {
+            var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+
             BuildWebHost(args).Run();
         }
 
