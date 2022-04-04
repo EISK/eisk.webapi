@@ -58,7 +58,6 @@ Next - you can try some hands-on experience by creating your own api on top of y
 
 Utilities and code samples as provided in EISK have intentionally been designed to be self explaining. You may still want to get deeper understanding by exploring the documentations:
 
-* [Live Demo](https://eiskwebapi.azurewebsites.net)
 * [Hands-on Walk-through](https://eisk.github.io/eisk.webapi/docs/application-development/handson-walkthrough-create-service-api.html)
 * [Logical Layer Architecture](https://eisk.github.io/eisk.webapi/docs/architecture/logical-layers.html)
 * [Technology Stack](https://eisk.github.io/eisk.webapi/docs/technical-reference/technology-stack.html)
