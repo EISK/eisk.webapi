@@ -201,7 +201,7 @@
   },
   "libraries": {
     "Microsoft.NETCore.App/2.0.0": {
-      "sha512": "aEj44yEbsK+XlDwPNSM7CeaYDg33NMk492y2kFRIOMPOVmXvXNO0LTDm8lUhS4Jlm2uNFsIDDH4ggt9lnSDejQ==",
+      "sha512": "/mzXF+UtZef+VpzzN88EpvFq5U6z4rj54ZMq/J968H6pcvyLOmcupmTRpJ3CJm8ILoCGh9WI7qpDdiKtuzswrQ==",
       "type": "package",
       "path": "microsoft.netcore.app/2.0.0",
       "files": [
@@ -481,7 +481,7 @@
       ]
     },
     "Microsoft.NETCore.DotNetAppHost/2.0.0": {
-      "sha512": "dYQNVWNBsO9LldqAyJTt/wYUq2BScXq3ENBaNUjELS3sT53mwrgyPpmoLHsE7H10RzYOHEl5G0sg/jpZGlIAzA==",
+      "sha512": "L4GGkcI/Mxl8PKLRpFdGmLb5oI8sGIR05bDTGkzCoamAjdUl1Zhkov2swjEsZvKYT8kkdiz39LtwyGYuCJxm1A==",
       "type": "package",
       "path": "microsoft.netcore.dotnetapphost/2.0.0",
       "files": [
@@ -495,7 +495,7 @@
       ]
     },
     "Microsoft.NETCore.DotNetHostPolicy/2.0.0": {
-      "sha512": "RAMrQqBFMiF4dbpHJEvcwwXG+ISoKRck8zXlfr49waPc7xllEpv/ANHi4c3pCTkVIdNNSdDYf71YjbkaRSHJgg==",
+      "sha512": "rm7mMn0A93fwyAwVhbyOCcPuu2hZNL0A0dAur9sNG9pEkONPfCEQeF7m2mC8KpqZO0Ol6tpV5J0AF3HTXT3GXA==",
       "type": "package",
       "path": "microsoft.netcore.dotnethostpolicy/2.0.0",
       "files": [
@@ -509,7 +509,7 @@
       ]
     },
     "Microsoft.NETCore.DotNetHostResolver/2.0.0": {
-      "sha512": "LrZ1AcFJF7+da03Is+5RKdqjnDVNnoi1MBRAi4LRif3uO9rRntfNUezeNcG/OO/yGYzyEwGJkioyw8ZWGJiKWg==",
+      "sha512": "uBbjpeSrwsaTCADZCzRk+3aBzNnMqkC4zftJWBsL+Zk+8u+W+/lMb2thM5Y4hiVrv1YQg9t6dKldXzOKkY+pQw==",
       "type": "package",
       "path": "microsoft.netcore.dotnethostresolver/2.0.0",
       "files": [
@@ -538,12 +538,11 @@
       ]
     },
     "NETStandard.Library/2.0.0": {
-      "sha512": "49ZAcrnNn56GIJwGoiaI7NpwcEJ8mjUyfSqVYIJMDhOBzPe8HSHS74swF2H0v8fzj7pxLfcYjS9P5PdIqsTQxw==",
+      "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
       "type": "package",
       "path": "netstandard.library/2.0.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/NETStandard.Library.targets",
@@ -674,23 +673,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VssAdministrator\\.nuget\\packages\\": {},
-    "C:\\hostedtoolcache\\windows\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\alamash\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\a\\1\\s\\build\\content\\DomainCore\\Eisk.Domains\\Eisk.Domains.csproj",
+      "projectUniqueName": "C:\\Users\\alamash\\Source\\Repos\\eisk.webapi-master\\DomainCore\\Eisk.Domains\\Eisk.Domains.csproj",
       "projectName": "Eisk.Domains",
-      "projectPath": "D:\\a\\1\\s\\build\\content\\DomainCore\\Eisk.Domains\\Eisk.Domains.csproj",
-      "packagesPath": "C:\\Users\\VssAdministrator\\.nuget\\packages\\",
-      "outputPath": "D:\\a\\1\\s\\build\\content\\DomainCore\\Eisk.Domains\\obj\\",
+      "projectPath": "C:\\Users\\alamash\\Source\\Repos\\eisk.webapi-master\\DomainCore\\Eisk.Domains\\Eisk.Domains.csproj",
+      "packagesPath": "C:\\Users\\alamash\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alamash\\Source\\Repos\\eisk.webapi-master\\DomainCore\\Eisk.Domains\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\hostedtoolcache\\windows\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\VssAdministrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alamash\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -702,6 +701,7 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
+          "targetAlias": "netcoreapp2.0",
           "projectReferences": {}
         }
       },
@@ -713,19 +713,26 @@
     },
     "frameworks": {
       "netcoreapp2.0": {
+        "targetAlias": "netcoreapp2.0",
         "dependencies": {
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
