@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Eisk.Core.DataService;
@@ -28,8 +28,6 @@ namespace Eisk.Test.Core.TestBases
 
         protected virtual async Task CreateTestEntityToStore(TEntity testEntity)
         {
-            //might pass for sql lite, but fail for sql server
-            //SetIdValueToEntity(testEntity, 100);//TODO: support for generic
             await _dataService.Add(testEntity);
         }
 
@@ -38,8 +36,6 @@ namespace Eisk.Test.Core.TestBases
         {
             //Arrange
             var inputEntity = Factory_Entity();
-            //might pass for sql lite, but fail for sql server
-            SetIdValueToEntity(inputEntity, 100);//TODO: support for generic
             var dataService = GetServiceInstance();
 
             //Act

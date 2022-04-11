@@ -1,0 +1,14 @@
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\bin\Debug\netcoreapp2.0\Eisk.DomainServices.deps.json
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\bin\Debug\netcoreapp2.0\Eisk.DomainServices.dll
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\bin\Debug\netcoreapp2.0\Eisk.DomainServices.pdb
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\bin\Debug\netcoreapp2.0\Eisk.Core.dll
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\bin\Debug\netcoreapp2.0\Eisk.DataServices.Interfaces.dll
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\bin\Debug\netcoreapp2.0\Eisk.Domains.dll
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\bin\Debug\netcoreapp2.0\Eisk.Core.pdb
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\bin\Debug\netcoreapp2.0\Eisk.DataServices.Interfaces.pdb
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\bin\Debug\netcoreapp2.0\Eisk.Domains.pdb
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\obj\Debug\netcoreapp2.0\Eisk.DomainServices.csproj.CoreCompileInputs.cache
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\obj\Debug\netcoreapp2.0\Eisk.DomainServices.AssemblyInfoInputs.cache
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\obj\Debug\netcoreapp2.0\Eisk.DomainServices.AssemblyInfo.cs
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\obj\Debug\netcoreapp2.0\Eisk.DomainServices.dll
+D:\a\1\s\build\content\DomainCore\Eisk.DomainServices\obj\Debug\netcoreapp2.0\Eisk.DomainServices.pdb

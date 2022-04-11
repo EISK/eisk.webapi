@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Eisk.DataServices.EFCore.DataContext;
 using Microsoft.EntityFrameworkCore;
 

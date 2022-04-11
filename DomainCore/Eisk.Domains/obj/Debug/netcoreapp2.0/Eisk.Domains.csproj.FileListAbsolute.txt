@@ -1,0 +1,8 @@
+D:\a\1\s\build\content\DomainCore\Eisk.Domains\bin\Debug\netcoreapp2.0\Eisk.Domains.deps.json
+D:\a\1\s\build\content\DomainCore\Eisk.Domains\bin\Debug\netcoreapp2.0\Eisk.Domains.dll
+D:\a\1\s\build\content\DomainCore\Eisk.Domains\bin\Debug\netcoreapp2.0\Eisk.Domains.pdb
+D:\a\1\s\build\content\DomainCore\Eisk.Domains\obj\Debug\netcoreapp2.0\Eisk.Domains.csproj.CoreCompileInputs.cache
+D:\a\1\s\build\content\DomainCore\Eisk.Domains\obj\Debug\netcoreapp2.0\Eisk.Domains.AssemblyInfoInputs.cache
+D:\a\1\s\build\content\DomainCore\Eisk.Domains\obj\Debug\netcoreapp2.0\Eisk.Domains.AssemblyInfo.cs
+D:\a\1\s\build\content\DomainCore\Eisk.Domains\obj\Debug\netcoreapp2.0\Eisk.Domains.dll
+D:\a\1\s\build\content\DomainCore\Eisk.Domains\obj\Debug\netcoreapp2.0\Eisk.Domains.pdb

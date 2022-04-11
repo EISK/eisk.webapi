@@ -1,4 +1,4 @@
-﻿namespace Eisk.Domains.Enums
+namespace Eisk.Domains.Enums
 {
     public enum TitleOfCourtesy
     {

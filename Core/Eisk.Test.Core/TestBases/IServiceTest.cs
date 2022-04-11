@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Eisk.Test.Core.TestBases
 {

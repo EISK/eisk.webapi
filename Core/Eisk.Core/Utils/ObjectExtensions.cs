@@ -1,4 +1,4 @@
-﻿namespace Eisk.Core.Utils
+namespace Eisk.Core.Utils
 {
     public static class ObjectExtensions
     {

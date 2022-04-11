@@ -1,4 +1,4 @@
-﻿namespace Eisk.Core.Exceptions
+namespace Eisk.Core.Exceptions
 {
     public class InvalidLookupIdParameterException<TEntity>: DomainException<TEntity>
     {
