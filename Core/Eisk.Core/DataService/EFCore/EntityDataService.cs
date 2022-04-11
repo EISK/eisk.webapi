@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Eisk.Core.DataService.EFCore
 {
@@ -29,7 +26,7 @@ namespace Eisk.Core.DataService.EFCore
         public virtual async Task<TEntity> Add(TEntity entity)
         {
             var obj = DbContext.Add(entity);
-
+;
             await DbContext.SaveChangesAsync();
 
             return obj.Entity;

@@ -1,0 +1,17 @@
+D:\a\1\s\build\content\Core\Eisk.Test.Core\bin\Debug\net6.0\Eisk.Test.Core.deps.json
+D:\a\1\s\build\content\Core\Eisk.Test.Core\bin\Debug\net6.0\Eisk.Test.Core.runtimeconfig.json
+D:\a\1\s\build\content\Core\Eisk.Test.Core\bin\Debug\net6.0\Eisk.Test.Core.dll
+D:\a\1\s\build\content\Core\Eisk.Test.Core\bin\Debug\net6.0\Eisk.Test.Core.pdb
+D:\a\1\s\build\content\Core\Eisk.Test.Core\bin\Debug\net6.0\Eisk.Core.dll
+D:\a\1\s\build\content\Core\Eisk.Test.Core\bin\Debug\net6.0\Eisk.Core.pdb
+D:\a\1\s\build\content\Core\Eisk.Test.Core\obj\Debug\net6.0\Eisk.Test.Core.csproj.AssemblyReference.cache
+D:\a\1\s\build\content\Core\Eisk.Test.Core\obj\Debug\net6.0\Eisk.Test.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\a\1\s\build\content\Core\Eisk.Test.Core\obj\Debug\net6.0\Eisk.Test.Core.AssemblyInfoInputs.cache
+D:\a\1\s\build\content\Core\Eisk.Test.Core\obj\Debug\net6.0\Eisk.Test.Core.AssemblyInfo.cs
+D:\a\1\s\build\content\Core\Eisk.Test.Core\obj\Debug\net6.0\Eisk.Test.Core.csproj.CoreCompileInputs.cache
+D:\a\1\s\build\content\Core\Eisk.Test.Core\obj\Debug\net6.0\Eisk.Test.Core.csproj.CopyComplete
+D:\a\1\s\build\content\Core\Eisk.Test.Core\obj\Debug\net6.0\Eisk.Test.Core.dll
+D:\a\1\s\build\content\Core\Eisk.Test.Core\obj\Debug\net6.0\refint\Eisk.Test.Core.dll
+D:\a\1\s\build\content\Core\Eisk.Test.Core\obj\Debug\net6.0\Eisk.Test.Core.pdb
+D:\a\1\s\build\content\Core\Eisk.Test.Core\obj\Debug\net6.0\Eisk.Test.Core.genruntimeconfig.cache
+D:\a\1\s\build\content\Core\Eisk.Test.Core\obj\Debug\net6.0\ref\Eisk.Test.Core.dll

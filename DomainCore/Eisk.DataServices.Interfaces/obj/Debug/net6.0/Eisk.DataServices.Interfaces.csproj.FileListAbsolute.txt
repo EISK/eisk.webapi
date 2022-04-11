@@ -1,0 +1,17 @@
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\bin\Debug\net6.0\Eisk.DataServices.Interfaces.deps.json
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\bin\Debug\net6.0\Eisk.DataServices.Interfaces.dll
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\bin\Debug\net6.0\Eisk.DataServices.Interfaces.pdb
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\bin\Debug\net6.0\Eisk.Core.dll
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\bin\Debug\net6.0\Eisk.Domains.dll
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\bin\Debug\net6.0\Eisk.Core.pdb
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\bin\Debug\net6.0\Eisk.Domains.pdb
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\obj\Debug\net6.0\Eisk.DataServices.Interfaces.csproj.AssemblyReference.cache
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\obj\Debug\net6.0\Eisk.DataServices.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\obj\Debug\net6.0\Eisk.DataServices.Interfaces.AssemblyInfoInputs.cache
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\obj\Debug\net6.0\Eisk.DataServices.Interfaces.AssemblyInfo.cs
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\obj\Debug\net6.0\Eisk.DataServices.Interfaces.csproj.CoreCompileInputs.cache
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\obj\Debug\net6.0\Eisk.DataServices.Interfaces.csproj.CopyComplete
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\obj\Debug\net6.0\Eisk.DataServices.Interfaces.dll
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\obj\Debug\net6.0\refint\Eisk.DataServices.Interfaces.dll
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\obj\Debug\net6.0\Eisk.DataServices.Interfaces.pdb
+D:\a\1\s\build\content\DomainCore\Eisk.DataServices.Interfaces\obj\Debug\net6.0\ref\Eisk.DataServices.Interfaces.dll

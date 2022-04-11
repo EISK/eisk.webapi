@@ -1,0 +1,12 @@
+D:\a\1\s\build\content\Core\Eisk.Core\bin\Debug\net6.0\Eisk.Core.deps.json
+D:\a\1\s\build\content\Core\Eisk.Core\bin\Debug\net6.0\Eisk.Core.dll
+D:\a\1\s\build\content\Core\Eisk.Core\bin\Debug\net6.0\Eisk.Core.pdb
+D:\a\1\s\build\content\Core\Eisk.Core\obj\Debug\net6.0\Eisk.Core.csproj.AssemblyReference.cache
+D:\a\1\s\build\content\Core\Eisk.Core\obj\Debug\net6.0\Eisk.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\a\1\s\build\content\Core\Eisk.Core\obj\Debug\net6.0\Eisk.Core.AssemblyInfoInputs.cache
+D:\a\1\s\build\content\Core\Eisk.Core\obj\Debug\net6.0\Eisk.Core.AssemblyInfo.cs
+D:\a\1\s\build\content\Core\Eisk.Core\obj\Debug\net6.0\Eisk.Core.csproj.CoreCompileInputs.cache
+D:\a\1\s\build\content\Core\Eisk.Core\obj\Debug\net6.0\Eisk.Core.dll
+D:\a\1\s\build\content\Core\Eisk.Core\obj\Debug\net6.0\refint\Eisk.Core.dll
+D:\a\1\s\build\content\Core\Eisk.Core\obj\Debug\net6.0\Eisk.Core.pdb
+D:\a\1\s\build\content\Core\Eisk.Core\obj\Debug\net6.0\ref\Eisk.Core.dll

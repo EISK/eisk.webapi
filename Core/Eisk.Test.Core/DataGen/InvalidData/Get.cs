@@ -1,4 +1,4 @@
-namespace Eisk.Test.Core.DataGen.InvalidData
+﻿namespace Eisk.Test.Core.DataGen.InvalidData
 {
     public class Get
     {

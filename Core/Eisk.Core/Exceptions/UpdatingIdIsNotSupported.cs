@@ -1,4 +1,4 @@
-namespace Eisk.Core.Exceptions
+﻿namespace Eisk.Core.Exceptions
 {
     public class UpdatingIdIsNotSupported<TEntity>: DomainException<TEntity>
 
