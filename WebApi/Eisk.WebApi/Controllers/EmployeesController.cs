@@ -1,6 +1,6 @@
 ﻿namespace Eisk.WebApi.Controllers
 {
-    using Eisk.Core.WebApi;
+    using Core.WebApi;
     using Domains.Entities;
     using DomainServices;
     using Microsoft.AspNetCore.Mvc;
