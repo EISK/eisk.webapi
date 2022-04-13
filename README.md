@@ -20,22 +20,29 @@ Using a simple table entity 'Employee' it demonstrates all aspect of web develop
 
 Here is a simple CRUD use case illustrated in the default template:
 
-* Creating a new employee record
-* Read existing employee records
-* Update an existing employee record
-* Delete existing employee records
+* [C]reating a new employee record
+* [R]ead existing employee records
+* [U]pdate an existing employee record
+* [D]elete existing employee records
+
+### Architecture Overview
+
+* [Onion Arcitecture](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/)
+* [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+* [Domain Driven Design (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design)
 
 ## Core Technology Areas
 
-* ASP.NET Core (Web Api)
-* Entity Framework Core
-* C# 
-* Visual Studio 
-* Azure App Services 
+* [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet
+* [ASP.NET Core (Web Api)](https://dotnet.microsoft.com/en-us/apps/aspnet/apis)
+* [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
+* [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
+* [Visual Studio](https://visualstudio.microsoft.com/)
+* [Azure App Services](https://azure.microsoft.com/en-gb/services/app-service/#overview)
 
 ## System Requirements (Development)
 
-* Visual Studio 2017 ([Free](https://visualstudio.microsoft.com/vs/community/) Community Edition or higher)
+* Visual Studio 2022 ([Free](https://visualstudio.microsoft.com/vs/community/) Community Edition or higher)
 
 ## QuickStart Guide
 
@@ -58,7 +65,7 @@ Next - you can try some hands-on experience by creating your own api on top of y
 
 Utilities and code samples as provided in EISK have intentionally been designed to be self explaining. You may still want to get deeper understanding by exploring the documentations:
 
-* [Live Demo](https://eiskwebapi.azurewebsites.net)
+* [Live Demo](https://eisk-webapi.azurewebsites.net)
 * [Hands-on Walk-through](https://eisk.github.io/eisk.webapi/docs/application-development/handson-walkthrough-create-service-api.html)
 * [Logical Layer Architecture](https://eisk.github.io/eisk.webapi/docs/architecture/logical-layers.html)
 * [Technology Stack](https://eisk.github.io/eisk.webapi/docs/technical-reference/technology-stack.html)
