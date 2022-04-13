@@ -1,7 +1,5 @@
 [![Build status](https://dev.azure.com/EiskOps/Eisk/_apis/build/status/Eisk-WebApi-TemplatePack-CI)](https://dev.azure.com/EiskOps/Eisk/_build/latest?definitionId=3) [![BuitlWithDot.Net shield](https://builtwithdot.net/project/334/eisk/badge)](https://builtwithdot.net/project/334/eisk)
 
-...
-
 # Getting Started with EISK Web Api
 
 EISK makes it easy to write scalable and secured web api on top of Microsoft's new cutting edge .net core technologies. 
@@ -36,9 +34,8 @@ Here is a simple CRUD use case illustrated in the default template:
 * [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet
 * [ASP.NET Core (Web Api)](https://dotnet.microsoft.com/en-us/apps/aspnet/apis)
 * [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
-* [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
+* [C# Programming Language](https://docs.microsoft.com/en-us/dotnet/csharp/)
 * [Visual Studio](https://visualstudio.microsoft.com/)
-* [Azure App Services](https://azure.microsoft.com/en-gb/services/app-service/#overview)
 
 ## System Requirements (Development)
 
