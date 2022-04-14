@@ -3,6 +3,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Eisk.Core.DomainService;
 using Eisk.Core.Exceptions;
+using Eisk.Test.Core.DataGen;
 using Xunit;
 
 namespace Eisk.Test.Core.TestBases
@@ -14,7 +15,7 @@ namespace Eisk.Test.Core.TestBases
         private readonly DomainService<TEntity, TId> _domainService;
 
         protected DomainServiceBaseComponentTests(DomainService<TEntity, TId> domainService,
-            Expression<Func<TEntity, TId>> idExpression) :base(idExpression)
+            Expression<Func<TEntity, TId>> idExpression, EntityDataFactory<TEntity> entityDataFactory) :base(idExpression, entityDataFactory)
         {
             _domainService = domainService;
         }

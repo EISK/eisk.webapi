@@ -2,21 +2,30 @@
 
 namespace Eisk.Domains.TestData
 {
-    using Domains.Entities;
-    using Domains.Enums;
+    using Entities;
+    using Enums;
+    using System;
     using Test.Core.DataGen;
 
     public class EmployeeDataFactory:EntityDataFactory<Employee>
     {
-        public Employee Factory_Entity()
+        public override Employee Factory_Entity(Action<Employee>? action = null)
         {
-            return base.Factory_Entity(AssignEmployee);
+            var employee = base.Factory_Entity( e =>
+            {
+                AssignEmployee(e);
+
+                //supporting custom overrides from user
+                action?.Invoke(e);
+            });
+
+            return employee;
         }
 
         void AssignEmployee(Employee employee)
         {
             var faker = new Faker();
-
+            
             employee.Id = 0;
             employee.ReportsTo = null;
             employee.ReportsToId = null;
@@ -28,7 +37,7 @@ namespace Eisk.Domains.TestData
             employee.BirthDate = faker.Date.Past();
 
             var fakerAddress = faker.Address;
-            employee.Address = new Domains.ValueObjects.Address
+            employee.Address = new ValueObjects.Address
             {
                 AddressLine = fakerAddress.StreetAddress(),
                 City = fakerAddress.City(),
@@ -40,7 +49,7 @@ namespace Eisk.Domains.TestData
             employee.HireDate = faker.Date.Future();
             employee.Title = null;
             employee.Phone = faker.Person.Phone;
-            employee.Extension = null;
+            //employee.Extension = null;
 
             employee.Photo = null;
 

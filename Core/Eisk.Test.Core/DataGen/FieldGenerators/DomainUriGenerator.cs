@@ -2,7 +2,7 @@
 using AutoFixture;
 using AutoFixture.Kernel;
 
-namespace Eisk.Test.Core.DataGen
+namespace Eisk.Test.Core.DataGen.FieldGenerators
 {
     /// <summary>
     /// Creates new <see cref="Uri"/> instances.

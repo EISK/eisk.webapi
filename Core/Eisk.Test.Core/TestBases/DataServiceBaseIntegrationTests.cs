@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Eisk.Core.DataService;
+using Eisk.Test.Core.DataGen;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Eisk.Core.DataService;
 using Xunit;
 
 namespace Eisk.Test.Core.TestBases
@@ -12,8 +14,8 @@ namespace Eisk.Test.Core.TestBases
     {
         private readonly IEntityDataService<TEntity> _dataService;
 
-        protected DataServiceBaseIntegrationTests(IEntityDataService<TEntity> dataService, Expression<Func<TEntity, TId>> idExpression)
-            :base(idExpression)
+        protected DataServiceBaseIntegrationTests(IEntityDataService<TEntity> dataService, Expression<Func<TEntity, TId>> idExpression, EntityDataFactory<TEntity> entityDataFactory = null)
+            :base(idExpression, entityDataFactory)
         {
             _dataService = dataService;
         }
@@ -28,8 +30,6 @@ namespace Eisk.Test.Core.TestBases
 
         protected virtual async Task CreateTestEntityToStore(TEntity testEntity)
         {
-            //might pass for sql lite, but fail for sql server
-            //SetIdValueToEntity(testEntity, 100);//TODO: support for generic
             await _dataService.Add(testEntity);
         }
 
@@ -38,25 +38,6 @@ namespace Eisk.Test.Core.TestBases
         {
             //Arrange
             var inputEntity = Factory_Entity();
-            //might pass for sql lite, but fail for sql server
-            SetIdValueToEntity(inputEntity, 100);//TODO: support for generic
-            var dataService = GetServiceInstance();
-
-            //Act
-            var returnedEntity = await dataService.Add(inputEntity);
-
-            //Assert
-            Assert.NotNull(returnedEntity);
-            Assert.NotEqual(default(TId), GetIdValueFromEntity(returnedEntity));
-        }
-
-        [Fact]
-        public virtual async Task Add_ValidDomainWithRandomIdPassed_ShouldReturnDomainAfterCreation()
-        {
-            //Arrange
-            var inputEntity = Factory_Entity();
-            //might pass for sql lite, but fail for sql server
-            SetIdValueToEntity(inputEntity, 100);//TODO: support for generic
             var dataService = GetServiceInstance();
 
             //Act
@@ -84,10 +65,8 @@ namespace Eisk.Test.Core.TestBases
         {
             //Arrange
             var domain = Factory_Entity();
-            var dataService = GetServiceInstance(async () => 
-            { 
-                await CreateTestEntityToStore(domain);
-            });
+            var dataService = GetServiceInstance();
+            await CreateTestEntityToStore(domain);
 
             var idValue = GetIdValueFromEntity(domain);
             
@@ -120,7 +99,7 @@ namespace Eisk.Test.Core.TestBases
             var dataService = GetServiceInstance();
 
             //Act
-            var returnedEntity = await dataService.GetById(100);//TODO: make it generic random
+            var returnedEntity = await dataService.GetById(RANDOM_ID);//TODO: make it generic random
 
             //Assert
             Assert.Null(returnedEntity);
@@ -132,10 +111,8 @@ namespace Eisk.Test.Core.TestBases
         {
             //Arrange
             var inputEntity = Factory_Entity();
-            var dataService = GetServiceInstance(async () =>
-            {
-                await CreateTestEntityToStore(inputEntity);
-            });
+            var dataService = GetServiceInstance();
+            await CreateTestEntityToStore(inputEntity);
 
             //Act
             var returnedEntity = await dataService.Update(inputEntity);
@@ -166,8 +143,8 @@ namespace Eisk.Test.Core.TestBases
         public virtual async Task Update_ValidDomainWithRandomIdPassed_ShouldThrowException()
         {
             //Arrange
-            var entityWithRandomId = Factory_Entity();
-            SetIdValueToEntity(entityWithRandomId, 100);//TODO: support generic
+            var entityWithRandomId = Factory_EntityWithRandomId();
+            
             var dataService = GetServiceInstance();
 
             //Act
@@ -194,7 +171,8 @@ namespace Eisk.Test.Core.TestBases
         {
             //Arrange
             var inputEntity = Factory_Entity();
-            var dataService = GetServiceInstance(async () => await CreateTestEntityToStore(inputEntity));
+            var dataService = GetServiceInstance();
+            await CreateTestEntityToStore(inputEntity);
             var idValue = GetIdValueFromEntity(inputEntity);
 
             //Act
@@ -223,10 +201,9 @@ namespace Eisk.Test.Core.TestBases
         public virtual async Task Delete_DomainWithRandomIdPassed_ShouldThrowException()
         {
             //Arrange
-            var inputEntity = Factory_Entity();
-            SetIdValueToEntity(inputEntity, 100);//TODO: support generic
+            var inputEntity = Factory_EntityWithRandomId();
             var dataService = GetServiceInstance();
-
+            
             //Act
             var ex = await Record.ExceptionAsync(() => dataService.Delete(inputEntity));
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using AutoFixture.Kernel;
 using Eisk.Core.Utils;
+using Eisk.Test.Core.DataGen.FieldGenerators;
 
 namespace Eisk.Test.Core.DataGen
 {

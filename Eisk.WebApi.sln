@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.DomainServices.Compone
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.WebApi", "WebApi\Eisk.WebApi\Eisk.WebApi.csproj", "{B99A94EA-9D76-4C67-88E2-A1814930E8B5}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eisk.Domains.TestData", "DomainCore\Eisk.Domains.TestData\Eisk.Domains.TestData.csproj", "{E2893FF6-17A0-4C27-9109-12705F62815E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{B99A94EA-9D76-4C67-88E2-A1814930E8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B99A94EA-9D76-4C67-88E2-A1814930E8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B99A94EA-9D76-4C67-88E2-A1814930E8B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2893FF6-17A0-4C27-9109-12705F62815E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2893FF6-17A0-4C27-9109-12705F62815E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2893FF6-17A0-4C27-9109-12705F62815E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2893FF6-17A0-4C27-9109-12705F62815E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +94,7 @@ Global
 		{5C60F4F8-B7A7-4B14-B476-79E138BAF1F9} = {8D09A735-BB55-4075-9B06-EAAA18F59781}
 		{CB7B38B4-9AE5-4B86-BC31-CD74F8690D79} = {8D09A735-BB55-4075-9B06-EAAA18F59781}
 		{B99A94EA-9D76-4C67-88E2-A1814930E8B5} = {9611B3D6-810A-4E98-9166-2DA770E38B81}
+		{E2893FF6-17A0-4C27-9109-12705F62815E} = {07B09CE7-77B7-4F0F-9BF1-1CA13B8501D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4370F72B-9D16-4EBF-8EF5-1F0925FC7CC6}

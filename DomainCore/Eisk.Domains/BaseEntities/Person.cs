@@ -18,12 +18,12 @@ namespace Eisk.Domains.BaseEntities
         public TitleOfCourtesy? TitleOfCourtesy { get; set; }
 
         [Required(ErrorMessage = "First name required.")]
-        [StringLength(15)]
+        [StringLength(50)]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         [Required(ErrorMessage = "Last name required.")]
-        [StringLength(20)]
+        [StringLength(50)]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
@@ -33,7 +33,7 @@ namespace Eisk.Domains.BaseEntities
         public Address Address { get; set; }
 
         [Required(ErrorMessage = "Phone required")]
-        [StringLength(15)]
+        [StringLength(50)]
         public string Phone { get; set; }
 
         [StringLength(4)]

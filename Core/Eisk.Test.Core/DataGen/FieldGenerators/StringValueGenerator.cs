@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Eisk.Test.Core.DataGen
+namespace Eisk.Test.Core.DataGen.FieldGenerators
 {
     public class StringValueGenerator
     {

@@ -23,7 +23,7 @@ builder.Services.AddSwaggerGen(c =>
         {
             Name = "EISK Web Api",
             Email = string.Empty,
-            Url = new Uri("https://eisk.github.io/eisk.webapi")
+            Url = new Uri("https://eisk.github.io")
         }
     });
 });
