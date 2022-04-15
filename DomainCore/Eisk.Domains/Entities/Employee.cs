@@ -10,7 +10,7 @@ namespace Eisk.Domains.Entities
     [Table("Employees")]
     public class Employee : Person
     {
-        [StringLength(5)]
+        [StringLength(20)]
         public string Title { get; set; }
 
         [Display(Name = "Hire Date")]

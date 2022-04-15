@@ -22,6 +22,7 @@ namespace Eisk.Domains.TestData
             return employee;
         }
 
+        string[] _jobTitles = new string[] { "Vice President", "Director", "Manager", "Executive", "Sales Executive", "Management Trainee" };
         void AssignEmployee(Employee employee)
         {
             var faker = new Faker();
@@ -47,9 +48,9 @@ namespace Eisk.Domains.TestData
             };
 
             employee.HireDate = faker.Date.Future();
-            employee.Title = null;
+            employee.Title = faker.PickRandomParam(_jobTitles);
             employee.Phone = faker.Person.Phone;
-            //employee.Extension = null;
+            employee.Extension = faker.Person.Random.Number(0,999).ToString("000");
 
             employee.Photo = null;
 
