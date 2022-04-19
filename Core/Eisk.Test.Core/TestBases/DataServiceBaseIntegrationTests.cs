@@ -14,7 +14,7 @@ public abstract class DataServiceBaseIntegrationTests<TEntity, TId> : EntityTest
     private readonly IEntityDataService<TEntity> _dataService;
 
     protected DataServiceBaseIntegrationTests(IEntityDataService<TEntity> dataService, Expression<Func<TEntity, TId>> idExpression, EntityDataFactory<TEntity> entityDataFactory = null)
-        :base(idExpression, entityDataFactory)
+        : base(idExpression, entityDataFactory)
     {
         _dataService = dataService;
     }
@@ -68,7 +68,7 @@ public abstract class DataServiceBaseIntegrationTests<TEntity, TId> : EntityTest
         await CreateTestEntityToStore(domain);
 
         var idValue = GetIdValueFromEntity(domain);
-        
+
         //Act
         var returnedEntity = await dataService.GetById(idValue);
 
@@ -82,13 +82,13 @@ public abstract class DataServiceBaseIntegrationTests<TEntity, TId> : EntityTest
     {
         //Arrange
         var dataService = GetServiceInstance();
-        
+
         //Act
         var returnedEntity = await dataService.GetById(default(TId));
 
         //Assert
         Assert.Null(returnedEntity);
-        
+
     }
 
     [Fact]
@@ -143,7 +143,7 @@ public abstract class DataServiceBaseIntegrationTests<TEntity, TId> : EntityTest
     {
         //Arrange
         var entityWithRandomId = Factory_EntityWithRandomId();
-        
+
         var dataService = GetServiceInstance();
 
         //Act
@@ -188,7 +188,7 @@ public abstract class DataServiceBaseIntegrationTests<TEntity, TId> : EntityTest
         //Arrange
         var inputEntity = Factory_Entity();
         var dataService = GetServiceInstance();
-        
+
         //Act
         var returnedException = await Record.ExceptionAsync(() => dataService.Delete(inputEntity));
 
@@ -202,7 +202,7 @@ public abstract class DataServiceBaseIntegrationTests<TEntity, TId> : EntityTest
         //Arrange
         var inputEntity = Factory_EntityWithRandomId();
         var dataService = GetServiceInstance();
-        
+
         //Act
         var ex = await Record.ExceptionAsync(() => dataService.Delete(inputEntity));
 

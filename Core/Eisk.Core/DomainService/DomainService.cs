@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Eisk.Core.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Eisk.Core.Exceptions;
 
 namespace Eisk.Core.DomainService;
 

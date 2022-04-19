@@ -1,6 +1,6 @@
-﻿using System;
-using Eisk.DataServices.EFCore.DataContext;
+﻿using Eisk.DataServices.EFCore.DataContext;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Eisk.EFCore.Setup;
 
@@ -11,7 +11,7 @@ public class InMemoryDbContext : AppDbContext
     {
         _uniqueDbName = uniqueDbName;
     }
-    
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         var dbName = "Eisk" + (_uniqueDbName ? Guid.NewGuid().ToString() : string.Empty);

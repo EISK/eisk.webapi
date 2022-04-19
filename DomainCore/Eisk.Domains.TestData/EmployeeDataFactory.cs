@@ -6,13 +6,13 @@ using Eisk.Test.Core.DataGen.DataFactories;
 using Entities;
 using Enums;
 
-public class EmployeeDataFactory:EntityDomainDataFactory<Employee>
+public class EmployeeDataFactory : EntityDomainDataFactory<Employee>
 {
     string[] _jobTitles = new string[] { "Vice President", "Director", "Manager", "Executive", "Sales Executive", "Management Trainee" };
     protected override void AssignDomainData(Employee employee)
     {
         var faker = new Faker();
-        
+
         employee.Id = 0;
         employee.ReportsTo = null;
         employee.ReportsToId = null;
@@ -36,7 +36,7 @@ public class EmployeeDataFactory:EntityDomainDataFactory<Employee>
         employee.HireDate = faker.Date.Future();
         employee.Title = faker.PickRandomParam(_jobTitles);
         employee.Phone = faker.Person.Phone;
-        employee.Extension = faker.Person.Random.Number(0,999).ToString("000");
+        employee.Extension = faker.Person.Random.Number(0, 999).ToString("000");
 
         employee.Photo = null;
 

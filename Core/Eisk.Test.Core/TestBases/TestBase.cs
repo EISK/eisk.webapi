@@ -19,5 +19,5 @@ public abstract class TestBase
         Assert.Equal(expectedException.Message, actualException.Message);
         Assert.Equal(expectedException.ErrorCode, actualException.ErrorCode);
     }
-    
+
 }

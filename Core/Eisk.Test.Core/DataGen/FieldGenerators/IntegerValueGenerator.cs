@@ -13,7 +13,7 @@ public class IntegerValueGenerator
 
     public int Value()
     {
-        return new Random().Next(1,_maxValue);
+        return new Random().Next(1, _maxValue);
     }
 
     public static int RandomInt => new IntegerValueGenerator().Value();

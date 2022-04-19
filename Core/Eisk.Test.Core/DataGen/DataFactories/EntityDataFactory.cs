@@ -1,6 +1,6 @@
-﻿using System;
-using AutoFixture;
+﻿using AutoFixture;
 using AutoFixture.DataAnnotations;
+using System;
 
 namespace Eisk.Test.Core.DataGen.DataFactories;
 

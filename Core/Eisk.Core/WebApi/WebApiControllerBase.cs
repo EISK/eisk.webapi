@@ -1,16 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Eisk.Core.DomainService;
+﻿using Eisk.Core.DomainService;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Eisk.Core.WebApi;
 
 [ApiController]
 [Route("api/[controller]")]
-public abstract class WebApiControllerBase<TDomain,TId>: ControllerBase
+public abstract class WebApiControllerBase<TDomain, TId> : ControllerBase
     where TDomain : class, new()
 {
-    protected DomainService<TDomain,TId> DomainService;
+    protected DomainService<TDomain, TId> DomainService;
     protected WebApiControllerBase(DomainService<TDomain, TId> domainService)
     {
         DomainService = domainService;

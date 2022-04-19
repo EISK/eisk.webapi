@@ -9,8 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 [Route("[controller]")]
 public class EmployeesController : WebApiControllerBase<Employee, int>
 {
-    public EmployeesController(EmployeeDomainService employeeDomainService):base(employeeDomainService)
+    public EmployeesController(EmployeeDomainService employeeDomainService) : base(employeeDomainService)
     {
-        
+
     }
 }

@@ -1,7 +1,7 @@
-﻿using System;
-using System.Linq.Expressions;
-using Eisk.Core.Utils;
+﻿using Eisk.Core.Utils;
 using Eisk.Test.Core.DataGen.DataFactories;
+using System;
+using System.Linq.Expressions;
 
 namespace Eisk.Test.Core.TestBases;
 
@@ -9,13 +9,13 @@ public abstract class EntityTestBase<TEntity, TId> : TestBase
     where TEntity : class, new()
 {
     protected readonly Expression<Func<TEntity, TId>> DbIdExpression;
-    
+
     EntityDataFactory<TEntity> _entityDataFactory;
     protected EntityDataFactory<TEntity> EntityDataFactory
     {
         get
         {
-            if (_entityDataFactory == null) 
+            if (_entityDataFactory == null)
                 _entityDataFactory = new EntityDataFactory<TEntity>();
 
             return _entityDataFactory; ;

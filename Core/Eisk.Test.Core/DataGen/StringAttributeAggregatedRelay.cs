@@ -1,10 +1,10 @@
-﻿using System;
+﻿using AutoFixture.Kernel;
+using Eisk.Core.Utils;
+using Eisk.Test.Core.DataGen.FieldGenerators;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
-using AutoFixture.Kernel;
-using Eisk.Core.Utils;
-using Eisk.Test.Core.DataGen.FieldGenerators;
 
 namespace Eisk.Test.Core.DataGen;
 

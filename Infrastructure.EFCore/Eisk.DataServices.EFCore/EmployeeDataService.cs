@@ -1,14 +1,14 @@
+using Eisk.Core.DataService.EFCore;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Eisk.Core.DataService.EFCore;
-using Microsoft.EntityFrameworkCore;
 
 namespace Eisk.DataServices.EFCore;
 
 using DataContext;
-using Interfaces;
 using Domains.Entities;
+using Interfaces;
 
 public class EmployeeDataService : EntityDataService<Employee>, IEmployeeDataService
 {

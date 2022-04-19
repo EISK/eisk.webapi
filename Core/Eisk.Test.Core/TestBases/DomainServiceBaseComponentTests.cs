@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
-using Eisk.Core.DomainService;
+﻿using Eisk.Core.DomainService;
 using Eisk.Core.Exceptions;
 using Eisk.Test.Core.DataGen.DataFactories;
+using System;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Eisk.Test.Core.TestBases;
@@ -15,7 +15,7 @@ public abstract class DomainServiceBaseComponentTests<TEntity, TId> : EntityTest
     private readonly DomainService<TEntity, TId> _domainService;
 
     protected DomainServiceBaseComponentTests(DomainService<TEntity, TId> domainService,
-        Expression<Func<TEntity, TId>> idExpression, EntityDataFactory<TEntity> entityDataFactory) :base(idExpression, entityDataFactory)
+        Expression<Func<TEntity, TId>> idExpression, EntityDataFactory<TEntity> entityDataFactory) : base(idExpression, entityDataFactory)
     {
         _domainService = domainService;
     }
@@ -134,7 +134,7 @@ public abstract class DomainServiceBaseComponentTests<TEntity, TId> : EntityTest
 
         //Act + Assert
         await domainService.Delete(idValue);
-        
+
     }
 
     [Fact]
@@ -146,6 +146,6 @@ public abstract class DomainServiceBaseComponentTests<TEntity, TId> : EntityTest
 
         //Act + Assert
         await Assert.ThrowsAsync<InvalidLookupIdParameterException<TEntity>>(() => domainService.Delete(emptyIdValue));
-        
+
     }
 }

@@ -26,7 +26,7 @@ public class EntityDataService<TEntity> : IEntityDataService<TEntity> where TEnt
     public virtual async Task<TEntity> Add(TEntity entity)
     {
         var obj = DbContext.Add(entity);
-;
+        ;
         await DbContext.SaveChangesAsync();
 
         return obj.Entity;

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Eisk.Domains.Enums;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Eisk.Domains.Enums;
 
 namespace Eisk.Domains.BaseEntities;
 

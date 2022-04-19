@@ -13,9 +13,9 @@ public abstract class DataServiceSqlServerBaseIntegrationTests<TEntity, TId> : D
     where TEntity : class, new()
 {
     protected DataServiceSqlServerBaseIntegrationTests(IEntityDataService<TEntity> dataService, Expression<Func<TEntity, TId>> idExpression, EntityDataFactory<TEntity> entityDataFactory = null)
-        :base(dataService, idExpression, entityDataFactory)
+        : base(dataService, idExpression, entityDataFactory)
     {
-        
+
     }
 
 

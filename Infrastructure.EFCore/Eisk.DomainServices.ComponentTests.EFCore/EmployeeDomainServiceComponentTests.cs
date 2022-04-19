@@ -11,7 +11,7 @@ public class EmployeeDomainServiceComponentTests : DomainServiceBaseComponentTes
     public EmployeeDomainServiceComponentTests() :
         base(new EmployeeDomainService(Factory_DataService()), x => x.Id, new EmployeeDataFactory())
     {
-        
+
     }
 
     static EmployeeDataService Factory_DataService()

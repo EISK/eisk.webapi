@@ -1,6 +1,6 @@
-﻿using System;
-using AutoFixture;
+﻿using AutoFixture;
 using AutoFixture.Kernel;
+using System;
 
 namespace Eisk.Test.Core.DataGen.FieldGenerators;
 

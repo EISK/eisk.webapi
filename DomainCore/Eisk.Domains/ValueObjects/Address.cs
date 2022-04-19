@@ -23,5 +23,5 @@ public class Address
     [Required(ErrorMessage = "Country required.")]
     [StringLength(80)]
     public string Country { get; set; }
-            
+
 }
