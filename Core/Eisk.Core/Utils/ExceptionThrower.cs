@@ -1,14 +1,13 @@
-namespace Eisk.Core.Utils
+namespace Eisk.Core.Utils;
+
+using Exceptions;
+
+public class ExceptionThrower
 {
-    using Exceptions;
 
-    public class ExceptionThrower
+    public static void Throws<T>()
+        where T : CoreException, new()
     {
-
-        public static void Throws<T>()
-            where T : CoreException, new()
-        {
-            throw new T();
-        }
+        throw new T();
     }
 }

@@ -1,12 +1,11 @@
-namespace Eisk.Test.Core.DataGen.InvalidData
+namespace Eisk.Test.Core.DataGen.InvalidData;
+
+using FieldGenerators;
+
+public class InvalidEmail : StringValueGenerator
 {
-    using FieldGenerators;
-
-    public class InvalidEmail : StringValueGenerator
+    public InvalidEmail(bool generateUniqueValue = true, string value = "invalid_email") : base(generateUniqueValue, value)
     {
-        public InvalidEmail(bool generateUniqueValue = true, string value = "invalid_email") : base(generateUniqueValue, value)
-        {
 
-        }
     }
 }

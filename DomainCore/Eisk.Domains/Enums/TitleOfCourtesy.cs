@@ -1,7 +1,6 @@
-﻿namespace Eisk.Domains.Enums
+﻿namespace Eisk.Domains.Enums;
+
+public enum TitleOfCourtesy
 {
-    public enum TitleOfCourtesy
-    {
-        Mr, Dr, Mrs, Ms
-    }
+    Mr, Dr, Mrs, Ms
 }
