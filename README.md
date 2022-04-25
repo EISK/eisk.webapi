@@ -52,7 +52,7 @@ Once the contents are available, just open the created solution, select "Eisk.We
 
 That's it!
 
-## How About Old Versions?
+### How About Old Versions?
 
 If you want to continue using one of the older versions of EISK, check the [releases](https://github.com/EISK/eisk.webapi/releases) page for specific instructions to install and use older versions of EISK.
 
