@@ -1,5 +1,7 @@
 [![Build status](https://dev.azure.com/EiskOps/Eisk/_apis/build/status/Eisk-WebApi-TemplatePack-CI)](https://dev.azure.com/EiskOps/Eisk/_build/latest?definitionId=3) [![BuitlWithDot.Net shield](https://builtwithdot.net/project/334/eisk/badge)](https://builtwithdot.net/project/334/eisk)
 
+[![Build status](https://dev.azure.com/EiskOps/Eisk/_apis/build/status/Eisk-WebApi-TemplatePack-CI)](https://dev.azure.com/EiskOps/Eisk/_build/latest?definitionId=3) [![BuitlWithDot.Net shield](https://builtwithdot.net/project/334/eisk/badge)](https://builtwithdot.net/project/334/eisk)
+
 # Getting Started with EISK Web Api
 
 EISK makes it easy to write scalable and secured web api on top of Microsoft's new cutting edge .net core technologies. 
@@ -25,17 +27,15 @@ Here is a simple CRUD use case illustrated in the default template:
 
 ### Architecture Overview
 
-* [Onion Arcitecture](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/)
-* [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-* [Domain Driven Design (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design)
+* Clean Architecture
 
 ## Core Technology Areas
 
 * [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet
-* [ASP.NET Core (Web Api)](https://dotnet.microsoft.com/en-us/apps/aspnet/apis)
-* [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
-* [C# Programming Language](https://docs.microsoft.com/en-us/dotnet/csharp/)
-* [Visual Studio](https://visualstudio.microsoft.com/)
+* ASP.NET Core (Web Api)
+* Entity Framework Core
+* C# Programming Language
+* Visual Studio
 
 ## System Requirements (Development)
 
@@ -63,6 +63,6 @@ Next - you can try some hands-on experience by creating your own api on top of y
 Utilities and code samples as provided in EISK have intentionally been designed to be self explaining. You may still want to get deeper understanding by exploring the documentations:
 
 * [Live Demo](https://eisk-webapi.azurewebsites.net)
-* [Hands-on Walk-through](https://eisk.github.io/eisk.webapi/docs/application-development/handson-walkthrough-create-service-api.html)
-* [Logical Layer Architecture](https://eisk.github.io/eisk.webapi/docs/architecture/logical-layers.html)
-* [Technology Stack](https://eisk.github.io/eisk.webapi/docs/technical-reference/technology-stack.html)
+* [Hands-on Walk-through](https://eisk.github.io/docs/webapi/application-development/handson-walkthrough-create-service-api.html)
+* [Logical Layer Architecture](https://eisk.github.io/docs/webapi/architecture/logical-layers.html)
+* [Technology Stack](https://eisk.github.io/docs/webapi/technical-reference/technology-stack.html)
