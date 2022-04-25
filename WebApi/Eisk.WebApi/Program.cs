@@ -1,3 +1,6 @@
+using Eisk.Core.DataService;
+using Eisk.Core.DataService.EFCore;
+using Eisk.Core.DomainService;
 using Eisk.DataServices.EFCore;
 using Eisk.DataServices.EFCore.DataContext;
 using Eisk.DataServices.Interfaces;
@@ -17,7 +20,7 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo
     {
         Title = "Eisk.WebApi",
-        Version = "v9.0.7",
+        Version = "v9.0.8",
         Description = "EISK makes it easy to write scalable and secured web api on top of Microsoft's new cutting edge .net core technologies.",
         Contact = new OpenApiContact
         {
@@ -27,6 +30,11 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+
+//generic services
+
+builder.Services.AddScoped(typeof(IEntityDataService<>), typeof(EntityDataService<>));
+builder.Services.AddScoped(typeof(DomainService<,>));
 
 //custom services
 
