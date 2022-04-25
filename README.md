@@ -48,6 +48,10 @@ Once the contents are available, just open the created solution, select "Eisk.We
 
 That's it!
 
+## How About Old Versions?
+
+If you want to continue using one of the older versions of EISK, check the [releases](https://github.com/EISK/eisk.webapi/releases) page for specific instructions to install and use older versions of EISK.
+
 ## What's Next?
 
 After running the created project successfully, you'll get an understanding about how the sample use case has been used to explore cutting edge technologies for building a web api.
