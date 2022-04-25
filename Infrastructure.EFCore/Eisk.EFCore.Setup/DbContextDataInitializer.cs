@@ -1,35 +1,34 @@
-using System.Linq;
+﻿using System.Linq;
 
-namespace Eisk.EFCore.Setup
+namespace Eisk.EFCore.Setup;
+
+using DataServices.EFCore.DataContext;
+using Domains.TestData;
+using Eisk.Domains.Entities;
+using System.Collections.Generic;
+
+public static class DbContextDataInitializer
 {
-    using Eisk.DataServices.EFCore.DataContext;
-    using Domains.Entities;
-    using Eisk.Test.Core.DataGen;
-
-    public static class DbContextDataInitializer
+    public static void Initialize(AppDbContext context)
     {
-        public static void Initialize(AppDbContext context)
+        context.Database.EnsureDeleted();
+
+        context.Database.EnsureCreated();
+
+        // Look for any data available.
+        if (context.Employees.Any())
         {
-            context.Database.EnsureDeleted();
-
-            context.Database.EnsureCreated();
-
-            // Look for any data available.
-            if (context.Employees.Any())
-            {
-                return; // DB has been seeded
-            }
-
-            for (int i = 0; i < 10; i++)
-                context.Employees.Add(
-                    EntityDataFactory<Employee>.Factory_Entity_Instance( 
-                        x =>
-                        {
-                            x.Id = 0;
-                            x.ReportsToId = null;
-                        }));
-
-            context.SaveChanges();
+            return; // DB has been seeded
         }
+
+        var employeeDataFactory = new EmployeeDataFactory();
+        var testEmployees = new List<Employee>();
+
+        for (int i = 0; i < 10; i++)
+            testEmployees.Add(employeeDataFactory.Factory_Entity());
+
+        context.Employees.AddRange(testEmployees);
+        context.SaveChanges();
+
     }
 }

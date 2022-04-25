@@ -1,6 +1,6 @@
 [![Build status](https://dev.azure.com/EiskOps/Eisk/_apis/build/status/Eisk-WebApi-TemplatePack-CI)](https://dev.azure.com/EiskOps/Eisk/_build/latest?definitionId=3) [![BuitlWithDot.Net shield](https://builtwithdot.net/project/334/eisk/badge)](https://builtwithdot.net/project/334/eisk)
 
-...
+[![Build status](https://dev.azure.com/EiskOps/Eisk/_apis/build/status/Eisk-WebApi-TemplatePack-CI)](https://dev.azure.com/EiskOps/Eisk/_build/latest?definitionId=3) [![BuitlWithDot.Net shield](https://builtwithdot.net/project/334/eisk/badge)](https://builtwithdot.net/project/334/eisk)
 
 # Getting Started with EISK Web Api
 
@@ -20,22 +20,26 @@ Using a simple table entity 'Employee' it demonstrates all aspect of web develop
 
 Here is a simple CRUD use case illustrated in the default template:
 
-* Creating a new employee record
-* Read existing employee records
-* Update an existing employee record
-* Delete existing employee records
+* [C]reating a new employee record
+* [R]ead existing employee records
+* [U]pdate an existing employee record
+* [D]elete existing employee records
+
+### Architecture Overview
+
+* Clean Architecture
 
 ## Core Technology Areas
 
+* [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet
 * ASP.NET Core (Web Api)
 * Entity Framework Core
-* C# 
-* Visual Studio 
-* Azure App Services 
+* C# Programming Language
+* Visual Studio
 
 ## System Requirements (Development)
 
-* Visual Studio 2017 ([Free](https://visualstudio.microsoft.com/vs/community/) Community Edition or higher)
+* Visual Studio 2022 ([Free](https://visualstudio.microsoft.com/vs/community/) Community Edition or higher)
 
 ## QuickStart Guide
 
@@ -58,7 +62,7 @@ Next - you can try some hands-on experience by creating your own api on top of y
 
 Utilities and code samples as provided in EISK have intentionally been designed to be self explaining. You may still want to get deeper understanding by exploring the documentations:
 
-* [Live Demo](https://eiskwebapi.azurewebsites.net)
-* [Hands-on Walk-through](https://eisk.github.io/eisk.webapi/docs/application-development/handson-walkthrough-create-service-api.html)
-* [Logical Layer Architecture](https://eisk.github.io/eisk.webapi/docs/architecture/logical-layers.html)
-* [Technology Stack](https://eisk.github.io/eisk.webapi/docs/technical-reference/technology-stack.html)
+* [Live Demo](https://eisk-webapi.azurewebsites.net)
+* [Hands-on Walk-through](https://eisk.github.io/docs/webapi/application-development/handson-walkthrough-create-service-api.html)
+* [Logical Layer Architecture](https://eisk.github.io/docs/webapi/architecture/logical-layers.html)
+* [Technology Stack](https://eisk.github.io/docs/webapi/technical-reference/technology-stack.html)

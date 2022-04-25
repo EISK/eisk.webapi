@@ -1,24 +1,23 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-namespace Eisk.DomainServices
+namespace Eisk.DomainServices;
+
+using Core.DomainService;
+using DataServices.Interfaces;
+using Domains.Entities;
+
+public class EmployeeDomainService : DomainService<Employee, int>
 {
-    using Core.DomainService;
-    using DataServices.Interfaces;
-    using Domains.Entities;
+    private readonly IEmployeeDataService _employeeDataService;
 
-    public class EmployeeDomainService : DomainService<Employee, int>
+    public EmployeeDomainService(IEmployeeDataService employeeDataService) : base(employeeDataService)
     {
-        private readonly IEmployeeDataService _employeeDataService;
-
-        public EmployeeDomainService(IEmployeeDataService employeeDataService) : base(employeeDataService)
-        {
-            _employeeDataService = employeeDataService;
-        }
-
-        public virtual async Task<IList<Employee>> GetByFirstName(string firstName)
-        {
-            return await _employeeDataService.GetByFirstName(firstName);
-        }
-
+        _employeeDataService = employeeDataService;
     }
+
+    public virtual async Task<IList<Employee>> GetByFirstName(string firstName)
+    {
+        return await _employeeDataService.GetByFirstName(firstName);
+    }
+
 }

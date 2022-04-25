@@ -1,7 +1,8 @@
-namespace Eisk.Test.Core.DataGen.InvalidData
+namespace Eisk.Test.Core.DataGen.InvalidData;
+
+using FieldGenerators;
+
+public class StringWithSpecialCharacters : StringValueGenerator
 {
-    public class StringWithSpecialCharacters:StringValueGenerator
-    {
-        public StringWithSpecialCharacters(bool generateUniqueValie = true, string value = "@@@@###%%%_string_with_special_characters") : base(generateUniqueValie, value) { }
-    }
+    public StringWithSpecialCharacters(bool generateUniqueValie = true, string value = "@@@@###%%%_string_with_special_characters") : base(generateUniqueValie, value) { }
 }

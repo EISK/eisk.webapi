@@ -1,14 +1,16 @@
-namespace Eisk.WebApi.Controllers
-{
-    using Eisk.Core.WebApi;
-    using Domains.Entities;
-    using DomainServices;
+﻿namespace Eisk.WebApi.Controllers;
 
-    public class EmployeesController : WebApiControllerBase<Employee,int>
+using Core.WebApi;
+using Domains.Entities;
+using DomainServices;
+using Microsoft.AspNetCore.Mvc;
+
+[ApiController]
+[Route("[controller]")]
+public class EmployeesController : WebApiControllerBase<Employee, int>
+{
+    public EmployeesController(EmployeeDomainService employeeDomainService) : base(employeeDomainService)
     {
-        public EmployeesController(EmployeeDomainService employeeDomainService):base(employeeDomainService)
-        {
-            
-        }
+
     }
 }

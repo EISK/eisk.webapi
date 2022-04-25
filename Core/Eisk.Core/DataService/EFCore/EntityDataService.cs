@@ -1,54 +1,50 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace Eisk.Core.DataService.EFCore
+namespace Eisk.Core.DataService.EFCore;
+
+public class EntityDataService<TEntity> : IEntityDataService<TEntity> where TEntity : class, new()
 {
-    public class EntityDataService<TEntity> : IEntityDataService<TEntity> where TEntity : class, new()
+    protected readonly DbContext DbContext;
+
+    public EntityDataService(DbContext dbContext)
     {
-        protected readonly DbContext DbContext;
+        DbContext = dbContext;
+    }
 
-        public EntityDataService(DbContext dbContext)
-        {
-            DbContext = dbContext;
-        }
+    public virtual async Task<TEntity> GetById<TId>(TId id)
+    {
+        return await DbContext.Set<TEntity>().FindAsync(id);
+    }
 
-        public virtual async Task<TEntity> GetById<TId>(TId id)
-        {
-            return await DbContext.Set<TEntity>().FindAsync(id);
-        }
+    public virtual async Task<IList<TEntity>> GetAll()
+    {
+        return await DbContext.Set<TEntity>().ToListAsync();
+    }
 
-        public virtual async Task<IList<TEntity>> GetAll()
-        {
-            return await DbContext.Set<TEntity>().ToListAsync();
-        }
+    public virtual async Task<TEntity> Add(TEntity entity)
+    {
+        var obj = DbContext.Add(entity);
+        
+        await DbContext.SaveChangesAsync();
 
-        public virtual async Task<TEntity> Add(TEntity entity)
-        {
-            var obj = DbContext.Add(entity);
+        return obj.Entity;
+    }
 
-            await DbContext.SaveChangesAsync();
+    public virtual async Task<TEntity> Update(TEntity entity)
+    {
+        var obj = DbContext.Update(entity);
 
-            return obj.Entity;
-        }
+        await DbContext.SaveChangesAsync();
 
-        public virtual async Task<TEntity> Update(TEntity entity)
-        {
-            var obj = DbContext.Update(entity);
+        return obj.Entity;
+    }
 
-            await DbContext.SaveChangesAsync();
+    public virtual async Task Delete(TEntity entity)
+    {
+        DbContext.Remove(entity);
 
-            return obj.Entity;
-        }
-
-        public virtual async Task Delete(TEntity entity)
-        {
-            DbContext.Remove(entity);
-
-            await DbContext.SaveChangesAsync();
-        }
+        await DbContext.SaveChangesAsync();
     }
 }

@@ -1,233 +1,212 @@
+﻿using Eisk.Core.DataService;
+using Eisk.Test.Core.DataGen.DataFactories;
 using System;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Eisk.Core.DataService;
 using Xunit;
 
-namespace Eisk.Test.Core.TestBases
+namespace Eisk.Test.Core.TestBases;
+
+public abstract class DataServiceBaseIntegrationTests<TEntity, TId> : EntityTestBase<TEntity, TId>,
+    IServiceTest<IEntityDataService<TEntity>>
+    where TEntity : class, new()
 {
-    public abstract class DataServiceBaseIntegrationTests<TEntity, TId> : EntityTestBase<TEntity, TId>,
-        IServiceTest<IEntityDataService<TEntity>>
-        where TEntity : class, new()
+    private readonly IEntityDataService<TEntity> _dataService;
+
+    protected DataServiceBaseIntegrationTests(IEntityDataService<TEntity> dataService, Expression<Func<TEntity, TId>> idExpression, EntityDataFactory<TEntity> entityDataFactory = null)
+        : base(idExpression, entityDataFactory)
     {
-        private readonly IEntityDataService<TEntity> _dataService;
-
-        protected DataServiceBaseIntegrationTests(IEntityDataService<TEntity> dataService, Expression<Func<TEntity, TId>> idExpression)
-            :base(idExpression)
-        {
-            _dataService = dataService;
-        }
+        _dataService = dataService;
+    }
 
 
-        public virtual IEntityDataService<TEntity> GetServiceInstance(Action action = null)
-        {
-            action?.Invoke();
+    public virtual IEntityDataService<TEntity> GetServiceInstance(Action action = null)
+    {
+        action?.Invoke();
 
-            return _dataService;
-        }
+        return _dataService;
+    }
 
-        protected virtual async Task CreateTestEntityToStore(TEntity testEntity)
-        {
-            await _dataService.Add(testEntity);
-        }
+    protected virtual async Task CreateTestEntityToStore(TEntity testEntity)
+    {
+        await _dataService.Add(testEntity);
+    }
 
-        [Fact]
-        public virtual async Task Add_ValidDomainPassed_ShouldReturnDomainAfterCreation()
-        {
-            //Arrange
-            var inputEntity = Factory_Entity();
-            var dataService = GetServiceInstance();
+    [Fact]
+    public virtual async Task Add_ValidDomainPassed_ShouldReturnDomainAfterCreation()
+    {
+        //Arrange
+        var inputEntity = Factory_Entity();
+        var dataService = GetServiceInstance();
 
-            //Act
-            var returnedEntity = await dataService.Add(inputEntity);
+        //Act
+        var returnedEntity = await dataService.Add(inputEntity);
 
-            //Assert
-            Assert.NotNull(returnedEntity);
-            Assert.NotEqual(default(TId), GetIdValueFromEntity(returnedEntity));
-        }
+        //Assert
+        Assert.NotNull(returnedEntity);
+        Assert.NotEqual(default(TId), GetIdValueFromEntity(returnedEntity));
+    }
 
-        [Fact]
-        public virtual async Task Add_ValidDomainWithRandomIdPassed_ShouldReturnDomainAfterCreation()
-        {
-            //Arrange
-            var inputEntity = Factory_Entity();
-            //might pass for sql lite, but fail for sql server
-            SetIdValueToEntity(inputEntity, 100);//TODO: support for generic
-            var dataService = GetServiceInstance();
+    [Fact]
+    public virtual async Task Add_NullDomainPassed_ShouldThrowArgumentNullException()
+    {
+        //Arrange
+        var dataService = GetServiceInstance();
+        TEntity invalidNullDomain = null;
 
-            //Act
-            var returnedEntity = await dataService.Add(inputEntity);
+        //Act and Assert
+        await Assert.ThrowsAsync<ArgumentNullException>(() => dataService.Add(invalidNullDomain));
 
-            //Assert
-            Assert.NotNull(returnedEntity);
-            Assert.NotEqual(default(TId), GetIdValueFromEntity(returnedEntity));
-        }
+    }
 
-        [Fact]
-        public virtual async Task Add_NullDomainPassed_ShouldThrowArgumentNullException()
-        {
-            //Arrange
-            var dataService = GetServiceInstance();
-            TEntity invalidNullDomain = null;
+    [Fact]
+    public virtual async Task GetById_ValidIdPassed_ShouldReturnResult()
+    {
+        //Arrange
+        var domain = Factory_Entity();
+        var dataService = GetServiceInstance();
+        await CreateTestEntityToStore(domain);
 
-            //Act and Assert
-            await Assert.ThrowsAsync<ArgumentNullException>(() => dataService.Add(invalidNullDomain));
+        var idValue = GetIdValueFromEntity(domain);
 
-        }
+        //Act
+        var returnedEntity = await dataService.GetById(idValue);
 
-        [Fact]
-        public virtual async Task GetById_ValidIdPassed_ShouldReturnResult()
-        {
-            //Arrange
-            var domain = Factory_Entity();
-            var dataService = GetServiceInstance(async () => 
-            { 
-                await CreateTestEntityToStore(domain);
-            });
+        //Assert
+        Assert.NotNull(returnedEntity);
+        Assert.Equal(idValue, GetIdValueFromEntity(returnedEntity));
+    }
 
-            var idValue = GetIdValueFromEntity(domain);
-            
-            //Act
-            var returnedEntity = await dataService.GetById(idValue);
+    [Fact]
+    public virtual async Task GetById_EmptyIdPassed_ShouldReturnNull()
+    {
+        //Arrange
+        var dataService = GetServiceInstance();
 
-            //Assert
-            Assert.NotNull(returnedEntity);
-            Assert.Equal(idValue, GetIdValueFromEntity(returnedEntity));
-        }
+        //Act
+        var returnedEntity = await dataService.GetById(default(TId));
 
-        [Fact]
-        public virtual async Task GetById_EmptyIdPassed_ShouldReturnNull()
-        {
-            //Arrange
-            var dataService = GetServiceInstance();
-            
-            //Act
-            var returnedEntity = await dataService.GetById(default(TId));
+        //Assert
+        Assert.Null(returnedEntity);
 
-            //Assert
-            Assert.Null(returnedEntity);
-            
-        }
+    }
 
-        [Fact]
-        public virtual async Task GetById_InvalidIdPassed_ShouldReturnNull()
-        {
-            //Arrange
-            var dataService = GetServiceInstance();
+    [Fact]
+    public virtual async Task GetById_InvalidIdPassed_ShouldReturnNull()
+    {
+        //Arrange
+        var dataService = GetServiceInstance();
 
-            //Act
-            var returnedEntity = await dataService.GetById(100);//TODO: make it generic random
+        //Act
+        var returnedEntity = await dataService.GetById(RANDOM_ID);//TODO: make it generic random
 
-            //Assert
-            Assert.Null(returnedEntity);
+        //Assert
+        Assert.Null(returnedEntity);
 
-        }
+    }
 
-        [Fact]
-        public virtual async Task Update_ValidDomainPassed_ShouldReturnDomain()
-        {
-            //Arrange
-            var inputEntity = Factory_Entity();
-            var dataService = GetServiceInstance(async () =>
-            {
-                await CreateTestEntityToStore(inputEntity);
-            });
+    [Fact]
+    public virtual async Task Update_ValidDomainPassed_ShouldReturnDomain()
+    {
+        //Arrange
+        var inputEntity = Factory_Entity();
+        var dataService = GetServiceInstance();
+        await CreateTestEntityToStore(inputEntity);
 
-            //Act
-            var returnedEntity = await dataService.Update(inputEntity);
+        //Act
+        var returnedEntity = await dataService.Update(inputEntity);
 
-            //Assert
-            Assert.NotNull(returnedEntity);
-            Assert.Equal(GetIdValueFromEntity(inputEntity), GetIdValueFromEntity(returnedEntity));
+        //Assert
+        Assert.NotNull(returnedEntity);
+        Assert.Equal(GetIdValueFromEntity(inputEntity), GetIdValueFromEntity(returnedEntity));
 
-        }
+    }
 
-        [Fact]
-        public virtual async Task Update_ValidDomainWithEmptyIdPassed_ShouldCreateDomain()
-        {
-            //Arrange
-            var inputEntity = Factory_Entity();
-            var dataService = GetServiceInstance();
+    [Fact]
+    public virtual async Task Update_ValidDomainWithEmptyIdPassed_ShouldCreateDomain()
+    {
+        //Arrange
+        var inputEntity = Factory_Entity();
+        var dataService = GetServiceInstance();
 
-            //Act
-            var returnedEntity = await dataService.Update(inputEntity);//may not be supported in all data providers
+        //Act
+        var returnedEntity = await dataService.Update(inputEntity);//may not be supported in all data providers
 
-            //Assert
-            Assert.NotNull(returnedEntity);
-            Assert.NotEqual(default(TId), GetIdValueFromEntity(returnedEntity));
+        //Assert
+        Assert.NotNull(returnedEntity);
+        Assert.NotEqual(default(TId), GetIdValueFromEntity(returnedEntity));
 
-        }
+    }
 
-        [Fact]
-        public virtual async Task Update_ValidDomainWithRandomIdPassed_ShouldThrowException()
-        {
-            //Arrange
-            var entityWithRandomId = Factory_Entity();
-            SetIdValueToEntity(entityWithRandomId, 100);//TODO: support generic
-            var dataService = GetServiceInstance();
+    [Fact]
+    public virtual async Task Update_ValidDomainWithRandomIdPassed_ShouldThrowException()
+    {
+        //Arrange
+        var entityWithRandomId = Factory_EntityWithRandomId();
 
-            //Act
-            var ex = await Record.ExceptionAsync(async () => await dataService.Update(entityWithRandomId));
+        var dataService = GetServiceInstance();
 
-            //Assert
-            Assert.NotNull(ex);
-        }
+        //Act
+        var ex = await Record.ExceptionAsync(async () => await dataService.Update(entityWithRandomId));
 
-        [Fact]
-        public virtual async Task Update_NullDomainPassed_ShouldThrowArgumentNullException()
-        {
-            //Arrange
-            var dataService = GetServiceInstance();
-            TEntity invalidNullDomain = null;
+        //Assert
+        Assert.NotNull(ex);
+    }
 
-            //Act and Assert
-            await Assert.ThrowsAsync<ArgumentNullException>(() => dataService.Update(invalidNullDomain));
+    [Fact]
+    public virtual async Task Update_NullDomainPassed_ShouldThrowArgumentNullException()
+    {
+        //Arrange
+        var dataService = GetServiceInstance();
+        TEntity invalidNullDomain = null;
 
-        }
+        //Act and Assert
+        await Assert.ThrowsAsync<ArgumentNullException>(() => dataService.Update(invalidNullDomain));
 
-        [Fact]
-        public virtual async Task Delete_DomainWithValidIdPassed_ShouldDeleteSuccessfully()
-        {
-            //Arrange
-            var inputEntity = Factory_Entity();
-            var dataService = GetServiceInstance(async () => await CreateTestEntityToStore(inputEntity));
-            var idValue = GetIdValueFromEntity(inputEntity);
+    }
 
-            //Act
-            await dataService.Delete(inputEntity);
+    [Fact]
+    public virtual async Task Delete_DomainWithValidIdPassed_ShouldDeleteSuccessfully()
+    {
+        //Arrange
+        var inputEntity = Factory_Entity();
+        var dataService = GetServiceInstance();
+        await CreateTestEntityToStore(inputEntity);
+        var idValue = GetIdValueFromEntity(inputEntity);
 
-            //Assert
-            var returnObject = await dataService.GetById(idValue);
-            Assert.Null(returnObject);
-        }
+        //Act
+        await dataService.Delete(inputEntity);
 
-        [Fact]
-        public virtual async Task Delete_DomainWithEmptyIdPassed_ShouldThrowException()
-        {
-            //Arrange
-            var inputEntity = Factory_Entity();
-            var dataService = GetServiceInstance();
-            
-            //Act
-            var returnedException = await Record.ExceptionAsync(() => dataService.Delete(inputEntity));
+        //Assert
+        var returnObject = await dataService.GetById(idValue);
+        Assert.Null(returnObject);
+    }
 
-            //Assert
-            Assert.NotNull(returnedException);
-        }
+    [Fact]
+    public virtual async Task Delete_DomainWithEmptyIdPassed_ShouldThrowException()
+    {
+        //Arrange
+        var inputEntity = Factory_Entity();
+        var dataService = GetServiceInstance();
 
-        [Fact]
-        public virtual async Task Delete_DomainWithRandomIdPassed_ShouldThrowException()
-        {
-            //Arrange
-            var inputEntity = Factory_Entity();
-            SetIdValueToEntity(inputEntity, 100);//TODO: support generic
-            var dataService = GetServiceInstance();
+        //Act
+        var returnedException = await Record.ExceptionAsync(() => dataService.Delete(inputEntity));
 
-            //Act
-            var ex = await Record.ExceptionAsync(() => dataService.Delete(inputEntity));
+        //Assert
+        Assert.NotNull(returnedException);
+    }
 
-            //Assert
-            Assert.NotNull(ex);
-        }
+    [Fact]
+    public virtual async Task Delete_DomainWithRandomIdPassed_ShouldThrowException()
+    {
+        //Arrange
+        var inputEntity = Factory_EntityWithRandomId();
+        var dataService = GetServiceInstance();
+
+        //Act
+        var ex = await Record.ExceptionAsync(() => dataService.Delete(inputEntity));
+
+        //Assert
+        Assert.NotNull(ex);
     }
 }
