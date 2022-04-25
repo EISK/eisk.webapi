@@ -1,18 +1,6 @@
-[![Build status](https://dev.azure.com/EiskOps/Eisk/_apis/build/status/Eisk-WebApi-TemplatePack-CI)](https://dev.azure.com/EiskOps/Eisk/_build/latest?definitionId=3) [![BuitlWithDot.Net shield](https://builtwithdot.net/project/334/eisk/badge)](https://builtwithdot.net/project/334/eisk)
-
-...
-
-# Getting Started with EISK Web Api
-
 EISK makes it easy to write scalable and secured web api on top of Microsoft's new cutting edge .net core technologies. 
 
 With an optional set of customizable utility classes, samples and tools, it lets you creating new web api straight away without wide technical experience or learning curve.
-
-## Give a Star! :star:
-
-If you like or are using this project to learn or start your solution, please give it a [star](https://github.com/EISK/eisk.webapi). Thanks!
-
-![eisk web api](https://github.com/EISK/eisk/blob/master/eisk-webapi-small.png)
 
 ## Sample Use Case
 
@@ -41,9 +29,13 @@ Here is a simple CRUD use case illustrated in the default template:
 
 Getting started with EISK Web Api is pretty easy. 
 
-You can either [clone](https://github.com/EISK/eisk.webapi.git) from github or simply run the following `dotnet new` command in command prompt to create a new project from EISK:
+You can either clone V8.0 from github:
 
-* Command to install EISK template in your machine: `dotnet new -i eisk.webapi`
+`git clone -b V8.0 https://github.com/EISK/eisk.webapi.git`
+
+Or simply run the following `dotnet new` command in command prompt to create a new project from EISK:
+
+* Command to install EISK template in your machine: `dotnet new --install Eisk.WebApi::8.0.12`
 * Command to create a new project: `dotnet new eiskwebapi -n Eisk`
 
 Once the contents are available, just open the created solution, select "Eisk.WebApi" as startup project and press F5!
