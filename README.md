@@ -16,7 +16,7 @@ Here is a simple CRUD use case illustrated in the default template:
 ## Core Technology Areas
 
 * ASP.NET Core (Web Api)
-* Entity Framework Core
+* Entity Framework Core 
 * C# 
 * Visual Studio 
 * Azure App Services 
