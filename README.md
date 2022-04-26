@@ -11,16 +11,7 @@ If you like or are using this project to learn or start your solution, please gi
 
 ![eisk web api](https://github.com/EISK/eisk/blob/master/eisk-webapi-small.png)
 
-## Core Technologies
-
-* Platform: [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet
-* Web Framework: ASP.NET Web API 
-* ORM Framework: Entity Framework
-* Programming Language: C#
-* Database: Sql Server (optional)
-* Build and Deployment: Azure DevOps Pipelines / App Service (optional)
-
-## Use Case Sample
+## Simple Use Case
 
 Using a simple data entity 'Employee', EISK shows how we can build scalable web api's easily along with addressing real-world domain and business use cases, including: 
 
@@ -43,7 +34,16 @@ Technical features available in EISK include:
 * Base classes for common test scenarios (component tests, integration tests)
 * Support for database integration tests with both in-memory database and SQL server
 
-## System Requirements (Development)
+## Core Technologies
+
+* Platform: [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet
+* Web Framework: ASP.NET Web API 
+* ORM Framework: Entity Framework
+* Programming Language: C#
+* Database: Sql Server (optional)
+* Build and Deployment: Azure DevOps Pipelines / App Service (optional)
+
+### System Requirements (Development)
 
 * Visual Studio 2022 ([Free](https://visualstudio.microsoft.com/vs/community/) Community Edition or higher)
 
