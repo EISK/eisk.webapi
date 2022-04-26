@@ -1,5 +1,4 @@
 [![NuGet Badge](https://buildstats.info/nuget/Eisk.WebApi)](https://www.nuget.org/packages/Eisk.WebApi/)  [![Build status](https://dev.azure.com/EiskOps/Eisk/_apis/build/status/Eisk-WebApi-TemplatePack-CI)](https://dev.azure.com/EiskOps/Eisk/_build/latest?definitionId=3) [![BuitlWithDot.Net shield](https://builtwithdot.net/project/334/eisk/badge)](https://builtwithdot.net/project/334/eisk)  
-
 ...
 
 EISK makes it easy to write scalable and secured web api on top of Microsoft's new cutting edge .net based technologies. 
@@ -12,26 +11,6 @@ If you like or are using this project to learn or start your solution, please gi
 
 ![eisk web api](https://github.com/EISK/eisk/blob/master/eisk-webapi-small.png)
 
-## Simple Use Case
-
-Using a simple table entity 'Employee' it demonstrates all aspect of web development including layered architecture following clean architecture, micro-service patterns, unit and integration tests, building and deploying in cloud environment. 
-
-Here is a simple CRUD use case illustrated in the default template:
-
-* [C]reating a new employee record
-* [R]ead existing employee records
-* [U]pdate an existing employee record
-* [D]elete existing employee records
-
-## Project Features
-
-* Clean Architecture based implementation 
-* Swagger/OpenAPI based Web API specification
-* Base classes for common CRUD functionalities for logical layers (where applicable)
-* Utility classes to generate real-world test data
-* Base classes for common test scenarios (component tests, integration tests)
-* Support for database integration tests with both in-memory database and SQL server
-
 ## Core Technologies
 
 * [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet
@@ -41,9 +20,30 @@ Here is a simple CRUD use case illustrated in the default template:
 * Sql Server (optional)
 * Azure DevOps Pipelines and App Service (optional)
 
-## System Requirements (Development)
+### System Requirements (Development)
 
 * Visual Studio 2022 ([Free](https://visualstudio.microsoft.com/vs/community/) Community Edition or higher)
+
+## Projects Features
+
+EISK provides utilitiy classes with regard to various aspects of web development along with clean architecture, micro-service patterns, unit and integration tests, building and deploying in cloud environment. Features include:
+
+* Cloud-aware RESTful API
+* Swagger/OpenAPI based Web API specification
+* Clean Architecture based implementation
+* Base classes for common CRUD functionalities for logical layers (where applicable)
+* Utility classes to generate real-world test data
+* Base classes for common test scenarios (component tests, integration tests)
+* Support for database integration tests with both in-memory database and SQL server
+
+## Use Case Sample
+
+Using a simple data entity 'Employee', EISK shows how we can build scalable web api's easily along with addressing real-world domain and business use cases, including: 
+
+* [C]reating a new employee record
+* [R]ead existing employee records
+* [U]pdate an existing employee record
+* [D]elete an existing employee record
 
 ## QuickStart Guide
 
