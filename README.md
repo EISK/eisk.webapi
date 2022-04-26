@@ -22,7 +22,9 @@ If you like or are using this project to learn or start your solution, please gi
 
 ## Technical Features
 
-EISK provides utilitiy classes with regard to various aspects of web development along with clean architecture, micro-service patterns, unit and integration tests, building and deploying in cloud environment. Features include:
+EISK provides code and tools for various aspects of web development, along with unit and integration tests, building and deploying in cloud environment. 
+
+Technical features available in EISK include:
 
 * Cloud-aware RESTful API
 * Swagger/OpenAPI based Web API specification
