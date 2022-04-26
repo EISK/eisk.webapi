@@ -1,4 +1,4 @@
-[![NuGet Badge](https://buildstats.info/nuget/Eisk.WebApi)](https://www.nuget.org/packages/Eisk.WebApi/)  [![BuitlWithDot.Net shield](https://builtwithdot.net/project/334/eisk/badge)](https://builtwithdot.net/project/334/eisk)  [![Build status](https://dev.azure.com/EiskOps/Eisk/_apis/build/status/Eisk-WebApi-TemplatePack-CI)](https://dev.azure.com/EiskOps/Eisk/_build/latest?definitionId=3)
+[![NuGet Badge](https://buildstats.info/nuget/Eisk.WebApi)](https://www.nuget.org/packages/Eisk.WebApi/)  [![Build status](https://dev.azure.com/EiskOps/Eisk/_apis/build/status/Eisk-WebApi-TemplatePack-CI)](https://dev.azure.com/EiskOps/Eisk/_build/latest?definitionId=3) [![BuitlWithDot.Net shield](https://builtwithdot.net/project/334/eisk/badge)](https://builtwithdot.net/project/334/eisk)  
 
 ...
 
@@ -14,7 +14,7 @@ If you like or are using this project to learn or start your solution, please gi
 
 ## Simple Use Case
 
-Using a simple table entity 'Employee' it demonstrates all aspect of web development including layered architecture following DDD, micro service, unit and integration tests, building and deploying in cloud environment.
+Using a simple table entity 'Employee' it demonstrates all aspect of web development including layered architecture following clean architecture, micro-service patterns, unit and integration tests, building and deploying in cloud environment. 
 
 Here is a simple CRUD use case illustrated in the default template:
 
@@ -23,17 +23,23 @@ Here is a simple CRUD use case illustrated in the default template:
 * [U]pdate an existing employee record
 * [D]elete existing employee records
 
-### Architecture Overview
+## Project Features
 
-* Clean Architecture
+* Clean Architecture based implementation (clean separation bewteen domain model, domain service and insfrastructure layers)
+* Swagger based Web API documentation
+* Base classes for common CRUD functionalities (where applicable) for logical layers
+* Base classes for common test scenarios
+* Support for database integration tests with both in-memory database and SQL server
+* Test data generator with meaningful, real-world data
 
-## Core Technology Areas
+## Core Technologies
 
 * [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet
-* ASP.NET Core (Web Api)
-* Entity Framework Core
-* C# Programming Language
-* Visual Studio
+* ASP.NET 6.0 (Web Api)
+* Entity Framework Core 6.0
+* C# 10.0
+* Sql Server (optional)
+* Azure DevOps Pipelines and App Service (optional)
 
 ## System Requirements (Development)
 
@@ -68,3 +74,7 @@ Utilities and code samples as provided in EISK have intentionally been designed 
 * [Hands-on Walk-through](https://eisk.github.io/docs/webapi/application-development/handson-walkthrough-create-service-api.html)
 * [Logical Layer Architecture](https://eisk.github.io/docs/webapi/architecture/logical-layers.html)
 * [Technology Stack](https://eisk.github.io/docs/webapi/technical-reference/technology-stack.html)
+
+## Questions?
+
+Should you have any questions or need any help to implement new cool features, you can [ask](https://stackoverflow.com/questions/ask?tags=eisk,webapi,asp.net-core&title=In%20EISK,%20How%20Do%20We%20..) in StackOverflow community with tag [eisk](https://stackoverflow.com/questions/tagged/eisk) and get prompt response.
