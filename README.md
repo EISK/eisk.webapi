@@ -13,18 +13,14 @@ If you like or are using this project to learn or start your solution, please gi
 
 ## Core Technologies
 
-* [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet
-* ASP.NET 6.0 (Web Api)
-* Entity Framework Core 6.0
-* C# 10.0
-* Sql Server (optional)
-* Azure DevOps Pipelines and App Service (optional)
+* Platform: [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet
+* Web Framework: ASP.NET Web API 
+* ORM Framework: Entity Framework
+* Programming Language: C#
+* Database: Sql Server (optional)
+* Build and Deployment: Azure DevOps Pipelines / App Service (optional)
 
-### System Requirements (Development)
-
-* Visual Studio 2022 ([Free](https://visualstudio.microsoft.com/vs/community/) Community Edition or higher)
-
-## Projects Features
+## Technical Features
 
 EISK provides utilitiy classes with regard to various aspects of web development along with clean architecture, micro-service patterns, unit and integration tests, building and deploying in cloud environment. Features include:
 
@@ -44,6 +40,10 @@ Using a simple data entity 'Employee', EISK shows how we can build scalable web 
 * [R]ead existing employee records
 * [U]pdate an existing employee record
 * [D]elete an existing employee record
+
+## System Requirements (Development)
+
+* Visual Studio 2022 ([Free](https://visualstudio.microsoft.com/vs/community/) Community Edition or higher)
 
 ## QuickStart Guide
 
