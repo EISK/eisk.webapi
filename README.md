@@ -12,9 +12,9 @@ If you like or are using this project to learn or start your solution, please gi
 
 ![eisk web api](https://github.com/EISK/eisk/blob/master/eisk-webapi-small.png)
 
-## Sample Use Case
+## Simple Use Case
 
-Using a simple table entity 'Employee' it demonstrates all aspect of web development including layered architecture following DDD, micro service, unit and integration tests, building and deploying in cloud environment. 
+Using a simple table entity 'Employee' it demonstrates all aspect of web development including layered architecture following DDD, micro service, unit and integration tests, building and deploying in cloud environment.
 
 Here is a simple CRUD use case illustrated in the default template:
 
