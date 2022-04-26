@@ -20,20 +20,6 @@ If you like or are using this project to learn or start your solution, please gi
 * Database: Sql Server (optional)
 * Build and Deployment: Azure DevOps Pipelines / App Service (optional)
 
-## Technical Features
-
-EISK provides code and tools for various aspects of web development, along with unit and integration tests, building and deploying in cloud environment. 
-
-Technical features available in EISK include:
-
-* Cloud-aware RESTful API
-* Swagger/OpenAPI based Web API specification
-* Clean Architecture based implementation
-* Base classes for common CRUD functionalities for logical layers (where applicable)
-* Utility classes to generate real-world test data
-* Base classes for common test scenarios (component tests, integration tests)
-* Support for database integration tests with both in-memory database and SQL server
-
 ## Use Case Sample
 
 Using a simple data entity 'Employee', EISK shows how we can build scalable web api's easily along with addressing real-world domain and business use cases, including: 
@@ -42,6 +28,20 @@ Using a simple data entity 'Employee', EISK shows how we can build scalable web 
 * [R]ead existing employee records
 * [U]pdate an existing employee record
 * [D]elete an existing employee record
+
+## Technical Features
+
+EISK provides reusable utility classes and tools for various aspects of web development, along with unit and integration tests, building and deploying in cloud environment. 
+
+Technical features available in EISK include:
+
+* Visual Studio project template that includes project structure to build modern cloud-aware RESTful APIs
+* Swagger/OpenAPI based Web API specification
+* Clean Architecture based implementation
+* Base classes for common CRUD functionalities for logical layers (where applicable)
+* Utility classes to generate real-world test data
+* Base classes for common test scenarios (component tests, integration tests)
+* Support for database integration tests with both in-memory database and SQL server
 
 ## System Requirements (Development)
 
