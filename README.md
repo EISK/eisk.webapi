@@ -1,5 +1,4 @@
 [![NuGet Badge](https://buildstats.info/nuget/Eisk.WebApi)](https://www.nuget.org/packages/Eisk.WebApi/)  [![Build status](https://dev.azure.com/EiskOps/Eisk/_apis/build/status/Eisk-WebApi-TemplatePack-CI)](https://dev.azure.com/EiskOps/Eisk/_build/latest?definitionId=3) [![BuitlWithDot.Net shield](https://builtwithdot.net/project/334/eisk/badge)](https://builtwithdot.net/project/334/eisk)  
-
 ...
 
 EISK makes it easy to write scalable and secured web api on top of Microsoft's new cutting edge .net based technologies. 
@@ -12,34 +11,37 @@ If you like or are using this project to learn or start your solution, please gi
 
 ![eisk web api](https://github.com/EISK/eisk/blob/master/eisk-webapi-small.png)
 
-## Simple Use Case
+## Core Technologies
 
-Using a simple table entity 'Employee' it demonstrates all aspect of web development including layered architecture following clean architecture, micro-service patterns, unit and integration tests, building and deploying in cloud environment. 
+* Platform: [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet
+* Web Framework: ASP.NET Web API 
+* ORM Framework: Entity Framework
+* Programming Language: C#
+* Database: Sql Server (optional)
+* Build and Deployment: Azure DevOps Pipelines / App Service (optional)
 
-Here is a simple CRUD use case illustrated in the default template:
+## Technical Features
 
-* [C]reating a new employee record
-* [R]ead existing employee records
-* [U]pdate an existing employee record
-* [D]elete existing employee records
+EISK provides code and tools for various aspects of web development, along with unit and integration tests, building and deploying in cloud environment. 
 
-## Project Features
+Technical features available in EISK include:
 
-* Clean Architecture based implementation 
+* Cloud-aware RESTful API
 * Swagger/OpenAPI based Web API specification
+* Clean Architecture based implementation
 * Base classes for common CRUD functionalities for logical layers (where applicable)
 * Utility classes to generate real-world test data
 * Base classes for common test scenarios (component tests, integration tests)
 * Support for database integration tests with both in-memory database and SQL server
 
-## Core Technologies
+## Use Case Sample
 
-* [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet
-* ASP.NET 6.0 (Web Api)
-* Entity Framework Core 6.0
-* C# 10.0
-* Sql Server (optional)
-* Azure DevOps Pipelines and App Service (optional)
+Using a simple data entity 'Employee', EISK shows how we can build scalable web api's easily along with addressing real-world domain and business use cases, including: 
+
+* [C]reating a new employee record
+* [R]ead existing employee records
+* [U]pdate an existing employee record
+* [D]elete an existing employee record
 
 ## System Requirements (Development)
 
