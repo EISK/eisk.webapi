@@ -11,7 +11,16 @@ If you like or are using this project to learn or start your solution, please gi
 
 ![eisk web api](https://github.com/EISK/eisk/blob/master/eisk-webapi-small.png)
 
-## EISK Features
+## Simple Use Case
+
+Using a simple data entity 'Employee', EISK shows how we can build scalable web api's easily along with addressing real-world domain and business use cases, including: 
+
+* [C]reating a new employee record
+* [R]ead existing employee records
+* [U]pdate an existing employee record
+* [D]elete an existing employee record
+
+## Developer Features
 
 You can build your own RESTful web api using EISK's Visual Studio and ASP.NET Web API project template. The template includes (but not limited to), project structure and all utility classes mentioned below to enable building modern cloud-aware RESTful APIs.
 
@@ -23,15 +32,6 @@ Technical features available in EISK include:
 * Utility classes to generate **real-world test data**
 * Base classes for **common test scenarios** (component tests, integration tests)
 * Support for **database integration tests** with both in-memory database and SQL server
-
-### Simple Use Case
-
-Using a simple data entity 'Employee', EISK shows how we can build scalable web api's easily along with addressing real-world domain and business use cases, including: 
-
-* [C]reating a new employee record
-* [R]ead existing employee records
-* [U]pdate an existing employee record
-* [D]elete an existing employee record
 
 ## Core Technologies
 
