@@ -29,9 +29,9 @@ Using a simple data entity 'Employee', EISK shows how we can build scalable web 
 
 ## Dev Features
 
-You can build your own RESTful web api using EISK's Visual Studio and ASP.NET Web API project template. The template includes (but not limited to), project structure and all utility classes mentioned below to enable building modern cloud-aware RESTful APIs.
+You can build your own RESTful web api using EISK's Visual Studio and ASP.NET Web API project template. 
 
-Technical features available in EISK include:
+The template includes (but not limited to), project structure and all utility classes mentioned below to enable building modern cloud-aware RESTful APIs.
 
 * **Clean Architecture** based implementation
 * **Swagger/OpenAPI** based RESTful Web API, including resuable base classes
