@@ -13,7 +13,7 @@ If you like or are using this project to learn or start your solution, please gi
 
 ## Core Technologies
 
-* Platform: [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet
+* Platform: [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet!
 * Web Framework: ASP.NET Web API 
 * ORM Framework: Entity Framework
 * Programming Language: C#
@@ -42,11 +42,9 @@ Technical features available in EISK include:
 
 ## QuickStart Guide
 
-### System Requirements (Development)
+Before installing EISK, all you need to have the following Visual Studio version installed.
 
 * Visual Studio 2022 ([Free](https://visualstudio.microsoft.com/vs/community/) Community Edition or higher)
-
-### Getting Started
 
 Getting started with EISK Web Api is pretty easy. 
 
@@ -59,7 +57,7 @@ Once the contents are available, just open the created solution, select "Eisk.We
 
 That's it!
 
-### How About Old Versions?
+### How about Old Versions?
 
 If you want to continue using one of the older versions of EISK, check the [releases](https://github.com/EISK/eisk.webapi/releases) page for specific instructions to install and use older versions of EISK.
 
