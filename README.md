@@ -25,7 +25,7 @@ Using a simple data entity 'Employee', EISK shows how we can build scalable web 
 * [U]pdate an existing employee record
 * [D]elete an existing employee record
 
-![eisk web api](https://github.com/EISK/eisk/blob/master/eisk-webapi-small.png)
+![eisk web api](https://raw.githubusercontent.com/EISK/eisk/master/eisk-webapi-small.png)
 
 Check the [Live Demo](https://eisk-webapi.azurewebsites.net) to see the use case implementation in action.
 
