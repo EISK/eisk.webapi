@@ -27,6 +27,8 @@ Using a simple data entity 'Employee', EISK shows how we can build scalable web 
 * [U]pdate an existing employee record
 * [D]elete an existing employee record
 
+Check the [Live Demo](https://eisk-webapi.azurewebsites.net) to see the use case implementation in action.
+
 ## Dev Features
 
 You can build your own RESTful web api using EISK's Visual Studio and ASP.NET Web API project template. 
@@ -56,7 +58,7 @@ Once the contents are available, just open the created solution, select "Eisk.We
 
 That's it!
 
-### How about Old Versions?
+### How About Old Versions?
 
 If you want to continue using one of the older versions of EISK, check the [releases](https://github.com/EISK/eisk.webapi/releases) page for specific instructions to install and use older versions of EISK.
 
