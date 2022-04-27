@@ -36,7 +36,7 @@ You can build your own RESTful web api using EISK's Visual Studio and ASP.NET We
 The template includes (but not limited to), project structure and all utility classes mentioned below to enable building modern cloud-aware RESTful APIs.
 
 * **Clean Architecture** based implementation
-* **Swagger/OpenAPI** based RESTful Web API, including resuable base classes
+* **Swagger/OpenAPI** based RESTful Web API specification
 * **Base classes** for common CRUD functionalities and testing for logical layers (i.e. controller, domain, data layers)
 * **Utility classes** to generate real-world test data
 * Support for database integration tests with both in-memory database and SQL server
