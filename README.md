@@ -33,12 +33,11 @@ You can build your own RESTful web api using EISK's Visual Studio and ASP.NET We
 
 Technical features available in EISK include:
 
-* **Swagger/OpenAPI** based RESTful Web API, including resuable base classes
 * **Clean Architecture** based implementation
-* Base classes for **common CRUD functionalities** for logical layers (where applicable)
-* Utility classes to generate **real-world test data**
-* Base classes for **common test scenarios** (component tests, integration tests)
-* Support for **database integration tests** with both in-memory database and SQL server
+* **Swagger/OpenAPI** based RESTful Web API, including resuable base classes
+* **Base classes** for common CRUD functionalities and testing for logical layers (i.e. controller, domain, data layers)
+* **Utility classes** to generate real-world test data
+* Support for database integration tests with both in-memory database and SQL server
 
 ## QuickStart Guide
 
