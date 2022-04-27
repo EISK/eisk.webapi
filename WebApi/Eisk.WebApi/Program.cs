@@ -20,7 +20,7 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo
     {
         Title = "Eisk.WebApi",
-        Version = "v9.0.14",
+        Version = "v9.0.15",
         Description = "EISK makes it easy to write scalable and secured web api on top of Microsoft's new cutting edge .net core technologies.",
         Contact = new OpenApiContact
         {
