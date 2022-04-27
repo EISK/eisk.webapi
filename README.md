@@ -17,12 +17,6 @@ If you like or are using this project to learn or start your solution, please gi
 * Web Framework: ASP.NET Web API 
 * ORM Framework: Entity Framework
 * Programming Language: C#
-* Database: Sql Server (optional)
-* Build and Deployment: Azure DevOps Pipelines / App Service (optional)
-
-### System Requirements (Development)
-
-* Visual Studio 2022 ([Free](https://visualstudio.microsoft.com/vs/community/) Community Edition or higher)
 
 ## Sample Use Case
 
@@ -47,6 +41,12 @@ Technical features available in EISK include:
 * Support for **database integration tests** with both in-memory database and SQL server
 
 ## QuickStart Guide
+
+### System Requirements (Development)
+
+* Visual Studio 2022 ([Free](https://visualstudio.microsoft.com/vs/community/) Community Edition or higher)
+
+### Getting Started
 
 Getting started with EISK Web Api is pretty easy. 
 
