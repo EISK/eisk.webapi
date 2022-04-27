@@ -9,8 +9,6 @@ With an optional set of customizable utility classes, samples and tools, it lets
 
 If you like or are using this project to learn or start your solution, please give it a [star](https://github.com/EISK/eisk.webapi). Thanks!
 
-![eisk web api](https://github.com/EISK/eisk/blob/master/eisk-webapi-small.png)
-
 ## Core Technologies
 
 * Platform: [.NET Framework 6.0](https://devblogs.microsoft.com/dotnet/announcing-net-6/) - The Fastest .NET Yet!
@@ -26,6 +24,8 @@ Using a simple data entity 'Employee', EISK shows how we can build scalable web 
 * [R]ead existing employee records
 * [U]pdate an existing employee record
 * [D]elete an existing employee record
+
+![eisk web api](https://github.com/EISK/eisk/blob/master/eisk-webapi-small.png)
 
 Check the [Live Demo](https://eisk-webapi.azurewebsites.net) to see the use case implementation in action.
 
