@@ -51,7 +51,7 @@ Getting started with EISK Web Api is pretty easy.
 
 You can either [clone](https://github.com/EISK/eisk.webapi.git) from github or simply run the following `dotnet new` command in command prompt to create a new project from EISK:
 
-* Command to install EISK template in your machine: `dotnet new --install Eisk.WebApi::9.0.10`
+* Command to install EISK template in your machine: `dotnet new --install Eisk.WebApi`
 * Command to create a new project: `dotnet new eiskwebapi -n Eisk`
 
 Once the contents are available, just open the created solution, select "Eisk.WebApi" as startup project and press F5!
