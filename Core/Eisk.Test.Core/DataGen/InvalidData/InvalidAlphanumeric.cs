@@ -1,6 +1,6 @@
-namespace Eisk.Test.Core.DataGen.InvalidData;
+using Eisk.Test.Core.DataGen.FieldGenerators;
 
-using FieldGenerators;
+namespace Eisk.Test.Core.DataGen.InvalidData;
 
 public class InvalidAlphanumeric : StringValueGenerator
 {

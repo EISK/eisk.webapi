@@ -1,9 +1,9 @@
-﻿namespace Eisk.WebApi.Controllers;
-
-using Core.WebApi;
-using Domains.Entities;
-using DomainServices;
+﻿using Eisk.Core.WebApi;
+using Eisk.Domains.Entities;
+using Eisk.DomainServices;
 using Microsoft.AspNetCore.Mvc;
+
+namespace Eisk.WebApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]

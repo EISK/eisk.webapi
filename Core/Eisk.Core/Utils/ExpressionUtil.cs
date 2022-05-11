@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Eisk.Core.Exceptions;
+using System;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Eisk.Core.Utils;
 
-using Exceptions;
+namespace Eisk.Core.Utils;
 
 public static class ExpressionUtil<TDomain>
 {

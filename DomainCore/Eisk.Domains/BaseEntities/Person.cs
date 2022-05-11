@@ -1,11 +1,11 @@
 ﻿using Eisk.Domains.Enums;
+using Eisk.Domains.ValueObjects;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Eisk.Domains.BaseEntities;
 
-using ValueObjects;
 
 public class Person
 {

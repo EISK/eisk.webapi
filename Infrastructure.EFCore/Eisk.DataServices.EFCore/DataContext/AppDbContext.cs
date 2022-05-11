@@ -1,20 +1,18 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Eisk.Domains.Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace Eisk.DataServices.EFCore.DataContext
+namespace Eisk.DataServices.EFCore.DataContext;
+
+public class AppDbContext : DbContext
 {
-    using Domains.Entities;
-
-    public class AppDbContext : DbContext
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
-        }
+    }
 
-        public virtual DbSet<Employee> Employees { get; set; }
+    public virtual DbSet<Employee> Employees { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Employee>().OwnsOne(c => c.Address);
-        }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Employee>().OwnsOne(c => c.Address);
     }
 }

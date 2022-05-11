@@ -1,12 +1,12 @@
+using Eisk.DataServices.EFCore;
+using Eisk.Domains.Entities;
+using Eisk.Domains.TestData;
+using Eisk.EFCore.Setup;
+using Eisk.Test.Core.TestBases;
 using Xunit;
 
 namespace Eisk.DataServices.IntegrationTests.EFCore.SqlServer;
 
-using Domains.Entities;
-using Domains.TestData;
-using Eisk.DataServices.EFCore;
-using Eisk.EFCore.Setup;
-using Test.Core.TestBases;
 
 public class EmployeeDataServiceTestsWithSqlServer : DataServiceSqlServerBaseIntegrationTests<Employee, int>, IClassFixture<DatabaseSetup>
 {

@@ -1,11 +1,11 @@
-﻿using System.Linq;
+﻿using Eisk.DataServices.EFCore.DataContext;
+using Eisk.Domains.Entities;
+using Eisk.Domains.TestData;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Eisk.EFCore.Setup;
 
-using DataServices.EFCore.DataContext;
-using Domains.TestData;
-using Eisk.Domains.Entities;
-using System.Collections.Generic;
 
 public static class DbContextDataInitializer
 {

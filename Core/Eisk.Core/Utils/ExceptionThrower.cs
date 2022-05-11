@@ -1,6 +1,6 @@
-namespace Eisk.Core.Utils;
+using Eisk.Core.Exceptions;
 
-using Exceptions;
+namespace Eisk.Core.Utils;
 
 public class ExceptionThrower
 {

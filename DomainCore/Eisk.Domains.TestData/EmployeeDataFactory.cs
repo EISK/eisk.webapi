@@ -1,10 +1,10 @@
 ﻿using Bogus;
+using Eisk.Domains.Entities;
+using Eisk.Domains.Enums;
+using Eisk.Test.Core.DataGen.DataFactories;
 
 namespace Eisk.Domains.TestData;
 
-using Eisk.Test.Core.DataGen.DataFactories;
-using Entities;
-using Enums;
 
 public class EmployeeDataFactory : EntityDomainDataFactory<Employee>
 {
