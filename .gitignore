@@ -333,3 +333,4 @@ ASALocalRun/
 /build/content-repo
 /WebApi/Eisk.WebApi/Properties/ServiceDependencies/eisk-webapi-1 - Web Deploy/profile.arm.json
 /build/dnn-remote-template-render
+*.txt
