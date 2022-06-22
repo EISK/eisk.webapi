@@ -1,0 +1,18 @@
+========================================================
+Business Rules
+========================================================
+* Single Field Level (Property)
+    * Required
+    * Length 
+    * Regular Expression (phone, email)
+* Single Field Level (Logic)
+    * Birthday should not be future date
+    * Employee must be 18 years old
+* Multiple Field Level
+    * HireDate should be later than Birthday
+* DB Check on Same Table
+    * Email should be unique
+* DB Check on Foreign Key Table
+    * An employee can have atmost 10 reports
+========================================================
+    

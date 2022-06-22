@@ -1,0 +1,47 @@
+{
+  "author": "Ashraf Alam",
+  "classifications": [],
+  "description": "Project template with simple CRUD to get started ASP.NET Web Api quickly.",
+  "name": "Eisk Web Api",
+  "defaultName": "Eisk.WebApi",
+  "identity": "Eisk.WebApi",
+  "groupIdentity": "Eisk.WebApi",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "shortName": "eiskwebapi",
+  "sourceName": "Eisk",
+  "primaryOutputs": [
+    {
+      "path": ".\\Core\\Eisk.Core\\Eisk.Core.csproj"
+    },
+    {
+      "path": ".\\DomainCore\\Eisk.Domains\\Eisk.Domains.csproj"
+    },
+    {
+      "path": ".\\DomainCore\\Eisk.Domains.TestData\\Eisk.Domains.TestData.csproj"
+    },
+    {
+      "path": ".\\DomainCore\\Eisk.DataServices.Interfaces\\Eisk.DataServices.Interfaces.csproj"
+    },
+    {
+      "path": ".\\Infrastructure.EFCore\\Eisk.EFCore.Setup\\Eisk.EFCore.Setup.csproj"
+    },
+    {
+      "path": ".\\Infrastructure.EFCore\\Eisk.DataServices.EFCore\\Eisk.DataServices.EFCore.csproj"
+    },
+    {
+      "path": ".\\DomainCore\\Eisk.DomainServices\\Eisk.DomainServices.csproj"
+    },
+    {
+      "path": ".\\Infrastructure.EFCore\\Eisk.DomainServices.ComponentTests.EFCore\\Eisk.DomainServices.ComponentTests.EFCore.csproj"
+    },
+    {
+      "path": ".\\WebApi\\Eisk.WebApi\\Eisk.WebApi.csproj"
+    },
+    {
+      "path": ".\\Core\\Eisk.Test.Core\\Eisk.Test.Core.csproj"
+    }
+  ]
+}

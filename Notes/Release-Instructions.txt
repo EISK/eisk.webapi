@@ -1,0 +1,53 @@
+========================================================
+Update a Version:
+
+Eisk.WebApi.TemplatePack
+	* Eisk.WebApi.proj
+	* source.extension.vsixmanifest
+Eisk.WebApi
+	* Program.cs (for Swagger doc)
+========================================================
+Release A New Version
+
+Release Prep
+* Update version in code and package
+* Build the project in CI
+
+Releasing the Web Site (semi-manual)
+* Release will be created automatically
+* Staging - will be deployed automatically
+* Prod - Web site needs to be deployed manually
+
+Releasing in git repo (semi-manual)
+* Release will be created automatically
+* Cd will deploy the changes in version branch automatically  
+* Version branch needs to be merged manually
+
+Releasing in Nuget (semi-manual)
+* Release will be created automatically
+* Release needs to be deployed by manual trigger (as nuget releases immutable i.e. canreleasepdated once created)
+
+Releasing to VS Gallery (semi-manual)
+* Release will be created automatically
+* Deploy need to be triggered manually 
+
+Releasing in Github Release (manual) - Create Tag
+* ** Merge the repo master branch (mentioned above) **
+* Create tag in github
+* Create release in github from the created tag
+* Update version in DevOps release
+* Create release and trigger deploy manually
+   * Template repo project readme.md will be included automatically in the release notes.
+   * Respective release assests as menionted in DevOps rlease will be updated automatically when master branch changed.
+
+Releasing in Github Release (manual) - Update Tag in Existing Release
+* Go to the corresponding release
+* Create a new tag from the release page (based on target commit)
+* Update version in DevOps release
+* Create release and trigger deploy manually
+
+Releasing in Github Release (manual) - Update Content
+* Relase Created Automatically
+* Trigger deploy manually (it doesn't update the source in the release, but updates the contents (notes, binaries in release page)
+
+========================================================

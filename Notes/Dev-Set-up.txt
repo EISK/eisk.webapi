@@ -1,0 +1,40 @@
+======================================================
+Template
+======================================================
+* Debugging template creation
+* Render template locally
+	* Run /build/dnn-install-from-local.cmd
+
+
+References
+* https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/
+* https://github.com/dotnet/dotnet-template-samples
+
+======================================================
+SQL Server
+======================================================
+Setting up Local DB in local environment
+
+* You would like to know the version of your SQL Server LocalDB instance.
+	* Open "Command Prompt" 
+	* Type line "sqllocaldb info" and check the name. By default, it will show "MSSQLLocalDB". 
+	* Type line "sqllocaldb info MSSQLLocalDB"
+	* If the version is "12.0.4100.1", LocalDB instance is in 2014 version. If the version if "13.1.4100.0" is in 2016 version. 
+
+* Starting LocalDB
+	* sqllocaldb start MSSQLLocalDB
+
+* Connect with SQL Server Management Studio
+	* Server name: (localdb)\mssqllocaldb
+
+* Installing 
+* Deploying database schema
+* Set connection string
+
+======================================================
+ASP.NET / Web Server
+======================================================
+
+* Turn off development mode for ASP.NET
+
+========================================================

@@ -1,0 +1,23 @@
+========================================================
+CD Troubleshoot
+
+VS2022/.NET 6.0
+* Change VS2017 hosting to azure pipeline, 
+	* Resolution: change in the edit release -> app service
+* Error on Deployment, 
+	* Resolution: change App Plan from Linux to Windows
+* Issue: web api not showing after deployment
+	* the api json was available, but the issue was due to swagger is not being accessible: https://stackoverflow.com/questions/55658948/asp-net-core-api-get-404-on-azure-app-service-but-works-ok-on-localhost
+* Issue: App service not being deployed
+	* Error: Web Deploy cannot modify the file 'Eisk.Core.dll' on the destination because it is locked by an external process.  In order to allow the publish operation to succeed, you may need to either restart your application to release the lock, or use the AppOffline rule handler for .Net applications on your next publish attempt.  Learn more at: http://go.microsoft.com/fwlink/?LinkId=221672#ERROR_FILE_IN_USE.  Learn more at: https://go.microsoft.com/fwlink/?LinkId=221672#ERROR_FILE_IN_USE. Error count: 1.
+	* Solution: In Azure DevOps, releas task for app service, set, Use Offline settings as true
+
+VS2017/.NET 2.0
+* Issue: An error occurred while starting the application. .NET Core 4.6.26614.01 X86 v4.0.0.0    Microsoft.AspNetCore.Hosting version 2.0.3-rtm-10026    |    Microsoft Windows 10.0.14393
+	* Enable detailed errors in azure portal: https://stackoverflow.com/questions/47134657/azure-webapp-asp-net-core-2-error-an-error-occurred-while-starting-the-applicat
+* Issue: Could not load file or assembly 'System.Runtime, Version=6.0.0.0
+	* In the build use specific .net sdk (2.0.0): https://stackoverflow.com/questions/59474379/failed-to-use-net-sdk-agent-in-azure-devops-build-pipeline
+	* Delete and re-create app service with .NET 3.1/2.1 LTS
+
+========================================================
+    

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="68FBFB63-9273-47F5-AC83-57A8BC8AD851" Version="9.0.32" Language="en-US" Publisher="Ashraf Alam" />
+        <DisplayName>Eisk</DisplayName>
+        <Description xml:space="preserve">EISK makes it easy to write scalable and secured web api on top of Microsoft's new cutting edge .net based technologies.</Description>
+        <MoreInfo>https://eisk.github.io</MoreInfo>
+        <GettingStartedGuide>https://eisk.github.io</GettingStartedGuide>
+        <ReleaseNotes>https://github.com/EISK/eisk.webapi/releases</ReleaseNotes>
+        <Tags>template, ASP.NET, web-api, vs2022, visual-studio-2022, boilerplate, starter-kit, efcore, dotnet, dotnet6, clean-architecture, architecture</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+    </Installation>
+    <Dependencies>
+    </Dependencies>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.NetCore.Component.Runtime.6.0" Version="[17.1.32210.238,18.0)" DisplayName=".NET 6.0 Runtime" />
+    </Prerequisites>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Output\Templates" />
+    </Assets>
+</PackageManifest>

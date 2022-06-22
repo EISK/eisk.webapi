@@ -1,0 +1,70 @@
+========================================================
+Test Strategy
+
+Api Controller Tests
+    * In-memory web tests
+    * All http codes tests only (200, 404)
+    * Can be used with build server
+Domain Service Tests
+    * In-memory tests (default): for smaller projects (assumes empty database in each test case)
+    * Unit tests: for large projects
+    * Tests only the business rules
+    * Can be used with build server
+Data Service Tests:
+    * SQL Server integration tests (not included in solution by default)
+    * Tests all database queries/operations
+    * To be used in post-deployment (in dev/UAT environment)
+    * To be used with empty sql server with test seed data (in dev envrionment)
+    * To be used with existing sql server with test seed data (in UAT envrionment) - smoke tests only
+
+System Tests:
+    * Health check 
+        ** to be tested locally, dev, prod
+        ** Includes db configuration tests
+        ** Any other external dependencies, like email server, blob storage
+        ** Can inlcude asp.net core feature, azure feature
+========================================================
+Reasons to consider testing base integration tests
+
+Sql Server (in-memory)
+- To verify if the ORM data model is not breaking (unsupported binding)
+- To verify if the ORM is working as expected (may not be needed if ORM documentation is available)
+
+Sql Server (generated from ORM)
+- To verify if the ORM data model is not breaking (unsupported binding)
+- To verify if the ORM is working as expected (may not be needed if ORM documentation is available)
+- To verify if the valid test data working (column size)
+
+Sql Server (live environment)
+- To check if the schema is same (can be achieved via schema comparison tool)
+- To check if the functionality is working as expected even if schema and database version is not identical
+
+========================================================
+========================================================
+Testing ORM functionality in test core
+
+- Single entity crud
+
+- p: Create/Create: primary and foreign tables together
+- p: Update/Create: exiting primary, create new fk row
+- p: Update/Remove: existing primary, remove existing fk row
+- p: Update/Update: updating pk and fk rows
+- p: Remove/Remove: deleting pk willl remove all fk
+- p: Remove/Update: deleting pk will update reference in fk only (no other update in fk table)
+- p: Read/Read (eager): loading pk will load all fk
+- p: Read/Read (lazy): loading pk will not not fk until property called
+
+- the above behaviour is when saving pk and its impact on fk
+- need to check the impact for the same behaviours on pk when fk is being saved
+
+- Difference between fk property and fk object
+=====≈========
+Factors
+
+* In-memory database tests (in CI) 
+* In-memory web tests (in CI) 
+* Database tests (in CD) 
+* Web UI Tests (in CD)
+* Generic utility base classes
+========================================================
+    

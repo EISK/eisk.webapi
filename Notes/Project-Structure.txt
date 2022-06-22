@@ -1,0 +1,177 @@
+*****************************************************
+Project Structure (Repositories, Folder Structure)
+*****************************************************
+
+========================================================
+Repository: EISK
+========================================================
+
+* All components shares as common domain model and rules
+* A single entity based sample will provide a simplified approach to illustrate common application implementation scenario
+* The template branch will reside side by side with generated content branch, will allow accepting pull requests from master (direct or modified by author)
+
+- TemplatePack
+	-- Eisk.TemplatePack
+		--- Eisk.TemplatePack.csproj
+		* Connects and combines all contents into a single pack
+		* Should be excluded from output folder
+
+- Web
+	-- Eisk.Web.SPA.Blazor
+	-- Eisk.Web.SPA.React
+	-- Eisk.Web.MVC
+
+- WebApi 
+	* Actual folder name, in solution, it can be according to framework, platform (i.e. Eisk.WebApi.GraphQL)
+	-- Eisk.WebApi.RESTFul
+		--- Eisk.WebApi.RESTFul.csproj
+		* Repo default, template default
+		* In Program.cs where dependency injection is associated can include combinational template params 
+		* to select preferred data service provider (i.e EFCore, COSMOS Db)
+		* Should connect to Eisk.DataServices.EFCore as default data provider
+	-- Eisk.WebApi.RESTFul.AzureFunction
+		--- Eisk.WebApi.RESTFul.AzureFunction.csproj
+		* Repo default
+		* RESTFul service with AzureFunction
+		* Should connect to Eisk.DataServices.EFCore as default data provider
+	-- Eisk.WebApi.GraphQL
+		--- Eisk.WebApi.GraphQL.csproj
+		* Repo default
+		* to be also included in Repo sample. For dotnet new should be available based on selected param
+		* Should connect to Eisk.DataServices.EFCore as default data provider
+	-- Eisk.WebApi.gRPC
+		--- Eisk.WebApi.gRPC.csproj
+		* Repo default
+		* Should connect to Eisk.DataServices.EFCore as default data provider
+
+- DomainCore
+	-- Eisk.DomainServices
+		--- Eisk.DomainServices.csproj
+			* Repo default, template default
+		--- EmployeeDomainService.cs
+			* default domain service
+		--- EmployeeDomainServiceWithViewModel.cs, EmployeeDomainServiceWithViewAndEditorModel.cs, EmployeeDomainServiceWithNoCustomRuleAndBaseClass.cs
+			* to be excluded by default, with "EmployeeDomainServiceWith*" wildcard.
+			* should be transformed to EmployeeDomainService.cs when view model option is selected
+
+- Infrastructure
+	* Actual folder name, in solution, it can be according to framework, platform, (i.e. Infrsatructure.EFCore)
+	-- Eisk.DataServices.EFCore 9
+		--- Eisk.DataServices.EFCore.csproj
+		* Repo default, template default
+		* considers Domain Service Tests with Component Tests with EFCore In-memory database
+		* considers Data Service Tests with SQL Server
+	-- Eisk.DataServices.CosmosDb.DocumentDatabase
+		--- Eisk.DataServices.CosmosDb.DocumentDatabase.csproj
+		* Not available in Repo default or template default
+		* to be also included in Repo sample. For dotnet new should be available based on selected param
+		* when this database provider is selected, the DomainService test should include Unit Tests (instead of Component Tests with EFCore In-memory database)
+
+- Core
+	* Utlities should be created based on param options
+	
+- Utilities
+	-- CleanSample
+		* Provide PowerShell script to clean included samples (without changing existing code)	
+
+- Bridge
+	* Includes projects with different combinations. Useful to test and experiment with different options and configurations. 
+	* Should be excluded from Template output
+	-- Eisk.WebApi.RESTFul + Eisk.DataServices.EFCore
+		* Folder to contain group of projects related to Eisk.WebApi.RESTFul with configuration to connect Eisk.DataServices.EFCore
+	-- Eisk.WebApi.GraphQL + Eisk.DataServices.CosmosDb.DocumentDatabase
+
+========================================================		
+Repository: Eisk.Samples.Core
+========================================================
+
+This repo will provide all samples with different template options combinations. Content in this repo will be generated automatically.
+
+* WebApi samples: to be created from dotnet new options
+* Blazor sample: single sample with Blazor + EFcore 
+
+========================================================		
+Repositories: Eisk.Apps
+========================================================
+
+* Eisk.Apps.EMS
+	* Employee Management System
+	* Features: employee info, timesheet entry, payment (based on perm salary, contrator rate)
+	
+* Eisk.Micro.Blog
+* Eisk.Micro.EShop
+* Eisk.Micro.Inventory
+* Eisk.Micro.Invoice
+
+* Eisk.Forms.ContactUs
+* Eisk.Forms.Survey
+* Eisk.Forms.OnlineTest
+
+========================================================
+Web API to Data Provider (cross functionality)
+========================================================
+
+* Original source (nXm): contains all web all to all data provider - special codes for testing cross provider functionalies for various api options
+* dotnet new template (nXm): creates connections dynamically
+* Public Repo (nX1): contains all web api to default data provider (EF Core)
+* Samples (nXm + K): contains all web all to all data provider - can be generated from dotnet new. K being additional number of app samples.
+* VSIX: (to be decided, dynamically or statically)
+
+========================================================
+Repo Modules and Dependencies
+========================================================
+
+- eisk
+	- Brnach (master): template output code
+	- Branch (template): template
+
+- eisk.webapi
+	- When eisk.webapi.module being used as sub-module with master, this repo allows isolation from other dependencies from eisk and consider as it's own.
+	- The above serves two pusposes at the same time (WebApi serves as sub-module of master or on-its own).
+	- The benefit of on it's own is - user's who are not interested with all components (i.e. webapi, webapp etc) can enjoy the interested one (i.e. data service)
+	- Can be completely an independent repo (when the object model is not shared with overall eisk design).
+	
+- eisk.webapi.module
+	- Can be served only as submodule for another repo (eisk or eisk.webapi)
+	- Brnach (master): (output repo)
+	- Branch (template): template.webapi (template sub module or main module)
+
+- eisk.domain-services, eisk.domain-services.module
+- eisk.data-services.sql-server, eisk.data-services.sql-server.module
+- eisk.data-services.cosmosdb, eisk.data-services.cosmosdb.module
+	
+- eisk.core (default shared across all, can be used as sub-module or main module)
+	- eisk.core
+	- eisk.testcore
+	
+========================================================
+All template structure (with architecture)
+========================================================
+
+- Eisk.TemplatePack
+	- Eisk.TemplatePack.csproj
+	* Connects and combines all contents into a single pack
+- CleanArchitecture
+	* Architecture specific folder
+	- Web
+		-- Eisk.Web.SPA.Blazor
+		-- Eisk.Web.SPA.React
+		-- Eisk.Web.MVC
+	- WebApi
+		-- Eisk.WebApi.RESTFul
+			-- Eisk.WebApi.RESTFul.csproj
+	- Infrastructure
+		-- Eisk.DataServices.EFCore 
+			-- Eisk.DataServices.EFCore.csproj
+	- WebCore
+		-- Eisk.Web.SPA.Blazor.Shared
+		* May not be needed
+		* Only Web UI related shard components based on application entity 
+		* If the shared components are application entity specific domain, which can be included inside DomainCore
+		* If the shared components are application entity specific infrastructure, which can be included inside Infrastructure
+		* If the shared components are just utilities, which can be included inside Core
+	- DomainCore
+	- Core
+- CQRS
+
+========================================================

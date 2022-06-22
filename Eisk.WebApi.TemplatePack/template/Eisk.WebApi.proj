@@ -1,0 +1,74 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TemplatePackPropsFilePath Condition=" '$(TemplatePackPropsFilePath)'=='' ">$(MSBuildThisFileFullPath).props</TemplatePackPropsFilePath>
+	</PropertyGroup>
+
+	<Import Project="$(TemplatePackPropsFilePath)"
+			Condition=" '$(TemplatePackPropsFilePath)' != '' and Exists('$(TemplatePackPropsFilePath)') " />
+
+	<PropertyGroup Label="TemplatePackInfo">
+		<Authors>Ashraf Alam</Authors>
+		<Description>
+			EISK makes it easy to write scalable and secured web api on top of Microsoft's new cutting edge .net based technologies.
+			With an optional set of customizable utility classes, samples and tools, it lets you creating new web api straight away without wide technical experience or learning curve.
+		</Description>
+		<Copyright>Copyright © Ashraf Alam. All rights Reserved</Copyright>
+		<PackageProjectUrl>https://eisk.github.io</PackageProjectUrl>
+		<PackageReleaseNotes>https://github.com/EISK/eisk.webapi/releases</PackageReleaseNotes>
+		<RepositoryUrl>https://github.com/EISK/eisk.webapi</RepositoryUrl>
+		<PackageTags>template, ASP.NET, web-api, vs2022, visual-studio-2022, boilerplate, starter-kit, efcore, dotnet, dotnet6, clean-architecture, architecture</PackageTags>
+		<PackageType>DotnetTool, Template</PackageType>
+		<PackageLicenseFile>Content/LICENSE.txt</PackageLicenseFile>
+		<PackageReadmeFile>Content/README.md</PackageReadmeFile>
+		<Version>9.0.32</Version>
+	</PropertyGroup>
+
+	<PropertyGroup Label="PackageConfiguration">
+		<TargetFramework>netstandard1.0</TargetFramework>
+		<PackageType>Template</PackageType>
+		<TemplateSourceRoot>$(MSBuildThisFileDirectory)</TemplateSourceRoot>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)**/bin/**/*" />
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)**/obj/**/*" />
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)**/*.user" />
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)**/*.suo" />
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)**/.vs/**/*" />
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)**/.git/**/*" />
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)**/packages/**/*" />
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)Infrastructure.EFCore/Eisk.DataServices.IntegrationTests.EFCore.InMemory/**/*" />
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)Notes/**/*" />
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)**/*Core.Tests/**/*" />
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)**/*DomainServices.UnitTests/**/*" />
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)Eisk.WebApi.TemplatePack.sln" />
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)Eisk.WebApi.TemplatePack/**/*" />
+		<ExcludeFromPackage Include="$(TemplateSourceRoot)build/**/*" />
+
+		<TemplateFiles  Include="$(TemplateSourceRoot)/**/*"
+						Exclude="@(ExcludeFromPackage)" />
+	</ItemGroup>
+
+	<PropertyGroup Label="BuildConfiguration">
+		<NoBuild>True</NoBuild>
+		<IncludeBuildOutput>False</IncludeBuildOutput>
+		<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+		<DisableImplicitFrameworkReferences>True</DisableImplicitFrameworkReferences>
+		<PackProjectInputFile>$(MSBuildProjectFullPath)</PackProjectInputFile>
+		<PackageOutputPath>bin/$(Configuration)/templates/</PackageOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content  Include="@(TemplateFiles)"
+				  Exclude="@(ExcludeFromPackage)"
+				  PackagePath="Content/%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<Target Name="GetNuGetPath" Outputs="@(NuGetPackOutput)">
+		<Message Text="NuGetPackOutput: [@(NuGetPackOutput)]" Importance="high"/>
+	</Target>
+	<Target Name="DebugInfo" BeforeTargets="Build;Pack">
+		<Message Text="Inner:TemplateSourceRoot: [$(TemplateSourceRoot)]" Importance="high"/>
+	</Target>
+	<!-- created with SideWaffle -->
+</Project>

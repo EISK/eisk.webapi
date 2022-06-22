@@ -1,0 +1,185 @@
+========================================================
+TODO: Today
+
+DONE * VSIX fix namespace issues
+DONE * Create read-me for VS gallery specific
+DONE * Publish to VS gallery
+
+========================================================
+
+* Re-visit exception classes
+* review template documentations
+	* check rendered output for template with VS
+	* check conditional rendering (file)
+	* check conditional rendering (text)
+
+========================================================
+TODO:
+
+CI (Remote)
+
+* Include code coverage in main build
+* Rename eisk.webapi.template to eisk.template
+* Convert original source CI to Yml
+* Convert generated template CI to Yml
+
+CD (Remote)
+
+* Publish to VS Gallery
+* Create staging api app service for V8
+* Combine V9 CDs into a single CD
+* Convery original source CD to Yml
+* Convert genrated CD to Yml
+
+Packaging (vsix/nuget)
+
+* Fix nuget package warnings
+* Fix metadata and asset issue, due to nuget restore (errors happens when open VS and create project from template for first time)
+* Include template category in VS gallery
+* Include template category in VS Project dialogue
+* VS should always install latest nuget package (currently its doing when no dotnet template is installed)
+* Make sure the VSIX read me html is visible after creating the project
+* Publish VSIX via CD
+* Enable multiple templates (such as blazor, web api, blazor)
+* Enable different template version to be installed different VS versions (mvc 20103 vs mvc 2022)
+* Enable using the same template along with dotnet new and VSIX (if possible) 
+* Enable parameterized selection in VSIX installation
+* Enable VSIX to be available under template and other sub-categories
+
+Code
+
+R * Custom logic
+	* Apply custom business logic
+	* Verify field level validations
+	* Add field for email
+	* Add field for URL
+R * Error handling
+	* Add exception handler for controller
+	* Map domain exceptions to http error (i.e. NotFound to 404)
+	* Firing exception when field constraint (i.e. length) is not applied
+R * Log
+	* Add log functionality
+	* Integrate azure insight
+
+* Include view model example
+
+Testing
+
+R * Add web tests
+		* Employee web tests
+		* Web test base class
+* Set db fixture with assesbmly set-up
+* Sql server integration tests: load from config
+* Create postman based test file (for template only)
+* Test post and update methods
+* Include ORM tests
+* Identify test strategy, check base tests usability
+
+Release Tasks
+
+* Publish to VS Gallery (maually)
+* Update project image in read me
+* Include github badge (in readme.md)
+* Include github badge (in docs footer)
+* Include facebook badge (in docs footer)
+* Include Icon in nuget package
+* Include uptime robot badge
+
+Others
+
+* Explore new .net features
+* Include instruction for template build and publish
+* Rename Eisk.DomainServices.ComponentTests.EFCore -> Eisk.DomainServices.ComponentTests?
+
+========================================================
+Phases
+
+DONE * Upgrade Template Pack to .NET 6.0
+DONE * Complete CI/CD - for V8, nuget, git repo, app service
+DONE * Complete CI/CD - for V9 git repo, app service
+DONE * Complete CI/CD - for Docs
+DONE * Restructure (docs) - build locally, folder structure, navigations (individual top, top nav, breadcrumbs)
+
+* Custom development (template) - build locally, document process, custom logic implementation
+* Doc - initial documenation
+* Blog - release post
+* Blog - tutorial
+* Articles - details
+* VSIX Release - CD, documentation
+* Github Release - CD, documentation
+* Doc - advansed documentation
+
+========================================================
+TODO: ARCHIVE
+
+Fix CI (Remote)
+DONE R * Create new doc CI/CD
+DONE * Fix github connection
+DONE * Install Github App in Azure
+DONE * Fix CI issue (core)
+DONE * Fix CI issue (template)
+DONE * Fix CI issue (docs)
+DONE * Finalize repo structure
+
+Fix CD (Remote)
+DONE * Fix publish to git repo (V9) - exclude binaries check-in
+DONE * Integrate with with git release task
+DONE * Update CI for Windows-2022 (V9, V8 Docs)
+DONE * Update all CD for Windows-2022
+DONE * Fix publish to git repo (V8) - exclude binaries check-in
+DONE * Publish to git repo (V9)
+DONE * Publish to git repo (V8)
+DONE * Fix Azure Web (Staging)
+DONE * Fix Azure Web (Prod)
+DONE * Fix Nuget publish (.new new)
+DONE * Update version specific trigger for CD
+DONE * Update version specific trigger for CD
+DONE * Create new app service for v9
+DONE * Deploy to web service v9
+DONE * Fix deploy to web service v8
+
+Build / packagaing
+DONE * generate template from nuget package
+DONE * Run docs locally
+DONE * Fix local run (web api) v8
+DONE * Fix local run (web api) v9
+
+Code
+DONE * Convert to file scope namespace
+DONE * Apply title, extension in entity data generator
+DONE * Investigate with length field is not causing issue when saving (for in-memory db constraints not applied)
+DONE * Remove obsolete methods (for .NET 6.0)
+DONE * fix unit tests
+DONE * Remove sub-module
+DONE * Fix project load issue for rendered content. issue: long file path
+DONE * Exclude unused project files (test projects)
+DONE * Exclude unused project files (notes)
+
+Testing
+DONE * Refactor entity data generator with domain 
+DONE * Refactor entity test data generator as an abstract class
+DONE * Test data service with sql server local instance
+DONE * Complete custom data generator implementation
+DONE * Test string size implementor
+DONE * Include custom entity data factory in entity test base
+DONE * Add test data generator for employee (with meaningful sample data)
+
+Release Tasks
+DONE * Merge V9.0 branch to master
+DONE * Publish nuget package to nuget gallery
+DONE * Publish documentation (soft release)
+DONE * Experiement tag, release and branch (what happens when branch is deleted after release is created?)
+DONE * Include readme for nuget package (manual)
+DONE * Include project site, repo into in nuget gallery
+DONE * Include tag into in nuget gallery : https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets#pack-target
+DONE * Include readme, license file for nuget package (automatic) : https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets#packagereadmefile
+DONE * Update readme.md
+DONE * Include nuge badge
+DONE * Include support help for stackoverflow
+DONE * Update git repo as template
+DONE N/A * Apply rules logic in custom data generator
+
+Others
+DONE * Finalize versioning
+
+========================================================

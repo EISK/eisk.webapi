@@ -1,0 +1,64 @@
+========
+Samples Use Cases (platform agonistic)
+
+* Different samples for same employee entity to illustrate how to use eisk differently as per design choices.
+* The respective sample will be loaded as provided in the optional parameter when creating project from template.
+* A default sample will be loaded when no option is provided.
+========
+
+* Empty (no domain)
+
+Single Entity (Base Classes)
+
+* Minimal code domain crud - Web controller base, with generic domain and data service
+
+* All base classes (no custom rules)
+* (default) All base classes (with custom rules)
+
+Single Entity (No Base Classes)
+- using service utility class as property instead of using as base class
+
+* No base classes (with no custom rules and partial crud) - for instance create and get only
+* No base classes (with custom rules and partial crud) - for instance create and get only
+
+* No base classes (with no custom rules and all crud)
+* No base classes (with custom rules and all crud)
+
+View Model (Base Classes)
+
+* With base classes, single view model, no custom rules
+* With base classes, single view model, with custom rules
+
+* With base classes, editor + view model, no custom rules
+* With base classes, editor + view model, with custom rules
+
+View Model (With out Base Classes)
+
+* With out base classes, single view model, no custom rules
+* With out base classes, single view model, with custom rules
+
+* With out base classes, editor + view model, no custom rules
+* With out base classes, editor + view model, with custom rules
+
+Search, Filtering, Sortng, Paging
+
+* Search
+* Filtering
+* Paging 
+* Sorting
+
+Multiple Entities
+
+* 1:m
+* m:1
+* m:m
+
+Query Features
+
+* Raw text query
+* Aggregate query (count, sum)
+* Stored procedure
+* Db function
+* View
+========
+

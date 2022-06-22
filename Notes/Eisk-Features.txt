@@ -1,0 +1,214 @@
+============================================================================================
+High Level Features
+============================================================================================
+
+Created Project - Dev Features
+
+* Web API base classes with supported in-memory web tests
+* Swagger support
+* Exception handling classes and filters
+* Domain class example with property attribute, inheritance, value object and enumeration support
+* Domain Service base classes with supported base component tests with in-memory databases
+* Data Service base classes with supported base integration tests with sql server databases
+* Meaningful test data generators
+* DevOps pipeline to build and run tests
+* DevOps pipeline to deploy in azure app services
+
+Created Project - User Stories
+
+* To be added
+
+Template Features
+
+* Allow selecting data providers, web api and web application type
+* Allow selecting cross cutting concern providers
+* Allow selecting devops provider and script
+* Allow selecting types of samples to be generated
+
+Tool Features (after creating projects)
+
+* Allow devs to start with minimal template and can add features as understood and needed.
+* Allow adding new features with incremental commit to git (using the combonation of above commands and respetive git commit)
+* Allow creating all services based on given domain in existing project
+* Allow cleaning sample domain and related classes created in bootstrap
+* Allow upgrading existing code base that was created from one version to another version
+
+============================================================================================
+Template / Tool Features & Options
+============================================================================================
+
+Application Type Options
+
+	- AppType
+		-- None (no app specific template generated)
+		-- Blazor
+		-- MVC: by default connects with DomainService. For ApiType not being none, would create and connect through a api proxy.
+		-- React
+	- ApiType
+		-- None (no api specific template generated)
+		-- REST (rst) (default)
+		-- GrapghQL (gql)
+		-- gRPC (grpc)
+	- DataProvider
+		-- EFCore (default) with EFCore In-memory database and SQL Server (to be also tested in SQL Azure)
+		-- CosmosDb.DocumentDatabase
+
+Test Options: applicable when relevant Application Type is not none
+
+	- AppTest
+		-- None (default)
+		-- FuntionalTest-Selenium
+	- APITest
+		-- None (default)
+		-- IntegrationTest-InMemoryWebServer
+		-- IntegrationTest-HttpClient
+		-- IntegrationTest-Postman
+	- DomainServiceTest
+		-- None
+		-- UnitTest
+		-- ComponentTest-InMemoryDatabase (default)
+	- DataServiceTest
+		-- None
+		-- IntegrationTest-SqlServerLocalDb (default)
+	- SystemTest
+		-- None (default)
+		-- HealthCheck: tests all system dependencies based on config settings
+
+Cross Cutting Concern Options
+
+	- AuthType
+		-- None (default)
+		-- IdentityServer
+		-- AzureB2C
+	- ErrorHandlingFilter
+		-- None
+		-- Custom (default)
+	- LogType
+		-- None (default)
+		-- Log4Net
+		-- SeriLog
+	- ApplicationInsightType
+		- None (default)
+		- AzureInsight
+		
+DevOps Options
+
+	- IncludeGitIgnore
+		- Yes
+		- No (default)
+	- DevOpsTypeYaml
+		- None (default)
+		- AzureDevOps
+		- GithubActions
+		
+Sample Options
+
+	- SampleInclude
+		-- None: no domain specific sample is provided (i.e. Employee domain)
+		-- SingleEntity (default): creates required logical layers and configurations based on a sample single domain
+	- SampleModelType
+		- Creates entity based samples for Controller and Domain Class
+		- Applicable when SampleInclude is not None
+		-- Entity (default)
+		-- Editor: same editor model will be used for View and Create/Edit
+		-- ViewAndEditor: separate model will be used for View and Create/Edit
+	- SampleIncludeBusinessRule
+		- Applicable when SampleInclude is not None
+		-- Yes (default)
+		-- No
+	- SampleIncludeBaseClass
+		- Applicable when SampleInclude is not None
+		-- Yes (default): contains IsA relation type, where DomainService utility class will be used as parent class. 
+			No custom override method will be provided when SampleIncludeBusinessRule: No
+		-- No: contains HasA relation type, where DomainService utility class will be used as property. 
+			CRUD methods will be avaible in the sample domain service class, even if  SampleIncludeBusinessRule: Yes
+      
+============================================================================================
+Application Components and Modules
+============================================================================================
+
+Client Side
+* Blazor (default)
+* MVC (Razor)
+* React
+* React Native
+
+Web API Layer
+* WebApi - ASP.NET Web API (default)
+* WebApi.Azure - Azure Function (http)
+* gRPC - gRPC
+* GraphAPI - Graph API
+
+Domain Layer
+* Clean Architecture (default)
+* DDD
+* CQRS
+
+Data Access Layer
+* Entity Framework (default)
+* Dapper
+* NHibernate
+
+Data Storage (in-memory)
+* Memory: EF In-memory (default)
+* Memory: SQLLite In-memory
+
+Data Storage
+* RDBMS: SQL Server (default)
+* Key-Value Pair: Azure Table Storage
+* Document database: COSMOS
+* Document database: Couchbase
+* Graph database: COSMOS (gremline)
+* Graph database: Neo4J
+* Columnar database: Cassandra
+
+===========================================
+Cross Cutting Concerns and Services
+===========================================
+
+Authentication
+* Azure AD B2C
+* Azure AD
+* Identity Server
+* ASP.NET Identity
+* Auth0
+
+Logging
+* SeriLog
+* Log4Net
+* Azure Insight
+
+Caching
+* Redis
+* Couchbase
+* SQL Server In-memory
+
+Search
+* Azure Search
+* SQL Server full text search
+* Solr
+
+Backgeound Process
+* Process.AzureWebJob
+* Process.AzureLogicApp
+* ServerLess.AzureFunction (Scheduler) (default)
+* ServerLess.AWSLambda
+
+Messagging
+* Azure Storage Queue
+* Azure Service Bus
+* AWS Simple Queue Service
+
+Hosting
+* Azure App Services
+* AWS
+* Docker
+* Kubernetes
+
+DevOps
+* AzureDevOps
+* AppVeyor
+* Github Actions
+* Vercel
+
+============================================================================================
