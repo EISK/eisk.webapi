@@ -42,7 +42,7 @@ The template includes (but not limited to), project structure and all utility cl
 
 ## QuickStart Guide
 
-Before installing EISK, all you need to have the following Visual Studio version installed.
+Before installing EISK, all you need to have the following Visual Studio version installed..
 
 * Visual Studio 2022 ([Free](https://visualstudio.microsoft.com/vs/community/) Community Edition or higher)
 
