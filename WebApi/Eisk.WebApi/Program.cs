@@ -6,11 +6,17 @@ using Eisk.DataServices.EFCore.DataContext;
 using Eisk.DataServices.Interfaces;
 using Eisk.DomainServices;
 using Eisk.EFCore.Setup;
+using Eisk.WebApi.Configuration;
 using Eisk.WebApi.Middlewares;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.AddSerilogConfig(builder.Configuration);
+
+Log.Information("Configuring web host...");
 // Add services to the container.
 
 builder.Services.AddControllers();
