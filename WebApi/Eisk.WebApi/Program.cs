@@ -6,10 +6,17 @@ using Eisk.DataServices.EFCore.DataContext;
 using Eisk.DataServices.Interfaces;
 using Eisk.DomainServices;
 using Eisk.EFCore.Setup;
+using Eisk.WebApi.Configuration;
+using Eisk.WebApi.Middlewares;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.AddSerilogConfig(builder.Configuration);
+
+Log.Information("Configuring web host...");
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -45,6 +52,8 @@ builder.Services.AddScoped<EmployeeDomainService>();
 DbContextDataInitializer.Initialize(new InMemoryDbContext());
 
 var app = builder.Build();
+
+app.UseMiddleware<ApiExceptionHandlerMiddleware>();
 
 // Configure the HTTP request pipeline.
 app.UseSwagger();
