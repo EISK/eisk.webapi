@@ -7,6 +7,7 @@ using Eisk.DataServices.Interfaces;
 using Eisk.DomainServices;
 using Eisk.EFCore.Setup;
 using Eisk.WebApi.Configuration;
+using Eisk.WebApi.Middlewares;
 using Microsoft.OpenApi.Models;
 using Serilog;
 
@@ -51,6 +52,8 @@ builder.Services.AddScoped<EmployeeDomainService>();
 DbContextDataInitializer.Initialize(new InMemoryDbContext());
 
 var app = builder.Build();
+
+app.UseMiddleware<ApiExceptionHandlerMiddleware>();
 
 // Configure the HTTP request pipeline.
 app.UseSwagger();
