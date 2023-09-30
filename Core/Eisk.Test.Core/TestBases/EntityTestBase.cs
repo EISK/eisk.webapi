@@ -18,7 +18,7 @@ public abstract class EntityTestBase<TEntity, TId> : TestBase
             if (_entityDataFactory == null)
                 _entityDataFactory = new EntityDataFactory<TEntity>();
 
-            return _entityDataFactory; ;
+            return _entityDataFactory;
         }
     }
 
